@@ -1,0 +1,27 @@
+
+.ant-form-item-label > label{
+    color: white !important;
+
+}
+.ant-checkbox-wrapper{
+    color: white !important;
+}
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: #282c34;
+    overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+    color: #fff;
+}
+.ant-layout-header{
+    height: 50px !important;
+    padding: 0 50px;
+    line-height: 64px;
+    background: #ffffff !important;
+
+
+}
