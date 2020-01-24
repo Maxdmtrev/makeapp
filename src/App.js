@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Form from "./components/Form";
 import Render from "./components/Render";
 import Constructor from "./components/Constructor";
+import Slider from './components/Slider';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                 <Form />
             </div>
         </div>
+        <Slider/>
         <Render />
         <Constructor />
       </div>

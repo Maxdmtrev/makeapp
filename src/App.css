@@ -29,7 +29,6 @@
 }
 
 .wrap-img {
-
 }
 
 #el1 {
@@ -69,4 +68,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.scroll-image {
+  background-color: #282c34;
+  overflow: scroll;
+  width: 100vw; 
+  height: 500px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
 }
