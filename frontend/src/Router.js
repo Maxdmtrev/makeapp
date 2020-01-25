@@ -13,6 +13,7 @@ import 'antd/dist/antd.css';
 import '../src/app.css';
 
 import {Layout} from 'antd';
+import { Icon } from 'antd';
 
 const {Header, Footer, Content} = Layout;
 
@@ -50,7 +51,11 @@ class Routers extends Component {
           <Route path='/slider' component={Render}/>
           <Route path='/registration' component={RegistrationForm}/>
         </Content>
-        <Footer >наши контакты и бла бла бла</Footer>
+        <Footer >Контакты:
+          <Icon type="instagram" style={{ fontSize: '30px', color: '#08c' }} theme="" />
+          <Icon type="slack" style={{ fontSize: '30px', color: '#08c' }} theme="" />
+          <Icon type="github" style={{ fontSize: '30px', color: '#08c' }} theme="" />
+        </Footer>
       </Layout>
 
 

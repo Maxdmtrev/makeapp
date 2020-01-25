@@ -15,8 +15,6 @@ class Constructor extends Component {
       imagefive:null
     };
   }
-  
-  
  async componentDidMount () {
     const response=await fetch("/slider")
    const result=await response.json()
@@ -27,13 +25,12 @@ this.setState({
   imagefour:result[3],
   imagefive:result[4]
 })
-   console.log (result);
+ }
 
-  }
-  
   render () {
-    const {cardImage, cardTitle, cardText} = this.props;
-    const {imageone, imagetwo, imagetree,imagefour,imagefive} = this.state;
+    const {cardImage, cardImageOne, cardTitle, cardText} = this.props;
+        const {imageone, imagetwo, imagetree,imagefour,imagefive} = this.state;
+
     return (<div>
       <Row>
         <Col span={14}>
@@ -45,11 +42,13 @@ this.setState({
                id={'el3'}/>
           <img style={{position: 'absolute', zIndex: 2}} src={imagefour} width={'400px'} alt={'test'} height={'400px'}
                id={'el4'}/>
+
           <img style={{position: 'absolute', zIndex: 1}} src={imagefive} width={'400px'} alt={'test'} height={'400px'}
                id={'el5'}/>
+
         </Col>
         <Col span={10}>
-          < Collapse accordion>
+          <Collapse accordion className={'card-input'}>
             <Panel header="Название секции" key="1">
               <Col span={11} style={{margin: 6}}>
                 <Card
@@ -57,6 +56,7 @@ this.setState({
                  style={{width: 215}}
                  cover={<img alt="example" src={cardImage}/>}
                 >
+                  <Button id={'btn'} onClick={(e) => this.handleClick(e)}>Change img</Button>
                   <Meta title={cardTitle} description={cardText}/>
                 </Card>
               </Col>
@@ -64,8 +64,9 @@ this.setState({
                 <Card
                  hoverable
                  style={{width: 215}}
-                 cover={<img alt="example" src={cardImage}/>}
+                 cover={<img alt="example" src={cardImageOne}/>}
                 >
+                  <Button id={'btn'} onClick={(e) => this.handleClickOne(e)}>Change img</Button>
                   <Meta title={cardTitle} description={cardText}/>
                 </Card>
                 
@@ -114,8 +115,7 @@ this.setState({
     
               </Col>
             </Panel>
-          </Collapse>,
-          <Button id={'btn'}>Change img</Button>
+          </Collapse>
         </Col>
       </Row>
     </div>);
