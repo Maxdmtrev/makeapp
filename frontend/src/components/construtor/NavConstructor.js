@@ -13,7 +13,7 @@ class NavConstructor extends Component {
   render () {
     return (<Tabs defaultActiveKey="1" style={{minHeight: 500}}>
        <TabPane tab="Название помещения" key="1">
-         <Constructor cardText={'sdfds'} cardImage={"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"} cardTitle cardPrice={"123"}/>
+         <Constructor cardText={'sdfds'}  cardImage={"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"} cardTitle cardPrice={"123"}/>
        </TabPane>
        <TabPane tab="Название помещения" key="2">
          <Constructor cardText={'23'} cardImage={"https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"} cardTitle cardPrice={"321"}/>
