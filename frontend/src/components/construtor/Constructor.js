@@ -1,12 +1,7 @@
 import React, {Component} from 'react';
-import imageone from '../../img/room/default(2).png';
-import imagetree from '../../img/room/default(2).png';
-import imagetwo from '../../img/room/default(1).png';
-import imagefour from '../../img/room/bimetal.png';
 import imagefive from '../../img/room/floor_base.png';
 import changeimg from '../../img/room/floor_1.png';
 import dataRoom from "../../dataRoom";
-
 import {Button, Card, Col, Collapse, Row} from 'antd';
 
 const {Meta} = Card;
@@ -16,31 +11,33 @@ class Constructor extends Component {
   constructor (props) {
     super (props);
     this.state = {
+
       src: imagefive,
-      data: dataRoom
+      data: dataRoom,
+      imageone:null,
+      imagetwo:null,
+      imagetree:null,
+      imagefour:null,
+      imagefive:null
     };
   }
+ async componentDidMount () {
+    const response=await fetch("/slider")
+   const result=await response.json()
+this.setState({
+  imageone:result[0],
+  imagetwo:result[1],
+  imagetree:result[2],
+  imagefour:result[3],
+  imagefive:result[4]
+})
+ }
 
-  handleClick() {
-    console.log('значение this:', this);
-    this.setState({
-      src: changeimg,
-    })
-  }
-
-  handleClickOne() {
-    console.log('значение this:', this);
-    this.setState({
-      src: imagefive,
-    })
-  }
-  
   render () {
     const {cardImage, cardImageOne, cardTitle, cardText} = this.props;
-    // console.log(this.state.data.src);
+        const {imageone, imagetwo, imagetree,imagefour,imagefive} = this.state;
     return (
         <div>
-
       <Row>
         <Col span={14}>
           {this.state.data ?
@@ -48,19 +45,9 @@ class Constructor extends Component {
           {this.state.data.src.map((elem, index) =>
             <img key={index} style={{position: 'absolute', zIndex: elem.zIndex}} src={elem.img} width={'400'} alt={'test'} height={'400px'}
                  id={'el1'} />
-
           )}
             </div>
           : '...Load'}
-          {/*<img style={{position: 'absolute', zIndex: 2}} src={imagetwo} width={'400px'} alt={'test'} height={'400px'}*/}
-          {/*     id={'el2'}/>*/}
-          {/*<img style={{position: 'absolute', zIndex: 1}} src={imagetree} width={'400px'} alt={'test'} height={'400px'}*/}
-          {/*     id={'el3'}/>*/}
-          {/*<img style={{position: 'absolute', zIndex: 2}} src={imagefour} width={'400px'} alt={'test'} height={'400px'}*/}
-          {/*     id={'el4'}/>*/}
-          {/*<img style={{position: 'absolute', zIndex: 2}} src={this.state.src} width={'400px'} alt={'test'} height={'400px'}*/}
-          {/*     id={'el5'}*/}
-          {/*/>*/}
         </Col>
         <Col span={10}>
           <Collapse accordion className={'card-input'}>
@@ -84,11 +71,9 @@ class Constructor extends Component {
                   <Button id={'btn'} onClick={(e) => this.handleClickOne(e)}>Change img</Button>
                   <Meta title={cardTitle} description={cardText}/>
                 </Card>
-                
-              </Col>
+                              </Col>
             </Panel>
-  
-            <Panel header="Стена" key="2">
+              <Panel header="Стена" key="2">
               <Col span={11} style={{margin: 6}}>
                 <Card
                  hoverable
@@ -105,8 +90,7 @@ class Constructor extends Component {
                  cover={<img alt="example" src={cardImage}/>}
                 >
                   <Meta title={cardTitle} description={cardText}/>
-                </Card>
-    
+                </Card>    
               </Col>
             </Panel>
             <Panel header="Название секции" key="3">
