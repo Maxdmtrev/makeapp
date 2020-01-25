@@ -5,6 +5,7 @@ import imagetwo from '../../img/room/default(1).png';
 import imagefour from '../../img/room/bimetal.png';
 import imagefive from '../../img/room/floor_base.png';
 import changeimg from '../../img/room/floor_1.png';
+import dataRoom from "../../dataRoom";
 
 import {Button, Card, Col, Collapse, Row} from 'antd';
 
@@ -16,6 +17,7 @@ class Constructor extends Component {
     super (props);
     this.state = {
       src: imagefive,
+      data: dataRoom
     };
   }
 
@@ -35,24 +37,34 @@ class Constructor extends Component {
   
   render () {
     const {cardImage, cardImageOne, cardTitle, cardText} = this.props;
-    return (<div>
+    // console.log(this.state.data.src);
+    return (
+        <div>
+
       <Row>
         <Col span={14}>
-          <img style={{position: 'absolute', zIndex: 1}} src={imageone} width={'400px'} alt={'test'} height={'400px'}
-               id={'el1'}/>
-          <img style={{position: 'absolute', zIndex: 2}} src={imagetwo} width={'400px'} alt={'test'} height={'400px'}
-               id={'el2'}/>
-          <img style={{position: 'absolute', zIndex: 1}} src={imagetree} width={'400px'} alt={'test'} height={'400px'}
-               id={'el3'}/>
-          <img style={{position: 'absolute', zIndex: 2}} src={imagefour} width={'400px'} alt={'test'} height={'400px'}
-               id={'el4'}/>
-          <img style={{position: 'absolute', zIndex: 2}} src={this.state.src} width={'400px'} alt={'test'} height={'400px'}
-               id={'el5'}
-          />
+          {this.state.data ?
+            <div>
+          {this.state.data.src.map((elem, index) =>
+            <img key={index} style={{position: 'absolute', zIndex: elem.zIndex}} src={elem.img} width={'400'} alt={'test'} height={'400px'}
+                 id={'el1'} />
+
+          )}
+            </div>
+          : '...Load'}
+          {/*<img style={{position: 'absolute', zIndex: 2}} src={imagetwo} width={'400px'} alt={'test'} height={'400px'}*/}
+          {/*     id={'el2'}/>*/}
+          {/*<img style={{position: 'absolute', zIndex: 1}} src={imagetree} width={'400px'} alt={'test'} height={'400px'}*/}
+          {/*     id={'el3'}/>*/}
+          {/*<img style={{position: 'absolute', zIndex: 2}} src={imagefour} width={'400px'} alt={'test'} height={'400px'}*/}
+          {/*     id={'el4'}/>*/}
+          {/*<img style={{position: 'absolute', zIndex: 2}} src={this.state.src} width={'400px'} alt={'test'} height={'400px'}*/}
+          {/*     id={'el5'}*/}
+          {/*/>*/}
         </Col>
         <Col span={10}>
           <Collapse accordion className={'card-input'}>
-            <Panel header="Название секции" key="1">
+            <Panel header="Пол" key="1">
               <Col span={11} style={{margin: 6}}>
                 <Card
                  hoverable
@@ -76,7 +88,7 @@ class Constructor extends Component {
               </Col>
             </Panel>
   
-            <Panel header="Название секции" key="2">
+            <Panel header="Стена" key="2">
               <Col span={11} style={{margin: 6}}>
                 <Card
                  hoverable
