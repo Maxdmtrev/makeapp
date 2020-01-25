@@ -1,50 +1,32 @@
 import React, {Component} from 'react';
-import imagefive from '../../img/room/floor_base.png';
-import changeimg from '../../img/room/floor_1.png';
-import dataRoom from "../../dataRoom";
-import {Button, Card, Col, Collapse, Row} from 'antd';
+import { Card, Col, Collapse, Row} from 'antd';
+import {GetUrlAC} from '../../redux/creators';
+import {connect} from 'react-redux';
+
 
 const {Meta} = Card;
 const {Panel} = Collapse;
 
 class Constructor extends Component {
-  constructor (props) {
-    super (props);
-    this.state = {
 
-      src: imagefive,
-      data: dataRoom,
-      imageone:null,
-      imagetwo:null,
-      imagetree:null,
-      imagefour:null,
-      imagefive:null
-    };
-  }
- async componentDidMount () {
-    const response=await fetch("/slider")
-   const result=await response.json()
-this.setState({
-  imageone:result[0],
-  imagetwo:result[1],
-  imagetree:result[2],
-  imagefour:result[3],
-  imagefive:result[4]
-})
- }
+//  async componentDidMount () {
+//     const response=await fetch("/slider")
+//    const result=await response.json()
+// this.props.addUrlAC(result)
+//  }
 
   render () {
-    const {cardImage, cardImageOne, cardTitle, cardText} = this.props;
-        const {imageone, imagetwo, imagetree,imagefour,imagefive} = this.state;
+    const {cardImage,  cardTitle, cardText} = this.props;
+    console.log (this.props.cardData);
     return (
         <div>
       <Row>
         <Col span={14}>
-          {this.state.data ?
+          {this.props.cardData ?
             <div>
-          {this.state.data.src.map((elem, index) =>
+          {this.props.cardData.srcDef.map((elem, index) =>
             <img key={index} style={{position: 'absolute', zIndex: elem.zIndex}} src={elem.img} width={'400'} alt={'test'} height={'400px'}
-                 id={'el1'} />
+                  />
           )}
             </div>
           : '...Load'}
@@ -52,26 +34,19 @@ this.setState({
         <Col span={10}>
           <Collapse accordion className={'card-input'}>
             <Panel header="Пол" key="1">
-              <Col span={11} style={{margin: 6}}>
-                <Card
-                 hoverable
-                 style={{width: 215}}
-                 cover={<img alt="example" src={cardImage}/>}
-                >
-                  <Button id={'btn'} onClick={(e) => this.handleClick(e)}>Change img</Button>
-                  <Meta title={cardTitle} description={cardText}/>
-                </Card>
+              {this.props.cardData.srcSample.map((elem,index)=>
+              <Col key={index} span={11} style={{margin: 6}}>
+                 <Card
+                  onClick={(e) => console.log(e.target)}
+                  hoverable
+                  style={{width: 215}}
+                  cover={<img alt="example" src={elem.img}/>}
+                 >
+                   
+                   <Meta title={elem.title} description={elem.descript}/>
+                 </Card>
               </Col>
-              <Col span={11} style={{margin: 6}}>
-                <Card
-                 hoverable
-                 style={{width: 215}}
-                 cover={<img alt="example" src={cardImageOne}/>}
-                >
-                  <Button id={'btn'} onClick={(e) => this.handleClickOne(e)}>Change img</Button>
-                  <Meta title={cardTitle} description={cardText}/>
-                </Card>
-                              </Col>
+              )}
             </Panel>
               <Panel header="Стена" key="2">
               <Col span={11} style={{margin: 6}}>
@@ -93,26 +68,20 @@ this.setState({
                 </Card>    
               </Col>
             </Panel>
-            <Panel header="Название секции" key="3">
-              <Col span={11} style={{margin: 6}}>
-                <Card
-                 hoverable
-                 style={{width: 215}}
-                 cover={<img alt="example" src={cardImage}/>}
-                >
-                  <Meta title={cardTitle} description={cardText}/>
-                </Card>
-              </Col>
-              <Col span={11} style={{margin: 6}}>
-                <Card
-                 hoverable
-                 style={{width: 215}}
-                 cover={<img alt="example" src={cardImage}/>}
-                >
-                  <Meta title={cardTitle} description={cardText}/>
-                </Card>
-    
-              </Col>
+            <Panel header="Двери" key="3">
+              {this.props.cardData.srcDoor.map((elem,index)=>
+               <Col key={index} span={11} style={{margin: 6}}>
+                 <Card
+                  onClick={(e) => console.log(e.target)}
+                  hoverable
+                  style={{width: 215}}
+                  cover={<img alt="example" src={elem.img}/>}
+                 >
+       
+                   <Meta title={elem.title} description={elem.descript}/>
+                 </Card>
+               </Col>
+              )}
             </Panel>
           </Collapse>
         </Col>
@@ -121,4 +90,20 @@ this.setState({
   }
 }
 
-export default Constructor;
+
+
+function mapStateToProps (store) {
+  return {
+    src: store.src
+  };
+}
+
+function mapDispatchToProps (dispatch) {
+  return {
+    addUrlAC: (data) => {
+      dispatch (GetUrlAC (data));
+    }
+  };
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Constructor);

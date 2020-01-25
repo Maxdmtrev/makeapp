@@ -1,11 +1,12 @@
 import React from "react";
-import imgElegant from "../img/elegant-white.png";
-import imgClassic from "../img/exquisite-classic.png";
-import imgPeach from "../img/peach-dreams.png";
-import imgVivaro from "../img/vivaro-alpine.png";
-import imgCaramel from "../img/cold-caramel.png";
+import imgElegant from "../../img/preset/elegant-white.png";
+import imgClassic from "../../img/preset/exquisite-classic.png";
+import imgPeach from "../../img/preset/peach-dreams.png";
+import imgVivaro from "../../img/preset/vivaro-alpine.png";
+import imgCaramel from "../../img/preset/cold-caramel.png"
 
 import { Card, Button, CardImg, CardGroup, CardBody } from "reactstrap";
+
 const Slider = props => {
   return (
     <div className={"scroll-image"}>

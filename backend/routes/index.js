@@ -1,6 +1,5 @@
 const express = require ('express');
 const router = express.Router ();
-const Todo = require ('../models/todos');
 const User = require ('../models/users');
 const bcrypt = require ('bcrypt');
 const saltRounds = 10;
@@ -38,56 +37,56 @@ await  res.json (arr);
 });
 
 
-router.route ('/add')
- .get ((req, res) => {
-   res.send ('add');
- })
- .post (async (req, res) => {
-   const host = req.session.user._id;
-   const {name, status} = req.body;
-   try {
-     const todo = new Todo ({
-       name, status
-     });
-     let newTodo = await todo.save ();
-     const finderTodoName = await Todo.findOne ({name: name});
-     await User.findOneAndUpdate ({_id: host}, {$push: {list: finderTodoName._id}});
-     return res.json ({result: true, todo: newTodo});
-   } catch (e) {
-     return res.json ({result: false, error: e});
-   }
- });
+// router.route ('/add')
+//  .get ((req, res) => {
+//    res.send ('add');
+//  })
+//  .post (async (req, res) => {
+//    const host = req.session.user._id;
+//    const {name, status} = req.body;
+//    try {
+//      const todo = new Todo ({
+//        name, status
+//      });
+//      let newTodo = await todo.save ();
+//      const finderTodoName = await Todo.findOne ({name: name});
+//      await User.findOneAndUpdate ({_id: host}, {$push: {list: finderTodoName._id}});
+//      return res.json ({result: true, todo: newTodo});
+//    } catch (e) {
+//      return res.json ({result: false, error: e});
+//    }
+//  });
 
-router.route ('/edit')
- .get ((req, res) => {
-   res.send ('edit');
- })
- .put (async (req, res) => {
-   const {name, newName} = req.body;
-   if (req.session.user) {
-     await Todo.findOneAndUpdate ({name}, {name: newName});
-     const host = req.session.user._id;
-     const findUSer = await User.find ({_id: host}).populate ('list');
-     return res.json ({result: findUSer[0].list, status: true});
-     
-   }
-   else {
-     return res.json ({result: false, error: e});
-   }
- });
-router.route ('/delete').get ((req, res) => {
-  res.send ('delete');
-})
- .delete (async (req, res) => {
-   if (req.session.user) {
-     const {name} = req.body;
-     const userId = req.session.user._id;
-     let todo = await Todo.findOne ({name});
-     await User.updateOne ({_id: userId}, {$pull: {list: todo._id}});
-     let deleteTodo = await todo.deleteOne ({name});
-     return res.json (deleteTodo);
-   }
- });
+// router.route ('/edit')
+//  .get ((req, res) => {
+//    res.send ('edit');
+//  })
+//  .put (async (req, res) => {
+//    const {name, newName} = req.body;
+//    if (req.session.user) {
+//      await Todo.findOneAndUpdate ({name}, {name: newName});
+//      const host = req.session.user._id;
+//      const findUSer = await User.find ({_id: host}).populate ('list');
+//      return res.json ({result: findUSer[0].list, status: true});
+//
+//    }
+//    else {
+//      return res.json ({result: false, error: e});
+//    }
+//  });
+// router.route ('/delete').get ((req, res) => {
+//   res.send ('delete');
+// })
+//  .delete (async (req, res) => {
+//    if (req.session.user) {
+//      const {name} = req.body;
+//      const userId = req.session.user._id;
+//      let todo = await Todo.findOne ({name});
+//      await User.updateOne ({_id: userId}, {$pull: {list: todo._id}});
+//      let deleteTodo = await todo.deleteOne ({name});
+//      return res.json (deleteTodo);
+//    }
+//  });
 
 
 router.route ('/signIn')
