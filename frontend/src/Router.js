@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Route, Router} from 'react-router';
 import RegistrationForm from './components/users/RegForm';
 import Home from './components/home/Home';
-import Render from './components/render/Render';
+import Slider from './components/render/Slider';
 import NavConstructor from './components/construtor/NavConstructor';
 import Navigation from './components/users/Navigation';
 import Login from './components/users/LoginForm';
@@ -48,7 +48,7 @@ class Routers extends Component {
           <Route exact path="/" component={Home}/>
           <Route path='/login' component={Login}/>
           <Route path='/game' component={NavConstructor}/>
-          <Route path='/slider' component={Render}/>
+          <Route path='/slider' component={Slider}/>
           <Route path='/registration' component={RegistrationForm}/>
         </Content>
         <Footer >Контакты:
