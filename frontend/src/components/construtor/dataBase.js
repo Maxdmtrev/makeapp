@@ -51,6 +51,18 @@ import plint5 from "../../img/room/plinth/high_white.jpg";
 import plint5p from "../../img/room/plinth/high_white.png";
 import plint6 from "../../img/room/plinth/profil_doors_brown.jpg";
 import plint6p from "../../img/room/plinth/profil_doors_brown.png";
+import sill1 from "../../img/room/sill/black_wood.jpg";
+import sill1p from "../../img/room/sill/black_wood.png";
+import sill2 from "../../img/room/sill/dark_wood.jpg";
+import sill2p from "../../img/room/sill/dark_wood.png";
+import sill3 from "../../img/room/sill/ginger_wood.jpg";
+import sill3p from "../../img/room/sill/ginger_wood.png";
+import sill4 from "../../img/room/sill/light_wood.jpg";
+import sill4p from "../../img/room/sill/light_wood.png";
+import sill5 from "../../img/room/sill/middle_wood.jpg";
+import sill5p from "../../img/room/sill/middle_wood.png";
+import sill6 from "../../img/room/sill/plastic.jpg";
+import sill6p from "../../img/room/sill/plastic.png";
 
 export default {
   srcDef: [
@@ -145,6 +157,58 @@ export default {
       title: "",
       id: null,
       sampleImage: plint6p,
+      descript: ""
+    }
+  ],
+  sill: [
+    {
+      img: sill1,
+      zIndex: 8,
+      title: "",
+      id: null,
+      sampleImage: sill1p,
+      descript: ""
+    },
+
+    {
+      img: sill2,
+      zIndex: 8,
+      title: "",
+      id: null,
+      sampleImage: sill2p,
+      descript: ""
+    },
+    {
+      img: sill3,
+      zIndex: 8,
+      title: "",
+      id: null,
+      sampleImage: sill3p,
+      descript: ""
+    },
+
+    {
+      img: sill4,
+      zIndex: 8,
+      title: "",
+      id: null,
+      sampleImage: sill4p,
+      descript: ""
+    },
+    {
+      img: sill5,
+      zIndex: 8,
+      title: "",
+      id: null,
+      sampleImage: sill5p,
+      descript: ""
+    },
+    {
+      img: sill6,
+      zIndex: 8,
+      title: "",
+      id: null,
+      sampleImage: sill6p,
       descript: ""
     }
   ],
