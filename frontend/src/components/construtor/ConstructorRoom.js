@@ -8,10 +8,10 @@ import paint from '../../img/construct/paint.png';
 import floor from '../../img/room/floor_base.png';
 import door from '../../img/room/door/glanta-white.png';
 import plint from '../../img/room/plint/curved_white.png';
-import window from '../../img/room/plint/curved_white.png';
-import podium from '../../img/room/plint/curved_white.png';
-import lamp from '../../img/room/plint/curved_white.png';
-import energy from '../../img/room/plint/curved_white.png';
+import molding from '../../img/room/molding/molding_simple.png';
+import podium from '../../img/room/sill/light_wood.png';
+import lamp from '../../img/room/light/lightstar.png';
+import energy from '../../img/room/electric/legrand.png';
 
 const {Meta} = Card;
 const {Panel} = Collapse;
@@ -29,7 +29,7 @@ class ConstructorRoom extends Component {
       floor: floor,
       door: door,
       plint: plint,
-      window: window,
+      molding: molding,
       podium: podium,
       lamp: lamp,
       energy: energy,
@@ -90,14 +90,14 @@ class ConstructorRoom extends Component {
           />
           <img key={'7'}
                style={{position: 'absolute', zIndex: '8',transform:`${this.state.invert}`  }}
-               src={this.state.window}
+               src={this.state.molding}
                width={this.state.width}
                height={this.state.height}
                alt={'test'}
   
           />
           <img key={'8'}
-               style={{position: 'absolute', zIndex: '8' ,transform:`${this.state.invert}` }}
+               style={{position: 'absolute', zIndex: '10' ,transform:`${this.state.invert}` }}
                src={this.state.podium}
                width={this.state.width}
                height={this.state.height}
@@ -107,6 +107,14 @@ class ConstructorRoom extends Component {
           <img key={'9'}
                style={{position: 'absolute', zIndex: '8' ,transform:`${this.state.invert}` }}
                src={this.state.lamp}
+               width={this.state.width}
+               height={this.state.height}
+               alt={'test'}
+  
+          />
+          <img key={'10'}
+               style={{position: 'absolute', zIndex: '5' ,transform:`${this.state.invert}` }}
+               src={this.state.energy}
                width={this.state.width}
                height={this.state.height}
                alt={'test'}
@@ -186,11 +194,11 @@ class ConstructorRoom extends Component {
                </Col>
               )}
             </Panel>
-            <Panel header="Окна" key="5">
-              {this.props.storage.srcPlint.map((elem,index)=>
+            <Panel header="Галтели" key="5">
+              {this.props.storage.molding.map((elem,index)=>
                <Col key={index} span={11} style={{margin: 6}}>
                  <Card
-                  onClick={() => this.setState ({plint: elem.img})}
+                  onClick={() => this.setState ({molding: elem.img})}
                   hoverable
                   style={{width: 215}}
                   cover={<img alt="example" src={elem.sampleImage}/>}
@@ -201,10 +209,10 @@ class ConstructorRoom extends Component {
               )}
             </Panel>
             <Panel header="Подокойник" key="6">
-              {this.props.storage.srcPlint.map((elem,index)=>
+              {this.props.storage.sill.map((elem,index)=>
                <Col key={index} span={11} style={{margin: 6}}>
                  <Card
-                  onClick={() => this.setState ({plint: elem.img})}
+                  onClick={() => this.setState ({podium: elem.img})}
                   hoverable
                   style={{width: 215}}
                   cover={<img alt="example" src={elem.sampleImage}/>}
@@ -215,10 +223,10 @@ class ConstructorRoom extends Component {
               )}
             </Panel>
             <Panel header="Светильник" key="7">
-              {this.props.storage.srcPlint.map((elem,index)=>
+              {this.props.storage.light.map((elem,index)=>
                <Col key={index} span={11} style={{margin: 6}}>
                  <Card
-                  onClick={() => this.setState ({plint: elem.img})}
+                  onClick={() => this.setState ({lamp: elem.img})}
                   hoverable
                   style={{width: 215}}
                   cover={<img alt="example" src={elem.sampleImage}/>}
@@ -229,10 +237,10 @@ class ConstructorRoom extends Component {
               )}
             </Panel>
             <Panel header="Электрика" key="8">
-              {this.props.storage.srcPlint.map((elem,index)=>
+              {this.props.storage.elecric.map((elem,index)=>
                <Col key={index} span={11} style={{margin: 6}}>
                  <Card
-                  onClick={() => this.setState ({plint: elem.img})}
+                  onClick={() => this.setState ({energy: elem.img})}
                   hoverable
                   style={{width: 215}}
                   cover={<img alt="example" src={elem.sampleImage}/>}
