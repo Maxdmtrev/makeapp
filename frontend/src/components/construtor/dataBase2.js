@@ -1,31 +1,28 @@
 import image from "../../img/bath/kerama_wall/kerama_belkanto.png";
-import image1 from "../../img/bath/kerama_floor/equipe_micro_revival.jpg";
-import image2 from "../../img/bath/kerama_floor/kerama_fregat_beige.jpg";
-import image3 from "../../img/bath/kerama_floor/kerama_fregat_dark.jpg";
-import image4 from "../../img/bath/kerama_floor/kerama_prostone_dark.jpg";
-import image5 from "../../img/bath/kerama_floor/kerama_prostone_light.jpg";
-import image6 from "../../img/bath/kerama_floor/prostone_beige_light.jpg";
-import image14 from "../../img/room/door/dg-nyuta-white.jpg";
-import image15 from "../../img/room/door/dorren-white.jpg";
-import image16 from "../../img/room/door/glanta-grey.jpg";
-import image17 from "../../img/room/door/glanta-light-grey.jpg";
-import image18 from "../../img/room/door/glanta-white.jpg";
-import image19 from "../../img/room/door/profildoors_1vg.jpg";
-import image20 from "../../img/room/door/profildoors_1z.jpg";
-import image21 from "../../img/room/door/profildoors_u100_antracite.jpg";
-import image22 from "../../img/room/door/profildoors_u100_black.jpg";
+import floor1 from "../../img/bath/kerama_floor/equipe_micro_revival.jpg";
+import floor2 from "../../img/bath/kerama_floor/kerama_fregat_beige.jpg";
+import floor3 from "../../img/bath/kerama_floor/kerama_fregat_dark.jpg";
+import floor4 from "../../img/bath/kerama_floor/kerama_prostone_dark.jpg";
+import floor5 from "../../img/bath/kerama_floor/kerama_prostone_light.jpg";
+import floor6 from "../../img/bath/kerama_floor/prostone_beige_light.jpg";
+import floor1p from '../../img/bath/kerama_floor/equipe_micro_revival.png';
+import floor2p from '../../img/bath/kerama_floor/kerama_fregat_beige.png';
+import floor3p from '../../img/bath/kerama_floor/kerama_fregat_dark.png';
+import floor4p from '../../img/bath/kerama_floor/kerama_prostone_dark.png';
+import floor5p from '../../img/bath/kerama_floor/kerama_prostone_light.png';
+import floor6p from '../../img/bath/kerama_floor/prostone_beige_light.png';
 import bath1 from "../../img/bath/bath/cersanit_octavia.jpg";
 import bath1p from "../../img/bath/bath/cersanit_octavia.png";
 import bath2 from "../../img/bath/bath/roca_contesa.jpg";
 import bath2p from "../../img/bath/bath/roca_contesa.png";
 import bath3 from "../../img/bath/bath/roca_continental.jpg";
 import bath3p from "../../img/bath/bath/roca_continental.png";
-import bath4 from "../../img/bath/bath/roca_continental.jpg";
-import bath4p from "../../img/bath/bath/roca_continental.png";
+import bath4 from "../../img/bath/bath/roca_princess.jpg";
+import bath4p from "../../img/bath/bath/roca_princess.png";
 import locker1 from "../../img/bath/locker/locker_white.jpg";
 import locker1p from "../../img/bath/locker/locker_white.png";
-import locker2 from "../../img/bath/locker/locker_white.jpg";
-import locker2p from "../../img/bath/locker/locker_white.png";
+import locker2 from "../../img/bath/locker/locker_wood.jpg";
+import locker2p from "../../img/bath/locker/locker_wood.png";
 import toilet1 from "../../img/bath/toilet/cersanit_parva.jpg";
 import toilet1p from "../../img/bath/toilet/cersanit_parva.png";
 import toilet2 from "../../img/bath/toilet/roca_gap.jpg";
@@ -40,18 +37,18 @@ import shower3 from "../../img/bath/shower/grohe_euphoria.jpg";
 import shower3p from "../../img/bath/shower/grohe_euphoria.png";
 import shower4 from "../../img/bath/shower/lemark_tropic.jpg";
 import shower4p from "../../img/bath/shower/lemark_tropic.png";
-import keramaWall1 from "../..//img/bath/kerama_wall/kerama_belkanto_fregat_beige.jpg";
-import keramaWall1p from "../..//img/bath/kerama_wall/kerama_belkanto_fregat_beige.png";
-import keramaWall2 from "../..//img/bath/kerama_wall/kerama_belkanto_fregat.jpg";
-import keramaWall2p from "../..//img/bath/kerama_wall/kerama_belkanto_fregat.png";
-import keramaWall3 from "../..//img/bath/kerama_wall/kerama_belkanto.jpg";
-import keramaWall3p from "../..//img/bath/kerama_wall/kerama_belkanto.png";
-import keramaWall4 from "../..//img/bath/kerama_wall/kerama_kaleidoskop_white_beige.jpg";
-import keramaWall4p from "../..//img/bath/kerama_wall/kerama_kaleidoskop_white_beige.png";
-import keramaWall5 from "../..//img/bath/kerama_wall/kerama_kaleidoskop_white_pink.jpg";
-import keramaWall5p from "../..//img/bath/kerama_wall/kerama_kaleidoskop_white_pink.png";
-import keramaWall6 from "../..//img/bath/kerama_wall/kerama_kaleidoskop_white.jpg";
-import keramaWall6p from "../..//img/bath/kerama_wall/kerama_kaleidoskop_white.png";
+import keramaWall1 from "../../img/bath/kerama_wall/kerama_belkanto_fregat_beige.jpg";
+import keramaWall1p from "../../img/bath/kerama_wall/kerama_belkanto_fregat_beige.png";
+import keramaWall2 from "../../img/bath/kerama_wall/kerama_belkanto_fregat.jpg";
+import keramaWall2p from "../../img/bath/kerama_wall/kerama_belkanto_fregat.png";
+import keramaWall3 from "../../img/bath/kerama_wall/kerama_belkanto.jpg";
+import keramaWall3p from "../../img/bath/kerama_wall/kerama_belkanto.png";
+import keramaWall4 from "../../img/bath/kerama_wall/kerama_kaleidoskop_white_beige.jpg";
+import keramaWall4p from "../../img/bath/kerama_wall/kerama_kaleidoskop_white_beige.png";
+import keramaWall5 from "../../img/bath/kerama_wall/kerama_kaleidoskop_white_pink.jpg";
+import keramaWall5p from "../../img/bath/kerama_wall/kerama_kaleidoskop_white_pink.png";
+import keramaWall6 from "../../img/bath/kerama_wall/kerama_kaleidoskop_white.jpg";
+import keramaWall6p from "../../img/bath/kerama_wall/kerama_kaleidoskop_white.png";
 
 export default {
   shower: [
@@ -227,130 +224,57 @@ export default {
       descript: ""
     }
   ],
-  srcSample: [
+  floor: [
     {
-      img: image1,
+      img: floor1p,
       zIndex: 1,
       title: "12",
       id: null,
-      sampleImage: null,
+      sampleImage: floor1,
       descript: ""
     },
     {
-      img: image2,
+      img: floor2p,
       zIndex: 2,
       title: "22",
       id: null,
-      sampleImage: null,
+      sampleImage: floor2,
       descript: ""
     },
     {
-      img: image3,
+      img: floor3p,
       zIndex: 1,
       title: "",
       id: null,
-      sampleImage: null,
+      sampleImage: floor3,
       descript: ""
     },
     {
-      img: image4,
+      img: floor4p,
       zIndex: 2,
       title: "",
       id: null,
-      sampleImage: null,
+      sampleImage: floor4,
       descript: ""
     },
     {
-      img: image5,
+      img: floor5p,
       zIndex: 2,
       title: "",
       id: null,
-      sampleImage: null,
+      sampleImage: floor5,
       descript: ""
     },
     {
-      img: image6,
+      img: floor6p,
       zIndex: 2,
       title: "",
       id: null,
-      sampleImage: null,
+      sampleImage: floor6,
       descript: ""
     }
   ],
-  srcDoor: [
-    {
-      img: image14,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image15,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image16,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image17,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image18,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image19,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image20,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image21,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image22,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    }
-  ],
+
   bath: [
     {
       img: bath1p,
