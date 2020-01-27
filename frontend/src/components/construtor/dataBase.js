@@ -63,6 +63,26 @@ import sill5 from "../../img/room/sill/middle_wood.jpg";
 import sill5p from "../../img/room/sill/middle_wood.png";
 import sill6 from "../../img/room/sill/plastic.jpg";
 import sill6p from "../../img/room/sill/plastic.png";
+import light1 from "../../img/room/light/lightstar_rullo_black.jpg";
+import light1p from "../../img/room/light/lightstar_rullo_black.png";
+import light2 from "../../img/room/light/lightstar_rullo.jpg";
+import light2p from "../../img/room/light/lightstar_rullo.png";
+import light3 from "../../img/room/light/lightstar_singo.jpg";
+import light3p from "../../img/room/light/lightstar_singo.png";
+import light4 from "../../img/room/light/lightstar_unitario_black_tablet.jpg";
+import light4p from "../../img/room/light/lightstar_unitario_black_tablet.png";
+import light5 from "../../img/room/light/lightstar.jpg";
+import light5p from "../../img/room/light/lightstar.png";
+import light6 from "../../img/room/light/melody.jpg";
+import light6p from "../../img/room/light/melody.png";
+import molding1 from "../../img/room/molding/molding_simple.jpg";
+import molding1p from "../../img/room/molding/molding_simple.png";
+import molding2 from "../../img/room/molding/molding_small.jpg";
+import molding2p from "../../img/room/molding/molding_small.png";
+import elecric1 from "../../img/room/electric/legrand.jpg";
+import elecric1p from "../../img/room/electric/legrand.png";
+import elecric2 from "../../img/room/electric/legrand_black.jpg";
+import elecric2p from "../../img/room/electric/legrand_black.png";
 
 
 export default {
@@ -173,6 +193,96 @@ export default {
       title: "",
       id: null,
       sampleImage: sill6p,
+      descript: ""
+    }
+  ],
+  light: [
+    {
+      img: light1,
+      zIndex: 9,
+      title: "",
+      id: null,
+      sampleImage: light1p,
+      descript: ""
+    },
+
+    {
+      img: light2,
+      zIndex: 9,
+      title: "",
+      id: null,
+      sampleImage: light2p,
+      descript: ""
+    },
+    {
+      img: light3,
+      zIndex: 9,
+      title: "",
+      id: null,
+      sampleImage: light3p,
+      descript: ""
+    },
+
+    {
+      img: light4,
+      zIndex: 9,
+      title: "",
+      id: null,
+      sampleImage: light4p,
+      descript: ""
+    },
+    {
+      img: light5,
+      zIndex: 9,
+      title: "",
+      id: null,
+      sampleImage: light5p,
+      descript: ""
+    },
+    {
+      img: light6,
+      zIndex: 9,
+      title: "",
+      id: null,
+      sampleImage: light6p,
+      descript: ""
+    }
+  ],
+  molding: [
+    {
+      img: molding1,
+      zIndex: 9,
+      title: "",
+      id: null,
+      sampleImage: molding1p,
+      descript: ""
+    },
+
+    {
+      img: molding2,
+      zIndex: 9,
+      title: "",
+      id: null,
+      sampleImage: molding2p,
+      descript: ""
+    }
+  ],
+  elecric: [
+    {
+      img: elecric1,
+      zIndex: 9,
+      title: "",
+      id: null,
+      sampleImage: elecric1p,
+      descript: ""
+    },
+
+    {
+      img: elecric2,
+      zIndex: 9,
+      title: "",
+      id: null,
+      sampleImage: elecric2p,
       descript: ""
     }
   ],
