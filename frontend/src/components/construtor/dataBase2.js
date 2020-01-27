@@ -19,20 +19,19 @@ import image22 from '../../img/room/door/profildoors_u100_black.jpg';
 
 
 export default {
-  srcDef: [
-    {
-      img: image, zIndex: 1, title: '', id: null, sampleImage: null, descript: ''
-    }, {
-      img: image, zIndex: 2, title: '', id: null, sampleImage: null, descript: ''
-    }, {
-      img: image, zIndex: 1, title: '', id: null, sampleImage: null, descript: ''
-    }, {
-      img: image, zIndex: 2, title: '', id: null, sampleImage: null, descript: ''
-    }, {
-      img: image, zIndex: 2, title: '', id: null, sampleImage: null, descript: ''
-    }
-  ]
-  ,
+  // srcDef: [
+  //   {
+  //     img: image, zIndex: 1, title: '', id: null, sampleImage: null, descript: ''
+  //   }, {
+  //     img: image, zIndex: 2, title: '', id: null, sampleImage: null, descript: ''
+  //   }, {
+  //     img: image, zIndex: 1, title: '', id: null, sampleImage: null, descript: ''
+  //   }, {
+  //     img: image, zIndex: 2, title: '', id: null, sampleImage: null, descript: ''
+  //   }, {
+  //     img: image, zIndex: 2, title: '', id: null, sampleImage: null, descript: ''
+  //   }
+  // ],
   srcSample:[
     {
       img: image1, zIndex: 1, title: '12', id: null, sampleImage: null, descript: ''

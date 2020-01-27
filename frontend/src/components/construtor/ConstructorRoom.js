@@ -15,45 +15,39 @@ class ConstructorRoom extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      width: '400px',
-      height: '400px',
+      width: '800px',
+      height: '500px',
       wall: wall_base,
       wall1: wall_default,
       paint: paint,
       changeColor: 'black',
       floor: floor,
-      floorChange: floor1
+      floorChange: floor1,
+      invert: 'scale(-1, 1)'
     };
   }
 
-  onClick = () => {
-    this.setState({
-      changeColor: 'red'
-    })
-  }
-
   render () {
-    const {cardImage, cardTitle, cardText} = this.props;
     return (
       <div>
       <Row>
         <Col span={14}>
           <img key={'1'}
-               style={{position: 'absolute', zIndex: '2'}}
+               style={{position: 'absolute', zIndex: '2', transform: `${this.state.invert}`}}
                src={this.state.wall}
                width={this.state.width}
                height={this.state.height}
                alt={'test'}
           />
           <img key={'2'}
-               style={{position: 'absolute', zIndex: '3'}}
+               style={{position: 'absolute', zIndex: '3', transform: `${this.state.invert}`}}
                src={this.state.wall1}
                width={this.state.width}
                height={this.state.height}
                alt={'test'}
           />
           <img key={'3'}
-               style={{position: 'absolute', zIndex: '4'}}
+               style={{position: 'absolute', zIndex: '4', opacity: '0.5',transform: `${this.state.invert}`, background: `${this.state.changeColor}`}}
                src={this.state.paint}
                width={this.state.width}
                height={this.state.height}
@@ -61,7 +55,7 @@ class ConstructorRoom extends Component {
 
           />
           <img key={'4'}
-               style={{position: 'absolute', zIndex: '4', opacity: '0.5', background: `${this.state.changeColor}`}}
+               style={{position: 'absolute', zIndex: '4', transform: `${this.state.invert}`}}
                src={this.state.floor}
                width={this.state.width}
                height={this.state.height}
@@ -72,11 +66,11 @@ class ConstructorRoom extends Component {
             <div>
           {this.props.storage.srcDef.map((elem, index) =>
             <img key={index}
-                 style={{position: 'absolute', zIndex: elem.zIndex}}
+                 style={{position: 'absolute', zIndex: elem.zIndex, transform: `${this.state.invert}`}}
                  src={elem.img}
-                 width={'400'}
+                 width={this.state.width}
                  alt={'test'}
-                 height={'400px'}
+                 height={this.state.height}
                   />
           )}
             </div>
