@@ -16,8 +16,10 @@ class NavConstructor extends Component {
   
   render () {
     return (
-        <Tabs defaultActiveKey="1" style={{minHeight: 500, minWidth: 600}}>
+     <>
+        <Tabs defaultActiveKey="1" style={{minHeight: 800, minWidth: 600}}>
            <TabPane tab="Комната" key="1">
+           
              <ConstructorRoom cardData={''} cardPrice={''}/>
            </TabPane>
            <TabPane tab="Санузел" key="2">
@@ -27,6 +29,8 @@ class NavConstructor extends Component {
              <ConstructorKitchen cardData={''} cardPrice={''}/>
            </TabPane>
         </Tabs>
+ 
+        </>
     );
   }
 }
