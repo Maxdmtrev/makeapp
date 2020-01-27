@@ -52,50 +52,14 @@ import plint5p from "../../img/room/plinth/high_white.png";
 import plint6 from "../../img/room/plinth/profil_doors_brown.jpg";
 import plint6p from "../../img/room/plinth/profil_doors_brown.png";
 
+
 export default {
   srcDef: [
-    {
-      img: image222,
-      zIndex: 5,
-      title: "",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    // { img: image3, zIndex: 6, title: '', id: null, sampleImage: null, descript: '' },
-    {
-      img: image444,
-      zIndex: 7,
-      title: "",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image233,
-      zIndex: 8,
-      title: "",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image244,
-      zIndex: 9,
-      title: "",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      img: image255,
-      zIndex: 9,
-      title: "",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    }
-  ],
+    { img: image222, zIndex: 5, title: '', id: null, sampleImage: null, descript: '' },
+    { img: image444, zIndex: 7, title: '', id: null, sampleImage: null, descript: '' },
+    { img: image233, zIndex: 8, title: '', id: null, sampleImage: null, descript: '' },
+    { img: image255, zIndex: 9, title: '', id: null, sampleImage: null, descript: '' },
+],
   plint: [
     {
       img: plint1,
@@ -249,6 +213,7 @@ export default {
       descript: ""
     },
     {
+
       sampleImage: image15,
       zIndex: 1,
       title: "12",
