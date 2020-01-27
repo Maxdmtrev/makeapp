@@ -21,8 +21,7 @@ class ConstructorRoom extends Component {
     super (props);
     this.state = {
       width: '100%',
-  
-      wall: wall_base,
+        wall: wall_base,
       wall1: wall_default,
       paint: paint,
       changeColor: 'black',
@@ -33,7 +32,7 @@ class ConstructorRoom extends Component {
       podium: podium,
       lamp: lamp,
       energy: energy,
-      invert: "scale(-1,1"
+      invert: "scale(-1,1)"
     }
   }
 

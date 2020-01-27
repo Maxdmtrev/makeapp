@@ -92,69 +92,69 @@ export default {
     },
   ], srcPlint: [
     {
-      sampleImage: plint1, zIndex: 8, title: '', id: null, img: plint1p, descript: ''
+      sampleImage: plint1, zIndex: 8, title: 'Рельефный плинтус 100мм', id: null, img: plint1p, descript: 'Древесно-волокнистый плинтус под покраску Aberhof'
     }, {
-      sampleImage: plint2, zIndex: 8, title: '', id: null, img: plint2p, descript: ''
+      sampleImage: plint2, zIndex: 8, title: 'В цвет стен', id: null, img: plint2p, descript: 'Древесно-волокнистый плинтус Aberhof высотой 60мм, окрашенный в цвет стен'
     }, {
-      sampleImage: plint3, zIndex: 8, title: '', id: null, img: plint3p, descript: ''
+      sampleImage: plint3, zIndex: 8, title: 'Плоский плинтус 60мм', id: null, img: plint3p, descript: 'Древесно-волокнистый плинтус под покраску'
     }, {
-      sampleImage: plint4, zIndex: 8, title: '', id: null, img: plint4p, descript: ''
+      sampleImage: plint4, zIndex: 8, title: 'Плоский плинтус 100мм', id: null, img: plint4p, descript: 'Древесно-волокнистый плинтус под покраску Aberhof'
     }, {
-      sampleImage: plint5, zIndex: 8, title: '', id: null, img: plint5p, descript: ''
+      sampleImage: plint5, zIndex: 8, title: 'Плоский плинтус 120мм', id: null, img: plint5p, descript: 'Древесно-волокнистый плинтус под покраску'
     }, {
-      sampleImage: plint6, zIndex: 8, title: '', id: null, img: plint6p, descript: ''
+      sampleImage: plint6, zIndex: 8, title: 'Плоский плинтус под дерево 80мм', id: null, img: plint6p, descript: 'Плинтус из эко-шпона ProfilDoors'
     }
   ], sill: [
     {
-      img: sill1p, zIndex: 8, title: '', id: null, sampleImage: sill1, descript: ''
+      img: sill1p, zIndex: 8, title: 'Деревянный, черный', id: null, sampleImage: sill1, descript: 'Шлифованный, обработанный масловоском OSMO Черное'
     },
     
     {
-      img: sill2p, zIndex: 8, title: '', id: null, sampleImage: sill2, descript: ''
+      img: sill2p, zIndex: 8, title: 'Деревянный, темный', id: null, sampleImage: sill2, descript: 'Шлифованный, обработанный масловоском OSMO Венге'
     }, {
-      img: sill3p, zIndex: 8, title: '', id: null, sampleImage: sill3, descript: ''
+      img: sill3p, zIndex: 8, title: 'Деревянный, орех', id: null, sampleImage: sill3, descript: 'Шлифованный, обработанный масловоском OSMO Орех'
     },
     
     {
-      img: sill4p, zIndex: 8, title: '', id: null, sampleImage: sill4, descript: ''
+      img: sill4p, zIndex: 8, title: 'Деревянный, светлый', id: null, sampleImage: sill4, descript: 'Шлифованный, обработанный масловоском OSMO Бук Дымчатый'
     }, {
-      img: sill5p, zIndex: 8, title: '', id: null, sampleImage: sill5, descript: ''
+      img: sill5p, zIndex: 8, title: 'Деревянный, полуночный', id: null, sampleImage: sill5, descript: 'Шлифованный, обработанный масловоском OSMO Янтарь'
     }, {
-      img: sill6p, zIndex: 8, title: '', id: null, sampleImage: sill6, descript: ''
+      img: sill6p, zIndex: 8, title: 'Пластиковый', id: null, sampleImage: sill6, descript: 'Стандартный подоконник ПВХ, белый'
     }
   ], light: [
     {
-      img: light1p, zIndex: 9, title: '', id: null, sampleImage: light1, descript: ''
+      img: light1p, zIndex: 9, title: 'Lightstar Rullo Чёрный', id: null, sampleImage: light1, descript: 'Точечные светильники. Диаметр 6см'
     },
     
     {
-      img: light2p, zIndex: 9, title: '', id: null, sampleImage: light2, descript: ''
+      img: light2p, zIndex: 9, title: 'Lightstar Rullo', id: null, sampleImage: light2, descript: 'Точечные светильники. Диаметр 6см'
     }, {
-      img: light3p, zIndex: 9, title: '', id: null, sampleImage: light3, descript: ''
+      img: light3p, zIndex: 9, title: 'Lightstar Singo', id: null, sampleImage: light3, descript: 'Lightstar Unitario Чёрный / Tablet'
     },
     
     {
-      img: light4p, zIndex: 9, title: '', id: null, sampleImage: light4, descript: ''
+      img: light4p, zIndex: 9, title: 'Lightstar Unitario Чёрный / Tablet', id: null, sampleImage: light4, descript: 'Люстры LED и точечные светильники'
     }, {
-      img: light5p, zIndex: 9, title: '', id: null, sampleImage: light5, descript: ''
+      img: light5p, zIndex: 9, title: 'Lightstar Tablet', id: null, sampleImage: light5, descript: 'Точечные светильники. Диаметр 11см'
     }, {
-      img: light6p, zIndex: 9, title: '', id: null, sampleImage: light6, descript: ''
+      img: light6p, zIndex: 9, title: 'IKEA Melody/Ваши люстры', id: null, sampleImage: light6, descript: 'Стандартный светильник или установка ваших люстр'
     }
   ], molding: [
     {
-      img: molding1p, zIndex: 9, title: '', id: null, sampleImage: molding1, descript: ''
+      img: molding1p, zIndex: 9, title: 'Резная галтель', id: null, sampleImage: molding1, descript: 'ПВХ галтель высотой 30мм'
     },
     
     {
-      img: molding2p, zIndex: 9, title: '', id: null, sampleImage: molding2, descript: ''
+      img: molding2p, zIndex: 9, title: 'Незаметная галтель', id: null, sampleImage: molding2, descript: 'Стандартный элемент натяжного потолка'
     }
   ], elecric: [
     {
-      img: elecric1p, zIndex: 9, title: '', id: null, sampleImage: elecric1, descript: ''
+      img: elecric1p, zIndex: 9, title: 'Legrand Etika (Франция)', id: null, sampleImage: elecric1, descript: ''
     },
     
     {
-      img: elecric2p, zIndex: 9, title: '', id: null, sampleImage: elecric2, descript: ''
+      img: elecric2p, zIndex: 9, title: 'Legrand Etika Black (Франция)', id: null, sampleImage: elecric2, descript: ''
       
     }
   ], colorWall: [
@@ -167,44 +167,44 @@ export default {
   
   srcSample: [
     {
-      sampleImage: image5, zIndex: 1, title: 'Дуб Светлый', id: null, img: image5p, descript: 'Quick step'
+      sampleImage: image5, zIndex: 1, title: 'Доска темной вишни лакированная', id: null, img: image5p, descript: 'Quick-Step Perspective UF865. Размеры: 138х15,6х0,95см. Класс 32. Влагостойкий. 4 V-образные фаски.'
     }, {
-      sampleImage: image6, zIndex: 2, title: '22', id: null, img: image6p, descript: ''
+      sampleImage: image6, zIndex: 2, title: 'Шоколад темный', id: null, img: image6p, descript: 'Quick-Step Clixfloor Plus CXP 088 Темный Шоколад. Размеры: 120х19х0,8см. Класс 32. 4-х сторонние фаски'
     }, {
-      sampleImage: image7, zIndex: 1, title: '', id: null, img: image7p, descript: ''
+      sampleImage: image7, zIndex: 1, title: 'Дуб бордо', id: null, img: image7p, descript: 'Quick-Step Impressive IM1995. Размеры: 138х19х0,8см. Класс 32. Влагостойкий. 4 V-образные фаски'
     }, {
-      sampleImage: image8, zIndex: 2, title: '', id: null, img: image8p, descript: ''
+      sampleImage: image8, zIndex: 2, title: 'Дуб светлый', id: null, img: image8p, descript: 'Quick-Step Impressive IM1847. Размеры: 138х19х0,8см. Класс 32. Влагостойкий. 4 V-образные фаски'
     }, {
-      sampleImage: image9, zIndex: 2, title: '', id: null, img: image9p, descript: ''
+      sampleImage: image9, zIndex: 2, title: 'Доска дуба фантазийного светло-серого', id: null, img: image9p, descript: 'Quick-Step Impressive IM3560. Размеры: 138х19х0,8см. Класс 32. Влагостойкий. 4 V-образные фаски'
     }, {
-      sampleImage: image10, zIndex: 2, title: '', id: null, img: image10p, descript: ''
+      sampleImage: image10, zIndex: 2, title: 'Дуб горный коричневый', id: null, img: image10p, descript: 'Quick-Step Classic CLM4091. Дуб горный коричневый. Размеры: 120х19х0,8см. Класс 32. Микрофаски'
     }, {
-      sampleImage: image11, zIndex: 2, title: '', id: null, img: image11p, descript: ''
+      sampleImage: image11, zIndex: 2, title: 'Доска белого дуба лакированная', id: null, img: image11p, descript: 'Quick-Step Impressive IM3105. Размеры: 138х19х0,8см. Класс 32. Влагостойкий. 4 V-образные фаски'
     }, {
-      sampleImage: image12, zIndex: 2, title: '', id: null, img: image12p, descript: ''
+      sampleImage: image12, zIndex: 2, title: 'Клен натуральный', id: null, img: image12p, descript: 'Quick-Step Perspective UF862. Размеры: 138х15,6х0,95см. Класс 32. Влагостойкий. 4 V-образные фаски'
     }
   ], srcDoor: [
     {
-      sampleImage: image13, zIndex: 1, title: '', id: null, img: image13p, descript: ''
+      sampleImage: image13, zIndex: 1, title: 'ВФД Ньюта ДГ, графит', id: null, img: image13p, descript: 'Плоское глухое полотно темно-серого цвета'
     }, {
-      sampleImage: image14, zIndex: 1, title: '12', id: null, img: image14p, descript: ''
+      sampleImage: image14, zIndex: 1, title: 'ВФД Ньюта ДГ, белая', id: null, img: image14p, descript: 'Плоское глухое полотно белого цвета'
     }, {
       
-      sampleImage: image15, zIndex: 1, title: '12', id: null, img: image15p, descript: ''
+      sampleImage: image15, zIndex: 1, title: 'ВФД Доррен, белая', id: null, img: image15p, descript: 'Полотно с филенками белого цвета'
     }, {
-      sampleImage: image16, zIndex: 1, title: '12', id: null, img: image16p, descript: ''
+      sampleImage: image16, zIndex: 1, title: 'ВФД Гланта, темно-серая', id: null, img: image16p, descript: 'Полотно с филенками темно-серого цвета'
     }, {
-      sampleImage: image17, zIndex: 1, title: '12', id: null, img: image17p, descript: ''
+      sampleImage: image17, zIndex: 1, title: 'ВФД Гланта, светло-серая', id: null, img: image17p, descript: 'Полотно с филенками светло-серого цвета'
     }, {
-      sampleImage: image18, zIndex: 1, title: '12', id: null, img: image18p, descript: ''
+      sampleImage: image18, zIndex: 1, title: 'ВФД Гланта, белая', id: null, img: image18p, descript: 'Полотно с филенками белого цвета'
     }, {
-      sampleImage: image19, zIndex: 1, title: '12', id: null, img: image19p, descript: ''
+      sampleImage: image19, zIndex: 1, title: 'Profil Doors 1VG (Россия)', id: null, img: image19p, descript: 'Черная матовая дверь. Клееный массив хвойных пород дерева и MDF'
     }, {
-      sampleImage: image20, zIndex: 1, title: '12', id: null, img: image20p, descript: ''
+      sampleImage: image20, zIndex: 1, title: 'Profil Doors 1Z (Россия)', id: null, img: image20p, descript: 'Клееный массив хвойных пород дерева и MDF. Кромка полотна двери изготовлена из алюминия'
     }, {
-      sampleImage: image21, zIndex: 1, title: '12', id: null, img: image21p, descript: ''
+      sampleImage: image21, zIndex: 1, title: 'Profil Doors U100 Антрацит (Россия)', id: null, img: image21p, descript: 'Глухая МДФ дверь с филенками'
     }, {
-      sampleImage: image22, zIndex: 1, title: '12', id: null, img: image22p, descript: ''
+      sampleImage: image22, zIndex: 1, title: 'Profil Doors U100 Чёрный (Россия)', id: null, img: image22p, descript: 'Глухая МДФ дверь с филенками'
     }
   ]
 };
