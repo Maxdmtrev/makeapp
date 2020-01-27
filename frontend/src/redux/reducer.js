@@ -1,19 +1,13 @@
 import {ADD_USER, GET_URL, LOGIN_USER, LOGOUT_USER} from './actions';
+import dataBase from "../components/construtor/dataBase";
+import dataBase2 from "../components/construtor/dataBase2";
+import dataBase3 from "../components/construtor/dataBase3";
 
 const initialState = {
-  todoData: null, done: null, isLogin: false, username: null, src: [
-    {
-      img: null, zIndex: 1, title: '', id: null, sampleImage: null, descript: ''
-    }, {
-      img: null, zIndex: 2, title: '', id: null, sampleImage: null, descript: ''
-    }, {
-      img: null, zIndex: 1, title: '', id: null, sampleImage: null, descript: ''
-    }, {
-      img: null, zIndex: 2, title: '', id: null, sampleImage: null, descript: ''
-    }, {
-      img: null, zIndex: 2, title: '', id: null, sampleImage: null, descript: ''
-    }
-  ]
+  constStore: dataBase,
+  bathStore: dataBase2,
+  kitchenStore: dataBase3
+
 };
 
 export default function (oldState = initialState, action) {
