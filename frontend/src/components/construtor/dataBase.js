@@ -130,37 +130,37 @@ export default {
   ],
   plint: [
     {
-      img: plint1,
+      img: plint1p,
       zIndex: 8,
       title: "",
       id: null,
-      sampleImage: plint1p,
+      sampleImage: plint1,
       descript: ""
     },
 
     {
-      img: plint2,
+      img: plint2p,
       zIndex: 8,
       title: "",
       id: null,
-      sampleImage: plint2p,
+      sampleImage: plint2,
       descript: ""
     },
     {
-      img: plint3,
+      img: plint3p,
       zIndex: 8,
       title: "",
       id: null,
-      sampleImage: plint3p,
+      sampleImage: plint3,
       descript: ""
     },
 
     {
-      img: plint4,
+      img: plint4p,
       zIndex: 8,
       title: "",
       id: null,
-      sampleImage: plint4p,
+      sampleImage: plint4,
       descript: ""
     },
     {
@@ -172,55 +172,55 @@ export default {
       descript: ""
     },
     {
-      img: plint6,
+      img: plint6p,
       zIndex: 8,
       title: "",
       id: null,
-      sampleImage: plint6p,
+      sampleImage: plint6,
       descript: ""
     }
   ],
   sill: [
     {
-      img: sill1,
+      img: sill1p,
       zIndex: 8,
       title: "",
       id: null,
-      sampleImage: sill1p,
+      sampleImage: sill1,
       descript: ""
     },
 
     {
-      img: sill2,
+      img: sill2p,
       zIndex: 8,
       title: "",
       id: null,
-      sampleImage: sill2p,
+      sampleImage: sill2,
       descript: ""
     },
     {
-      img: sill3,
+      img: sill3p,
       zIndex: 8,
       title: "",
       id: null,
-      sampleImage: sill3p,
+      sampleImage: sill3,
       descript: ""
     },
 
     {
-      img: sill4,
+      img: sill4p,
       zIndex: 8,
       title: "",
       id: null,
-      sampleImage: sill4p,
+      sampleImage: sill4,
       descript: ""
     },
     {
-      img: sill5,
+      img: sill5p,
       zIndex: 8,
       title: "",
       id: null,
-      sampleImage: sill5p,
+      sampleImage: sill5,
       descript: ""
     },
     {
@@ -234,91 +234,91 @@ export default {
   ],
   light: [
     {
-      img: light1,
+      img: light1p,
       zIndex: 9,
       title: "",
       id: null,
-      sampleImage: light1p,
+      sampleImage: light1,
       descript: ""
     },
 
     {
-      img: light2,
+      img: light2p,
       zIndex: 9,
       title: "",
       id: null,
-      sampleImage: light2p,
+      sampleImage: light2,
       descript: ""
     },
     {
-      img: light3,
+      img: light3p,
       zIndex: 9,
       title: "",
       id: null,
-      sampleImage: light3p,
+      sampleImage: light3,
       descript: ""
     },
 
     {
-      img: light4,
+      img: light4p,
       zIndex: 9,
       title: "",
       id: null,
-      sampleImage: light4p,
+      sampleImage: light4,
       descript: ""
     },
     {
-      img: light5,
+      img: light5p,
       zIndex: 9,
       title: "",
       id: null,
-      sampleImage: light5p,
+      sampleImage: light5,
       descript: ""
     },
     {
-      img: light6,
+      img: light6p,
       zIndex: 9,
       title: "",
       id: null,
-      sampleImage: light6p,
+      sampleImage: light6,
       descript: ""
     }
   ],
   molding: [
     {
-      img: molding1,
+      img: molding1p,
       zIndex: 9,
       title: "",
       id: null,
-      sampleImage: molding1p,
+      sampleImage: molding1,
       descript: ""
     },
 
     {
-      img: molding2,
+      img: molding2p,
       zIndex: 9,
       title: "",
       id: null,
-      sampleImage: molding2p,
+      sampleImage: molding2,
       descript: ""
     }
   ],
   elecric: [
     {
-      img: elecric1,
+      img: elecric1p,
       zIndex: 9,
       title: "",
       id: null,
-      sampleImage: elecric1p,
+      sampleImage: elecric1,
       descript: ""
     },
 
     {
-      img: elecric2,
+      img: elecric2p,
       zIndex: 9,
       title: "",
       id: null,
-      sampleImage: elecric2p,
+      sampleImage: elecric2,
       descript: ""
     }
   ],
