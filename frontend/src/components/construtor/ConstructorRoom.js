@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import { Card, Col, Collapse, Row} from 'antd';
+import {Card, Col, Collapse, Row} from 'antd';
 import {GetUrlAC} from '../../redux/creators';
 import {connect} from 'react-redux';
 import wall_base from '../../img/construct/wall_base.png';
 import wall_default from '../../img/construct/wall_default.png';
 import paint from '../../img/construct/paint.png';
 import floor from '../../img/room/floor_base.png';
-import floor1 from '../../img/room/floor_1.png'
+import door from '../../img/room/door/glanta-white.png';
 
 const {Meta} = Card;
 const {Panel} = Collapse;
@@ -15,25 +15,18 @@ class ConstructorRoom extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      width: '400px',
+      width: '600px',
       height: '400px',
       wall: wall_base,
       wall1: wall_default,
       paint: paint,
       changeColor: 'black',
-      floor: floor,
-      floorChange: floor1
+      floor: floor, door: door
     };
   }
 
-  onClick = () => {
-    this.setState({
-      changeColor: 'red'
-    })
-  }
 
   render () {
-    const {cardImage, cardTitle, cardText} = this.props;
     return (
       <div>
       <Row>
@@ -53,7 +46,7 @@ class ConstructorRoom extends Component {
                alt={'test'}
           />
           <img key={'3'}
-               style={{position: 'absolute', zIndex: '4'}}
+               style={{position: 'absolute', zIndex: '4',opacity: '0.5', background: `${this.state.changeColor}`}}
                src={this.state.paint}
                width={this.state.width}
                height={this.state.height}
@@ -61,12 +54,20 @@ class ConstructorRoom extends Component {
 
           />
           <img key={'4'}
-               style={{position: 'absolute', zIndex: '4', opacity: '0.5', background: `${this.state.changeColor}`}}
+               style={{position: 'absolute', zIndex: '5', }}
                src={this.state.floor}
                width={this.state.width}
                height={this.state.height}
                alt={'test'}
 
+          />
+          <img key={'5'}
+               style={{position: 'absolute', zIndex: '9'  }}
+               src={this.state.door}
+               width={this.state.width}
+               height={this.state.height}
+               alt={'test'}
+  
           />
           {this.props.storage ?
             <div>
@@ -74,9 +75,9 @@ class ConstructorRoom extends Component {
             <img key={index}
                  style={{position: 'absolute', zIndex: elem.zIndex}}
                  src={elem.img}
-                 width={'400'}
+                 width={this.state.width}
                  alt={'test'}
-                 height={'400px'}
+                 height={this.state.height}
                   />
           )}
             </div>
@@ -88,12 +89,11 @@ class ConstructorRoom extends Component {
               {this.props.storage.colorWall.map((elem,index)=>
                 <Col key={index} span={11} style={{margin: 6}}>
                   <Card
-                    onClick={(e) =>
-                    {
-                      this.setState({changeColor: elem.background})
-                    }}
-                    hoverable
-                    style={{width: 235, background: elem.background}}
+                   onClick={() => {
+                     this.setState ({changeColor: elem.background});
+                   }}
+                   hoverable
+                   style={{width: 235, background: elem.background}}
                     // cover={<img alt="example" src={elem.img}/>}
                   >
                     <Meta title={elem.title} description={elem.descript}/>
@@ -106,7 +106,7 @@ class ConstructorRoom extends Component {
               {this.props.storage.srcSample.map((elem,index)=>
               <Col key={index} span={11} style={{margin: 6}}>
                <Card
-                onClick={(e) => this.setState({floor: elem.img})}
+                onClick={() =>{ return  console.log (elem.img) ,this.setState ({floor: elem.img})}}
                 hoverable
                 style={{width: 235}}
                 cover={<img alt="example" src={elem.sampleImage}/>}
@@ -122,7 +122,7 @@ class ConstructorRoom extends Component {
               {this.props.storage.srcDoor.map((elem,index)=>
                <Col key={index} span={11} style={{margin: 6}}>
                  <Card
-                  onClick={(e) => console.log(e.target)}
+                  onClick={() => this.setState ({door: elem.img})}
                   hoverable
                   style={{width: 215}}
                   cover={<img alt="example" src={elem.sampleImage}/>}

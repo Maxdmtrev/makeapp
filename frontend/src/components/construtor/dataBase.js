@@ -2,7 +2,6 @@
 import image222 from "../../img/room/default(2).png"
 import image444 from "../../img/room/bimetal.png"
 import image233 from '../../img/construct/flat_white_small.png';
-import image244 from '../../img/construct/dg-nyuta-white.png';
 import image255 from '../../img/construct/window.png';
 import image5 from "../../img/room/floor/darkcherry.jpg"
 import image5p from "../../img/room/floor/darkcherry.png"
@@ -43,10 +42,8 @@ import image22p from "../../img/room/door/profildoors_u100_black.png"
 export default {
   srcDef: [
     { img: image222, zIndex: 5, title: '', id: null, sampleImage: null, descript: '' },
-    // { img: image3, zIndex: 6, title: '', id: null, sampleImage: null, descript: '' },
     { img: image444, zIndex: 7, title: '', id: null, sampleImage: null, descript: '' },
     { img: image233, zIndex: 8, title: '', id: null, sampleImage: null, descript: '' },
-    { img: image244, zIndex: 9, title: '', id: null, sampleImage: null, descript: '' },
     { img: image255, zIndex: 9, title: '', id: null, sampleImage: null, descript: '' },
   ],
 
@@ -76,7 +73,7 @@ export default {
   ]
   ,srcDoor:[
     {
-      sampleImage: image13, zIndex: 1, title: '', id: null, img: image13p, descript: ''
+      sampleImage: image13, zIndex: 1, title: 'Светлый', id: null, img: image13p, descript: ''
     },
     {
       sampleImage: image14, zIndex: 1, title: '12', id: null, img: image14p, descript: ''
