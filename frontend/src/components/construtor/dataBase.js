@@ -1,3 +1,4 @@
+
 import image222 from "../../img/room/default(2).png";
 import image444 from "../../img/room/bimetal.png";
 import image233 from "../../img/construct/flat_white_small.png";
@@ -85,63 +86,31 @@ import elecric2 from "../../img/room/electric/legrand_black.jpg";
 import elecric2p from "../../img/room/electric/legrand_black.png";
 
 
+
 export default {
   srcDef: [
-    { img: image222, zIndex: 5, title: '', id: null, sampleImage: null, descript: '' },
-    { img: image444, zIndex: 7, title: '', id: null, sampleImage: null, descript: '' },
-    { img: image233, zIndex: 8, title: '', id: null, sampleImage: null, descript: '' },
-    { img: image255, zIndex: 9, title: '', id: null, sampleImage: null, descript: '' },
-],
-  plint: [
+    {img: image222, zIndex: 5, title: '', id: null, sampleImage: null, descript: ''},
     {
-      img: plint1p,
-      zIndex: 8,
-      title: "",
-      id: null,
-      sampleImage: plint1,
-      descript: ""
-    },
-
-    {
-      img: plint2p,
-      zIndex: 8,
-      title: "",
-      id: null,
-      sampleImage: plint2,
-      descript: ""
+      img: image444, zIndex: 7, title: '', id: null, sampleImage: null, descript: ''
     },
     {
-      img: plint3p,
-      zIndex: 8,
-      title: "",
-      id: null,
-      sampleImage: plint3,
-      descript: ""
-    },
-
+      img: image255, zIndex: 9, title: '', id: null, sampleImage: null, descript: ''
+          },
+  ], srcPlint: [
     {
-      img: plint4p,
-      zIndex: 8,
-      title: "",
-      id: null,
-      sampleImage: plint4,
-      descript: ""
+      sampleImage: plint1, zIndex: 8, title: '', id: null, img: plint1p, descript: ''
     },
-    {
-      img: plint5,
-      zIndex: 8,
-      title: "",
-      id: null,
-      sampleImage: plint5p,
-      descript: ""
+        {
+      sampleImage: plint2, zIndex: 8, title: '', id: null, img: plint2p, descript: ''
+    }, {
+      sampleImage: plint3, zIndex: 8, title: '', id: null, img: plint3p, descript: ''
     },
-    {
-      img: plint6p,
-      zIndex: 8,
-      title: "",
-      id: null,
-      sampleImage: plint6,
-      descript: ""
+        {
+      sampleImage: plint4, zIndex: 8, title: '', id: null, img: plint4p, descript: ''
+    }, {
+      sampleImage: plint5, zIndex: 8, title: '', id: null, img: plint5p, descript: ''
+    }, {
+      sampleImage: plint6, zIndex: 8, title: '', id: null, img: plint6p, descript: ''
     }
   ],
   sill: [
@@ -284,172 +253,56 @@ export default {
       id: null,
       sampleImage: elecric2,
       descript: ""
-    }
-  ],
-  colorWall: [
-    {
-      background: "rgb(115, 73, 68)",
-      title: "Red",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    },
-    {
-      background: "rgb(248, 235, 193)",
-      title: "Yellow",
-      id: null,
-      sampleImage: null,
-      descript: ""
-    }
-  ],
 
+    }
+  ], colorWall: [
+    {
+      background: 'rgb(115, 73, 68)', title: 'Red', id: null, sampleImage: null, descript: ''
+    }, {
+      background: 'rgb(248, 235, 193)', title: 'Yellow', id: null, sampleImage: null, descript: ''
+    }
+  ],
+  
   srcSample: [
     {
-      sampleImage: image5,
-      zIndex: 1,
-      title: "Дуб Светлый",
-      id: null,
-      img: image5p,
-      descript: "Quick step"
-    },
-    {
-      sampleImage: image6,
-      zIndex: 2,
-      title: "22",
-      id: null,
-      img: image6p,
-      descript: ""
-    },
-    {
-      sampleImage: image7,
-      zIndex: 1,
-      title: "",
-      id: null,
-      img: image7p,
-      descript: ""
-    },
-    {
-      sampleImage: image8,
-      zIndex: 2,
-      title: "",
-      id: null,
-      img: image8p,
-      descript: ""
-    },
-    {
-      sampleImage: image9,
-      zIndex: 2,
-      title: "",
-      id: null,
-      img: image9p,
-      descript: ""
-    },
-    {
-      sampleImage: image10,
-      zIndex: 2,
-      title: "",
-      id: null,
-      img: image10p,
-      descript: ""
-    },
-    {
-      sampleImage: image11,
-      zIndex: 2,
-      title: "",
-      id: null,
-      img: image11p,
-      descript: ""
-    },
-    {
-      sampleImage: image12,
-      zIndex: 2,
-      title: "",
-      id: null,
-      img: image12p,
-      descript: ""
+      sampleImage: image5, zIndex: 1, title: 'Дуб Светлый', id: null, img: image5p, descript: 'Quick step'
+    }, {
+      sampleImage: image6, zIndex: 2, title: '22', id: null, img: image6p, descript: ''
+    }, {
+      sampleImage: image7, zIndex: 1, title: '', id: null, img: image7p, descript: ''
+    }, {
+      sampleImage: image8, zIndex: 2, title: '', id: null, img: image8p, descript: ''
+    }, {
+      sampleImage: image9, zIndex: 2, title: '', id: null, img: image9p, descript: ''
+    }, {
+      sampleImage: image10, zIndex: 2, title: '', id: null, img: image10p, descript: ''
+    }, {
+      sampleImage: image11, zIndex: 2, title: '', id: null, img: image11p, descript: ''
+    }, {
+      sampleImage: image12, zIndex: 2, title: '', id: null, img: image12p, descript: ''
     }
-  ],
-  srcDoor: [
+  ], srcDoor: [
     {
-      sampleImage: image13,
-      zIndex: 1,
-      title: "",
-      id: null,
-      img: image13p,
-      descript: ""
-    },
-    {
-      sampleImage: image14,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      img: image14p,
-      descript: ""
-    },
-    {
-
-      sampleImage: image15,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      img: image15p,
-      descript: ""
-    },
-    {
-      sampleImage: image16,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      img: image16p,
-      descript: ""
-    },
-    {
-      sampleImage: image17,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      img: image17p,
-      descript: ""
-    },
-    {
-      sampleImage: image18,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      img: image18p,
-      descript: ""
-    },
-    {
-      sampleImage: image19,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      img: image19p,
-      descript: ""
-    },
-    {
-      sampleImage: image20,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      img: image20p,
-      descript: ""
-    },
-    {
-      sampleImage: image21,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      img: image21p,
-      descript: ""
-    },
-    {
-      sampleImage: image22,
-      zIndex: 1,
-      title: "12",
-      id: null,
-      img: image22p,
-      descript: ""
+      sampleImage: image13, zIndex: 1, title: '', id: null, img: image13p, descript: ''
+    }, {
+      sampleImage: image14, zIndex: 1, title: '12', id: null, img: image14p, descript: ''
+    }, {
+      
+      sampleImage: image15, zIndex: 1, title: '12', id: null, img: image15p, descript: ''
+    }, {
+      sampleImage: image16, zIndex: 1, title: '12', id: null, img: image16p, descript: ''
+    }, {
+      sampleImage: image17, zIndex: 1, title: '12', id: null, img: image17p, descript: ''
+    }, {
+      sampleImage: image18, zIndex: 1, title: '12', id: null, img: image18p, descript: ''
+    }, {
+      sampleImage: image19, zIndex: 1, title: '12', id: null, img: image19p, descript: ''
+    }, {
+      sampleImage: image20, zIndex: 1, title: '12', id: null, img: image20p, descript: ''
+    }, {
+      sampleImage: image21, zIndex: 1, title: '12', id: null, img: image21p, descript: ''
+    }, {
+      sampleImage: image22, zIndex: 1, title: '12', id: null, img: image22p, descript: ''
     }
   ]
 };

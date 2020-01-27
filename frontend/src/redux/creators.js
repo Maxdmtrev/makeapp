@@ -1,4 +1,4 @@
-import { ADD_USER,LOGIN_USER,LOGOUT_USER,GET_URL} from './actions';
+import {ADD_USER, GET_CARD, GET_URL, LOGIN_USER, LOGOUT_USER} from './actions';
 
 
 export const AddUserAC = (status,user) => {
@@ -16,18 +16,20 @@ export const ReqUserAC = (status,user,data) => {
     data: data
   };
 };
-export const LogoutUserAC = (status,user) => {
+export const LogoutUserAC = (status, user) => {
   return {
-    type: LOGOUT_USER,
-    isLogin: status,
-    username: user
+    type: LOGOUT_USER, isLogin: status, username: user
   };
 };
 
 export const GetUrlAC = (data) => {
   return {
-    type: GET_URL,
-    data: data,
- 
+    type: GET_URL, data: data,
+    
+  };
+};
+export const GetCardAC = (address, m2, countBath, countDoor, countRoom) => {
+  return {
+    type: GET_CARD, address: address, m2: m2, countBath: countBath, countDoor: countDoor, countRoom: countRoom,
   };
 };
