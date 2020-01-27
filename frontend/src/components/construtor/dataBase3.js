@@ -15,7 +15,8 @@ import image13 from "../../img/room/floor/dubvillage.jpg"
 
 
 
-export default {srcDef: [
+export default {
+  srcDef: [
     {
       img: image, zIndex: 1, title: '', id: null, sampleImage: null, descript: ''
     }, {

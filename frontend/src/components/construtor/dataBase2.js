@@ -18,7 +18,8 @@ import image22 from '../../img/room/door/profildoors_u100_black.jpg';
 
 
 
-export default {srcDef: [
+export default {
+  srcDef: [
     {
       img: image, zIndex: 1, title: '', id: null, sampleImage: null, descript: ''
     }, {
