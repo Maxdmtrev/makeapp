@@ -282,6 +282,7 @@ export default {
       descript: ""
     }
   ],
+
   bath: [
     {
       img: bath1p,
