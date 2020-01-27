@@ -20,8 +20,8 @@ class ConstructorRoom extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      width: '600px',
-      height: '400px',
+      width: '800px',
+      height: '500px',
       wall: wall_base,
       wall1: wall_default,
       paint: paint,
