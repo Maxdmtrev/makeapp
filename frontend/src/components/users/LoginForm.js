@@ -62,7 +62,7 @@ class LoginForm extends Component {
           Log in
         </Button>
       </Form.Item>
-    </Form>) : (<Redirect to="/game"/>)}
+    </Form>) : (<Redirect to="/"/>)}
     </>);
   }
 }
