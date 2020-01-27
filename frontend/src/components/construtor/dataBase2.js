@@ -5,12 +5,12 @@ import floor3 from "../../img/bath/kerama_floor/kerama_fregat_dark.jpg";
 import floor4 from "../../img/bath/kerama_floor/kerama_prostone_dark.jpg";
 import floor5 from "../../img/bath/kerama_floor/kerama_prostone_light.jpg";
 import floor6 from "../../img/bath/kerama_floor/prostone_beige_light.jpg";
-import floor1p from '../../img/bath/kerama_floor/equipe_micro_revival.png';
-import floor2p from '../../img/bath/kerama_floor/kerama_fregat_beige.png';
-import floor3p from '../../img/bath/kerama_floor/kerama_fregat_dark.png';
-import floor4p from '../../img/bath/kerama_floor/kerama_prostone_dark.png';
-import floor5p from '../../img/bath/kerama_floor/kerama_prostone_light.png';
-import floor6p from '../../img/bath/kerama_floor/prostone_beige_light.png';
+import floor1p from "../../img/bath/kerama_floor/equipe_micro_revival.png";
+import floor2p from "../../img/bath/kerama_floor/kerama_fregat_beige.png";
+import floor3p from "../../img/bath/kerama_floor/kerama_fregat_dark.png";
+import floor4p from "../../img/bath/kerama_floor/kerama_prostone_dark.png";
+import floor5p from "../../img/bath/kerama_floor/kerama_prostone_light.png";
+import floor6p from "../../img/bath/kerama_floor/prostone_beige_light.png";
 import bath1 from "../../img/bath/bath/cersanit_octavia.jpg";
 import bath1p from "../../img/bath/bath/cersanit_octavia.png";
 import bath2 from "../../img/bath/bath/roca_contesa.jpg";
@@ -55,34 +55,37 @@ export default {
     {
       img: shower1p,
       zIndex: 3,
-      title: "12",
+      title: "Bravat Opal, круг (Германия)",
       id: null,
       sampleImage: shower1,
-      descript: ""
+      descript:
+        "Душевая стойка и смесители. Корпус: латунь. Покрытие: Хром. Керамический картридж Sedal 35 mm. Аэратор Neoperl. Излив: 20 л/мин, Душ: 12 л/мин"
     },
     {
       img: shower2p,
       zIndex: 3,
-      title: "12",
+      title: "Bravat Opal, квадрат (Германия)",
       id: null,
       sampleImage: shower2,
-      descript: ""
+      descript:
+        "Душевая стойка и смесители. Корпус: латунь. Покрытие: Хром. Керамический картридж Sedal 35 mm. Аэратор Neoperl. Излив: 20 л/мин, Душ: 12 л/мин"
     },
     {
       img: shower3p,
       zIndex: 3,
-      title: "12",
+      title: "Grohe Euphoria (Германия)",
       id: null,
       sampleImage: shower3,
-      descript: ""
+      descript:
+        "Душевая стойка и смесители с термостатом (27475001). Покрытие: Хром. Душ 9.5 л/мин"
     },
     {
       img: shower4p,
       zIndex: 3,
-      title: "12",
+      title: "Lemark Tropic (Чехия)",
       id: null,
       sampleImage: shower4,
-      descript: ""
+      descript: "Душевая стойка и смесители. Покрытие: Хром. Съемная полка."
     }
   ],
 
@@ -90,50 +93,50 @@ export default {
     {
       img: keramaWall1p,
       zIndex: 3,
-      title: "12",
+      title: "Kerama Marazzi Бельканто/Фрегат беж",
       id: null,
       sampleImage: keramaWall1,
-      descript: ""
+      descript: "Керамическая плитка 15х40см"
     },
     {
       img: keramaWall2p,
       zIndex: 3,
-      title: "12",
+      title: "Kerama Marazzi Бельканто/Фрегат коричн.",
       id: null,
       sampleImage: keramaWall2,
-      descript: ""
+      descript: "Керамическая плитка 15х40см"
     },
     {
       img: keramaWall3p,
       zIndex: 3,
-      title: "12",
+      title: "Kerama Marazzi Бельканто",
       id: null,
       sampleImage: keramaWall3,
-      descript: ""
+      descript: "Керамическая плитка 15х40см"
     },
     {
       img: keramaWall4p,
       zIndex: 3,
-      title: "12",
+      title: "Kerama Marazzi Калейдоскоп белая/беж",
       id: null,
       sampleImage: keramaWall4,
-      descript: ""
+      descript: "Керамическая плитка 20х20см"
     },
     {
       img: keramaWall5p,
       zIndex: 3,
-      title: "12",
+      title: "Kerama Marazzi Калейдоскоп белая/розовая",
       id: null,
       sampleImage: keramaWall5,
-      descript: ""
+      descript: "Керамическая плитка 20х20см"
     },
     {
       img: keramaWall6p,
       zIndex: 3,
-      title: "12",
+      title: "Kerama Marazzi Калейдоскоп белая",
       id: null,
       sampleImage: keramaWall6,
-      descript: ""
+      descript: "Керамическая плитка 20х20см"
     }
   ],
 
@@ -141,26 +144,29 @@ export default {
     {
       img: toilet1p,
       zIndex: 3,
-      title: "12",
+      title: "Cersanit Parva (Польша)",
       id: null,
       sampleImage: toilet1,
-      descript: ""
+      descript:
+        "Напольный унитаз-компакт с микролифтом. Корпус: Фаянс. Система антивсплеск. Размеры: 36x61,5см"
     },
     {
       img: toilet2p,
       zIndex: 3,
-      title: "12",
+      title: "Roca The Gap (Испания)",
       id: null,
       sampleImage: toilet2,
-      descript: ""
+      descript:
+        "Подвесной унитаз с микролифтом. Корпус: Фаянс. Безободковый. Система антивсплеск. Размеры: 35x54см. Инсталляция Grohe Rapid"
     },
     {
       img: toilet3p,
       zIndex: 3,
-      title: "12",
+      title: "Roca Meridian (Испания)",
       id: null,
       sampleImage: toilet3,
-      descript: ""
+      descript:
+        "Подвесной унитаз с микролифтом. Корпус: Фаянс. Система антивсплеск. Размеры: 36x48см. Инсталляция Geberit Duofix."
     }
   ],
 
@@ -168,18 +174,20 @@ export default {
     {
       img: locker1p,
       zIndex: 3,
-      title: "12",
+      title: "IKEA ГОДМОРГОН / БРОВИКЕН",
       id: null,
       sampleImage: locker1,
-      descript: ""
+      descript:
+        "Белый шкаф для раковины с 2 ящиками. Ширина: 82см, Глубина: 49см, Высота: 68см. Одинарная раковина IKEA ОДЕНСВИК"
     },
     {
       img: locker2p,
       zIndex: 3,
-      title: "12",
+      title: "IKEA ГОДМОРГОН / БРОВИКЕН",
       id: null,
       sampleImage: locker2,
-      descript: ""
+      descript:
+        "Шкаф для раковины с 2 ящиками цвета белёный дуб. Ширина: 82см, Глубина: 49см, Высота: 68см. Одинарная раковина IKEA ОДЕНСВИК"
     }
   ],
   srcDef: [
@@ -279,34 +287,38 @@ export default {
     {
       img: bath1p,
       zIndex: 3,
-      title: "12",
+      title: "Cersanit Octavia (Польша)",
       id: null,
       sampleImage: bath1,
-      descript: ""
+      descript:
+        "Акриловая ванна. Длина: 170см, Ширина: 70см, Глубина: 40см, Объём: 180л."
     },
     {
       img: bath2p,
       zIndex: 3,
-      title: "12",
+      title: "Roca Contesa (Испания)",
       id: null,
       sampleImage: bath2,
-      descript: ""
+      descript:
+        "Стальная ванна. Длина: 170см, Ширина: 70см, Глубина: 40см, Объём: 195л"
     },
     {
       img: bath3p,
       zIndex: 3,
-      title: "12",
+      title: "Roca Continental (Испания)",
       id: null,
       sampleImage: bath3,
-      descript: ""
+      descript:
+        "Чугунная ванна с противоскользящим покрытием. Длина: 170см, Ширина: 70см, Глубина: 42см, Объём: 182л"
     },
     {
       img: bath4p,
       zIndex: 3,
-      title: "12",
+      title: "Roca Princess (Испания)",
       id: null,
       sampleImage: bath4,
-      descript: ""
+      descript:
+        "Стальная ванна с ручками и противоскользящим покрытием. Длина: 170см, Ширина: 70см, Глубина: 43см, Объём: 190л"
     }
   ]
 };
