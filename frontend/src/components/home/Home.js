@@ -19,16 +19,29 @@ class Home extends Component {
   }
   }
   
+  componentDidMount () {
+    if (this.state.change) {
+      this.loadMap ();
+    }
+   }
+  componentDidUpdate (prevProps, prevState) {
+    if (this.state.change !== prevState.change && this.state.change) {
+      this.loadMap ();
+    }
+  }
+   loadMap=()=>{
+     new this.props.ymaps.SuggestView ('suggest', {
+       results: 5, offset: [15, 30]
+     });
+   }
   render () {
     const{address,m2,countBath,countDoor,countRoom,change}=this.state;
     const{roomCard}=this.props;
     return (<div style={{backgroundColor: "#282c34" }}  >
-      
-      
       {change ?  <Form ><Row style={{margin:5,padding:5}} >
         <Col span={9}  >
           <Form.Item label="Address">
-            <Input type="text" name="address" id="exampleAddress" placeholder="Название улицы"  onChange={e=>{
+            <Input type="text" name="address" id="suggest" placeholder="Название улицы"  value={address} onChange={e=>{
               this.setState({address: e.target.value})
             }}/>
           </Form.Item>
@@ -115,6 +128,7 @@ class Home extends Component {
             <p>{roomCard.countBath}</p>
             <Button onClick={()=>{
               this.setState({change: !change})
+              // this.loadMap()
             }}>Изменить</Button>
           </Card>
         </Col>
@@ -125,7 +139,7 @@ class Home extends Component {
 
 function mapStateToProps (store) {
   return {
-    roomCard: store.roomCard,
+    roomCard: store.roomCard, ymaps: store.ymaps
   };
 }
 

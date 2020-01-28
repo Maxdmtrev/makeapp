@@ -1,4 +1,4 @@
-import {ADD_USER, GET_CARD, GET_URL, LOGIN_USER, LOGOUT_USER} from './actions';
+import {ADD_USER, GET_CARD, GET_URL, LOGIN_USER, LOGOUT_USER,GET_MAP} from './actions';
 
 
 export const AddUserAC = (status,user) => {
@@ -31,5 +31,10 @@ export const GetUrlAC = (data) => {
 export const GetCardAC = (address, m2, countBath, countDoor, countRoom) => {
   return {
     type: GET_CARD, address: address, m2: m2, countBath: countBath, countDoor: countDoor, countRoom: countRoom,
+  };
+};
+export const GetMapAC = (map) => {
+  return {
+    type: GET_MAP, ymaps: map
   };
 };

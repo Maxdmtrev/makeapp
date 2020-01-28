@@ -12,8 +12,7 @@ import {connect} from 'react-redux';
 import 'antd/dist/antd.css';
 import '../src/app.css';
 
-import {Layout} from 'antd';
-import { Icon } from 'antd';
+import {Icon, Layout,BackTop} from 'antd';
 
 const {Header, Footer, Content} = Layout;
 
@@ -41,20 +40,22 @@ class Routers extends Component {
   render () {
     return (<Router history={customHistory}>
       <Layout >
-        <Header >
-          <Navigation  history={customHistory}/>
+        <Header>
+          <Navigation history={customHistory}/>
         </Header>
-        <Content >
-          <Route exact path="/" component={Home}/>
+        <Content>
+          {this.props.ymaps ? <Route exact path="/" component={Home}/> : <>loading</>}
+    
           <Route path='/login' component={Login}/>
           <Route path='/game' component={NavConstructor}/>
           <Route path='/slider' component={Slider}/>
           <Route path='/registration' component={RegistrationForm}/>
         </Content>
-        <Footer >Контакты:
-          <Icon type="instagram" style={{ fontSize: '30px', color: '#08c' }} theme="" />
-          <Icon type="slack" style={{ fontSize: '30px', color: '#08c' }} theme="" />
-          <Icon type="github" style={{ fontSize: '30px', color: '#08c' }} theme="" />
+        <Footer>Контакты:
+          <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""/>
+          <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""/>
+          <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""/>
+          <BackTop style={{ left: "50px"}} />
         </Footer>
       </Layout>
 
@@ -73,7 +74,7 @@ function mapDispatchToProps (dispatch) {
 
 function mapStateToProps (store) {
   return {
-    isLogin: store.isLogin, username: store.username
+    isLogin: store.isLogin, username: store.username, ymaps: store.ymaps
   };
 }
 
