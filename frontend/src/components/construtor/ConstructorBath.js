@@ -10,6 +10,14 @@ import floor from "../../img/construct_bath/bravat_opal.png";
 import shower from "../../img/construct_bath/bravat_opal.png";
 import bath from '../../img/bath/bath/cersanit_octavia.png';
 import locker from '../../img/bath/locker/locker_white.png';
+import {
+  AddPriceBathAC,
+  AddPriceBathFloorAC,
+  AddPriceKeramaWallAC,
+  AddPriceLockerAC,
+  AddPriceShowerAC,
+  AddPriceToiletAC
+} from "../../redux/priceCreators";
 
 
 
@@ -107,11 +115,10 @@ class ConstructorBath extends Component {
                     <Card
                         name={index}
                         onClick={(event) =>{ event.preventDefault();  this.setState ({ceramic: elem.img});
-                          console.log(event.target.name.index)
-                          console.log(index)
-                          if(event.target.id === index) {
-                            this.setState({border: "2px solid black"})
-                          }
+                          this.props.addPriceKeramaWall(elem.price);
+                          // if(event.target.id === index) {
+                          //   this.setState({border: "2px solid black"})
+                          // };
                           }}
                         hoverable
                         style={{width: 215, border: `${this.state.border}`}}
@@ -128,7 +135,9 @@ class ConstructorBath extends Component {
                 {this.props.storage.floor.map((elem, index) =>
                   <Col key={index} span={11} style={{margin: 6}}>
                     <Card
-                      onClick={() =>{ this.setState ({floor: elem.img})}}
+                      onClick={() =>{ this.setState ({floor: elem.img});
+                        this.props.addPriceBathFloor(elem.price);
+                      }}
                       hoverable
                       style={{width: 215}}
                       cover={<img alt="example" src={elem.sampleImage}/>}
@@ -143,7 +152,9 @@ class ConstructorBath extends Component {
                 {this.props.storage.toilet.map((elem, index) =>
                   <Col key={index} span={11} style={{margin: 6}}>
                     <Card
-                      onClick={() =>{ this.setState ({toilet: elem.img})}}
+                      onClick={() =>{ this.setState ({toilet: elem.img});
+                      this.props.addPriceToilet(elem.price);
+                      }}
                       hoverable
                       style={{width: 215}}
                       cover={<img alt="example" src={elem.sampleImage}/>}
@@ -158,7 +169,9 @@ class ConstructorBath extends Component {
                 {this.props.storage.bath.map((elem, index) =>
                   <Col key={index} span={11} style={{margin: 6}}>
                     <Card
-                      onClick={() =>{ this.setState ({bath: elem.img})}}
+                      onClick={() =>{
+                        this.setState ({bath: elem.img});
+                        this.props.addPriceBath(elem.price);}}
                       hoverable
                       style={{width: 215}}
                       cover={<img alt="example" src={elem.sampleImage}/>}
@@ -173,7 +186,9 @@ class ConstructorBath extends Component {
                 {this.props.storage.shower.map((elem, index) =>
                   <Col key={index} span={11} style={{margin: 6}}>
                     <Card
-                      onClick={() =>{ this.setState ({shower: elem.img})}}
+                      onClick={() =>{ this.setState ({shower: elem.img});
+                      this.props.addPriceShower(elem.price);
+                      }}
                       hoverable
                       style={{width: 215}}
                       cover={<img alt="example" src={elem.sampleImage}/>}
@@ -188,7 +203,9 @@ class ConstructorBath extends Component {
                 {this.props.storage.locker.map((elem, index) =>
                   <Col key={index} span={11} style={{margin: 6}}>
                     <Card
-                        onClick={() =>{ this.setState ({locker: elem.img})}}
+                        onClick={() =>{ this.setState ({locker: elem.img});
+                        this.props.addPriceLocker(elem.price);
+                        }}
                         hoverable
                         style={{width: 215}}
                         cover={<img alt="example" src={elem.sampleImage}/>}
@@ -213,5 +230,27 @@ function mapStateToProps(store) {
   };
 }
 
+function mapDispatchToProps (dispatch) {
+  return {
+    addPriceBath: (data) => {
+      dispatch (AddPriceBathAC (data));
+      },
+    addPriceBathFloor: (data) => {
+      dispatch (AddPriceBathFloorAC (data));
+      },
+    addPriceKeramaWall: (data) => {
+      dispatch (AddPriceKeramaWallAC (data));
+      },
+    addPriceLocker: (data) => {
+      dispatch (AddPriceLockerAC (data));
+      },
+    addPriceShower: (data) => {
+      dispatch (AddPriceShowerAC (data));
+      },
+    addPriceToilet: (data) => {
+      dispatch (AddPriceToiletAC (data));
+      },
+  };
+}
 
-export default connect(mapStateToProps)(ConstructorBath);
+export default connect(mapStateToProps, mapDispatchToProps)(ConstructorBath);
