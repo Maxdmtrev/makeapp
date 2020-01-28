@@ -2,6 +2,9 @@
     color: white;
 }
 
+.ant-notification{
+    width: 27%!important;
+}
 .ant-form-item-label > label{
     color: white !important;
 
@@ -27,6 +30,9 @@
     background: #ffffff !important;
 
 
+}
+.ant-card-body{
+    padding: 10px !important;
 }
 
 .ant-card  {
