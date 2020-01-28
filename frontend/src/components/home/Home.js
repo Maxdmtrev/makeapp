@@ -31,7 +31,7 @@ class Home extends Component {
   }
    loadMap=()=>{
      new this.props.ymaps.SuggestView ('suggest', {
-       results: 5, offset: [15, 30]
+       results:5, offset: [0, 5]
      });
    }
   render () {
@@ -39,9 +39,9 @@ class Home extends Component {
     const{roomCard}=this.props;
     return (<div style={{display:"flex",justifyContent: "center", marginTop: "10px"}}   >
       
-      {change ?  <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: "#282c34",width:"60%",  textAlign: 'center' }}><Form ><Row style={{margin:5,padding:5}} >
+      {change ?  <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: "#282c34",width:"60%",opacity:"0.90" }}><Form ><Row style={{margin:5,padding:5}} >
         <Col offset={2} span={12}  >
-          <Form.Item label="Address">
+          <Form.Item label="Адрес">
             <Input type="text" name="address" style={{width: "100%"}} id="suggest" placeholder="Название улицы"  value={address} onChange={e=>{
               this.setState({address: e.target.value})
             }}/>
@@ -73,7 +73,7 @@ class Home extends Component {
     
           <Col offset={3} span={5}>
             <Form.Item label={"Количество дверей"}>
-              <Select style={{width: 60}} onChange={(e)=>    this.setState({countDoor: e})}>
+              <Select style={{width: 100}} onChange={(e)=>    this.setState({countDoor: e})}>
                 <Option value="1">1</Option>
                 <Option value="2">2</Option>
                 <Option value="3">3</Option>
@@ -85,7 +85,7 @@ class Home extends Component {
     
           <Col  offset={2} span={5}>
             <Form.Item label="Количество санузлов">
-              <Select style={{width: 60}} onChange={(e)=>    this.setState({countBath: e})}>
+              <Select style={{width: 100}} onChange={(e)=>    this.setState({countBath: e})}>
                 <Option value="1">1</Option>
                 <Option value="2">2</Option>
               </Select>
@@ -121,10 +121,10 @@ class Home extends Component {
        :<Row>
         <Col >
           <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: "#282c34",width:"100%" }}>
-            <h3 style={{color: "white"}}>{roomCard.address}</h3>
-            <p style={{color: "white"}} >{roomCard.countRoom} квартира площадью {roomCard.m2}</p>
-            <p style={{color: "white"}} >Количество санузлов {roomCard.countDoor}</p>
-            <p style={{color: "white"}} >Количество дверей {roomCard.countBath}</p>
+            <h2 style={{color: "white"}}> Ваш адрес{roomCard.address}</h2>
+            <p style={{color: "white"}} >{roomCard.countRoom} Квартира площадью {roomCard.m2} м2</p>
+            <p style={{color: "white"}} >Количество санузлов: {roomCard.countBath}</p>
+            <p style={{color: "white"}} >Количество дверей: {roomCard.countDoor}</p>
             <Button onClick={()=>{
               this.setState({change: !change})
               // this.loadMap()
