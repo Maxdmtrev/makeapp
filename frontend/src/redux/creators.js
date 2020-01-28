@@ -28,9 +28,9 @@ export const GetUrlAC = (data) => {
     
   };
 };
-export const GetCardAC = (address, m2, countBath, countDoor, countRoom) => {
+export const GetCardAC = (address,m2,countBath,countDoor,countRoom,desPrice,perePlanPrice) => {
   return {
-    type: GET_CARD, address: address, m2: m2, countBath: countBath, countDoor: countDoor, countRoom: countRoom,
+    type: GET_CARD, address: address, m2: m2, countBath: countBath, countDoor: countDoor, countRoom: countRoom,desPrice:desPrice,perePlanPrice:perePlanPrice
   };
 };
 export const GetMapAC = (map) => {
