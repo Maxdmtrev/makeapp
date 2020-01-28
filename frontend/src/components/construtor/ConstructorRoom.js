@@ -129,15 +129,15 @@ class ConstructorRoom extends Component {
             />
             {this.props.storage ? <div>
               {this.props.storage.srcDef.map ((elem, index) => <img key={index}
-                                                                    style={{
-                                                                      position: 'absolute',
-                                                                      zIndex: elem.zIndex,
-                                                                      transform: `${this.state.invert}`
-                                                                    }}
-                                                                    src={elem.img}
-                                                                    width={this.state.width}
-                                                                    alt={'test'}
-                                                                    height={this.state.height}
+                style={{
+                  position: 'absolute',
+                  zIndex: elem.zIndex,
+                  transform: `${this.state.invert}`
+                }}
+                src={elem.img}
+                width={this.state.width}
+                alt={'test'}
+                height={this.state.height}
               />)}
             </div> : '...Load'}
           </Col>

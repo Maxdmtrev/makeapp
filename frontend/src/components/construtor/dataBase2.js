@@ -1,4 +1,3 @@
-import image from "../../img/bath/kerama_wall/kerama_belkanto.png";
 import floor1 from "../../img/bath/kerama_floor/equipe_micro_revival.jpg";
 import floor2 from "../../img/bath/kerama_floor/kerama_fregat_beige.jpg";
 import floor3 from "../../img/bath/kerama_floor/kerama_fregat_dark.jpg";
