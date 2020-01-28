@@ -23,6 +23,11 @@ class Navigation extends Component {
           <Icon type="snippets"/> AppartmentDesigh
         </Link>
       </Menu.Item>
+      <Menu.Item>
+        <Link to="/list">
+          <Icon type="diff" />  List
+        </Link>
+      </Menu.Item>
       
       {this.props.isLogin ? (<Menu.Item style={{float: 'right'}}>
         <Link to="/logout" onClick={async (e) => {

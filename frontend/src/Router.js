@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Route, Router} from 'react-router';
 import RegistrationForm from './components/users/RegForm';
 import Home from './components/home/Home';
+import List from './components/home/List'
 import Slider from './components/render/Slider';
 import NavConstructor from './components/construtor/NavConstructor';
 import Navigation from './components/users/Navigation';
@@ -50,6 +51,7 @@ class Routers extends Component {
           <Route path='/game' component={NavConstructor}/>
           <Route path='/slider' component={Slider}/>
           <Route path='/registration' component={RegistrationForm}/>
+          <Route path='/list' component={List} />
         </Content>
         <Footer>Контакты:
           <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""/>
