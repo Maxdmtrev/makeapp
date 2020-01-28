@@ -236,50 +236,50 @@ export default {
     {
       img: floor1p,
       zIndex: 1,
-      title: "12",
+      title: "Equipe Micro Revival",
       id: null,
       sampleImage: floor1,
-      descript: ""
+      descript: "Испанская плитка 20х20см"
     },
     {
       img: floor2p,
       zIndex: 2,
-      title: "22",
+      title: "Kerama Marazzi Fregat бежевый",
       id: null,
       sampleImage: floor2,
-      descript: ""
+      descript: "Керамогранит имитирующий дерево 20х80см"
     },
     {
       img: floor3p,
       zIndex: 1,
-      title: "",
+      title: "Kerama Marazzi Fregat",
       id: null,
       sampleImage: floor3,
-      descript: ""
+      descript: "Керамогранит имитирующий дерево 20х80см"
     },
     {
       img: floor4p,
       zIndex: 2,
-      title: "",
+      title: "Kerama Marazzi Про Стоун Черный",
       id: null,
       sampleImage: floor4,
-      descript: ""
+      descript: "Керамогранит имитирующий натуральный камень 60х60см"
     },
     {
       img: floor5p,
       zIndex: 2,
-      title: "",
+      title: "Kerama Marazzi ПроСтоун Беж",
       id: null,
       sampleImage: floor5,
-      descript: ""
+      descript: "Керамогранит имитирующий камень 60х60см"
     },
     {
       img: floor6p,
       zIndex: 2,
-      title: "",
+      title: "Kerama Marazzi ПроСтоун Беж Светлый",
       id: null,
       sampleImage: floor6,
-      descript: ""
+      descript: "Керамогранит имитирующий камень 60х60см"
     }
   ],
 
