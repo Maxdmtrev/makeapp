@@ -41,7 +41,7 @@ class Home extends Component {
       
       {change ?  <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: "#282c34",width:"60%",opacity:"0.90" }}><Form ><Row style={{margin:5,padding:5}} >
         <Col offset={2} span={12}  >
-          <Form.Item label="Адрес">
+
             <Input type="text" name="address" style={{width: "100%"}} id="suggest" placeholder="Название улицы"  value={address} onChange={e=>{
               this.setState({address: e.target.value})
             }}/>
@@ -70,10 +70,10 @@ class Home extends Component {
               </Select>
             </Form.Item>
           </Col>
-    
-          <Col offset={3} span={5}>
+              <Col offset={3} span={5}>
             <Form.Item label={"Количество дверей"}>
               <Select style={{width: 100}} onChange={(e)=>    this.setState({countDoor: e})}>
+
                 <Option value="1">1</Option>
                 <Option value="2">2</Option>
                 <Option value="3">3</Option>
@@ -82,8 +82,7 @@ class Home extends Component {
               </Select>
             </Form.Item>
           </Col>
-    
-          <Col  offset={2} span={5}>
+              <Col  offset={2} span={5}>
             <Form.Item label="Количество санузлов">
               <Select style={{width: 100}} onChange={(e)=>    this.setState({countBath: e})}>
                 <Option value="1">1</Option>
