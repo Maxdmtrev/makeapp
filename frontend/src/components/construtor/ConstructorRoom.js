@@ -155,7 +155,8 @@ class ConstructorRoom extends Component {
               {this.props.storage.srcSample.map((elem,index)=>
               <Col key={index} span={11} style={{margin: 6}}>
                <Card
-                onClick={() =>{ this.setState ({floor: elem.img})}}
+                onClick={() =>
+                {this.setState ({floor: elem.img})}}
                 hoverable
                 style={{width: 235}}
                 cover={<img alt="example" src={elem.sampleImage}/>}
@@ -208,7 +209,7 @@ class ConstructorRoom extends Component {
                </Col>
               )}
             </Panel>
-            <Panel header="Подокойник" key="6">
+            <Panel header="Подоконник" key="6">
               {this.props.storage.sill.map((elem,index)=>
                <Col key={index} span={11} style={{margin: 6}}>
                  <Card
