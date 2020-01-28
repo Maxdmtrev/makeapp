@@ -1,16 +1,11 @@
 import React, {Component} from 'react';
-import { Card, Icon, Avatar } from 'antd';
+import {  Icon, } from 'antd';
 import { Statistic, Row, Col, Button, Descriptions} from 'antd';
 import { Upload, message } from 'antd';
 
 const { Dragger } = Upload;
-const { Meta } = Card;
 
 class List extends Component {
-  constructor(props) {
-    super(props);
-
-  }
 
   onChange(info) {
     const { status } = info.file;
