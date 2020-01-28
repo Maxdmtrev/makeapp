@@ -58,6 +58,8 @@ export default {
       title: "Bravat Opal, круг (Германия)",
       id: null,
       sampleImage: shower1,
+      price: 15210,
+      href: 'https://santehnika-online.ru/product/dushevaya_stoyka_bravat_opal_f6125183cp_a1_rus/',
       descript:
         "Душевая стойка и смесители. Корпус: латунь. Покрытие: Хром. Керамический картридж Sedal 35 mm. Аэратор Neoperl. Излив: 20 л/мин, Душ: 12 л/мин"
     },
@@ -67,6 +69,8 @@ export default {
       title: "Bravat Opal, квадрат (Германия)",
       id: null,
       sampleImage: shower2,
+      price: 15210,
+      href: 'https://santehnika-online.ru/product/dushevaya_stoyka_bravat_opal_f6125183cp_a_rus/',
       descript:
         "Душевая стойка и смесители. Корпус: латунь. Покрытие: Хром. Керамический картридж Sedal 35 mm. Аэратор Neoperl. Излив: 20 л/мин, Душ: 12 л/мин"
     },
@@ -76,6 +80,8 @@ export default {
       title: "Grohe Euphoria (Германия)",
       id: null,
       sampleImage: shower3,
+      price: 42850,
+      href: 'https://santehnika-online.ru/product/dushevaya_stoyka_grohe_euphoria_27475001/',
       descript:
         "Душевая стойка и смесители с термостатом (27475001). Покрытие: Хром. Душ 9.5 л/мин"
     },
@@ -85,6 +91,8 @@ export default {
       title: "Lemark Tropic (Чехия)",
       id: null,
       sampleImage: shower4,
+      price: 15830,
+      href: 'https://santehnika-online.ru/product/dushevaya_stoyka_lemark_tropic_lm7002c/',
       descript: "Душевая стойка и смесители. Покрытие: Хром. Съемная полка."
     }
   ],
@@ -96,6 +104,7 @@ export default {
       title: "Kerama Marazzi Бельканто/Фрегат беж",
       id: null,
       sampleImage: keramaWall1,
+      href: 'https://santehnika-online.ru/product/kollektsiya_plitki_kerama_marazzi_belkanto/',
       descript: "Керамическая плитка 15х40см"
     },
     {
@@ -104,6 +113,7 @@ export default {
       title: "Kerama Marazzi Бельканто/Фрегат коричн.",
       id: null,
       sampleImage: keramaWall2,
+      href: 'https://santehnika-online.ru/product/kollektsiya_plitki_kerama_marazzi_fregat/#1598421',
       descript: "Керамическая плитка 15х40см"
     },
     {
@@ -112,6 +122,7 @@ export default {
       title: "Kerama Marazzi Бельканто",
       id: null,
       sampleImage: keramaWall3,
+      href: 'https://santehnika-online.ru/product/kollektsiya_plitki_kerama_marazzi_belkanto/',
       descript: "Керамическая плитка 15х40см"
     },
     {
@@ -120,6 +131,7 @@ export default {
       title: "Kerama Marazzi Калейдоскоп белая/беж",
       id: null,
       sampleImage: keramaWall4,
+      href: 'https://santehnika-online.ru/product/kollektsiya_plitki_kerama_marazzi_kaleydoskop/',
       descript: "Керамическая плитка 20х20см"
     },
     {
@@ -128,6 +140,7 @@ export default {
       title: "Kerama Marazzi Калейдоскоп белая/розовая",
       id: null,
       sampleImage: keramaWall5,
+      href: 'https://santehnika-online.ru/product/kollektsiya_plitki_kerama_marazzi_kaleydoskop/',
       descript: "Керамическая плитка 20х20см"
     },
     {
@@ -136,6 +149,7 @@ export default {
       title: "Kerama Marazzi Калейдоскоп белая",
       id: null,
       sampleImage: keramaWall6,
+      href: 'https://santehnika-online.ru/product/kollektsiya_plitki_kerama_marazzi_kaleydoskop/',
       descript: "Керамическая плитка 20х20см"
     }
   ],
@@ -147,6 +161,8 @@ export default {
       title: "Cersanit Parva (Польша)",
       id: null,
       sampleImage: toilet1,
+      price: 7990,
+      href: 'https://santehnika-online.ru/product/unitaz_kompakt_cersanit_parva_new_clean_on_s_mikroliftom/',
       descript:
         "Напольный унитаз-компакт с микролифтом. Корпус: Фаянс. Система антивсплеск. Размеры: 36x61,5см"
     },
@@ -156,6 +172,8 @@ export default {
       title: "Roca The Gap (Испания)",
       id: null,
       sampleImage: toilet2,
+      price: 14419,
+      href: 'https://santehnika-online.ru/product/unitaz_podvesnoy_roca_gap_346477000/',
       descript:
         "Подвесной унитаз с микролифтом. Корпус: Фаянс. Безободковый. Система антивсплеск. Размеры: 35x54см. Инсталляция Grohe Rapid"
     },
@@ -165,6 +183,8 @@ export default {
       title: "Roca Meridian (Испания)",
       id: null,
       sampleImage: toilet3,
+      price: 15000,
+      href: 'https://santehnika-online.ru/product/unitaz_podvesnoy_roca_meridian_346247000/',
       descript:
         "Подвесной унитаз с микролифтом. Корпус: Фаянс. Система антивсплеск. Размеры: 36x48см. Инсталляция Geberit Duofix."
     }
@@ -177,6 +197,8 @@ export default {
       title: "IKEA ГОДМОРГОН / БРОВИКЕН",
       id: null,
       sampleImage: locker1,
+      price: 8000,
+      href: 'https://www.ikea.com/ru/ru/p/godmorgon-shkaf-dlya-rakoviny-s-2-yashch-belyy-80369008/',
       descript:
         "Белый шкаф для раковины с 2 ящиками. Ширина: 82см, Глубина: 49см, Высота: 68см. Одинарная раковина IKEA ОДЕНСВИК"
     },
@@ -186,6 +208,8 @@ export default {
       title: "IKEA ГОДМОРГОН / БРОВИКЕН",
       id: null,
       sampleImage: locker2,
+      price: 8500,
+      href: 'https://www.ikea.com/ru/ru/p/godmorgon-shkaf-dlya-rakoviny-s-2-yashch-pod-belenyy-dub-60380912/',
       descript:
         "Шкаф для раковины с 2 ящиками цвета белёный дуб. Ширина: 82см, Глубина: 49см, Высота: 68см. Одинарная раковина IKEA ОДЕНСВИК"
     }
@@ -290,6 +314,8 @@ export default {
       title: "Cersanit Octavia (Польша)",
       id: null,
       sampleImage: bath1,
+      price: 0,
+      href: '',
       descript:
         "Акриловая ванна. Длина: 170см, Ширина: 70см, Глубина: 40см, Объём: 180л."
     },
@@ -299,6 +325,8 @@ export default {
       title: "Roca Contesa (Испания)",
       id: null,
       sampleImage: bath2,
+      price: 0,
+      href: '',
       descript:
         "Стальная ванна. Длина: 170см, Ширина: 70см, Глубина: 40см, Объём: 195л"
     },
@@ -308,6 +336,8 @@ export default {
       title: "Roca Continental (Испания)",
       id: null,
       sampleImage: bath3,
+      price: 0,
+      href: '',
       descript:
         "Чугунная ванна с противоскользящим покрытием. Длина: 170см, Ширина: 70см, Глубина: 42см, Объём: 182л"
     },
@@ -317,6 +347,8 @@ export default {
       title: "Roca Princess (Испания)",
       id: null,
       sampleImage: bath4,
+      price: 0,
+      href: '',
       descript:
         "Стальная ванна с ручками и противоскользящим покрытием. Длина: 170см, Ширина: 70см, Глубина: 43см, Объём: 190л"
     }

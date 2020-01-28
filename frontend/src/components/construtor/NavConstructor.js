@@ -16,6 +16,7 @@ class NavConstructor extends Component {
   
   render () {
     return (
+
      <Card style={{margin:4}}>
         <Tabs defaultActiveKey="1" style={{minHeight: 800, minWidth: 600, }}>
            <TabPane tab="Комната" key="1">
