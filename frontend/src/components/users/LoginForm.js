@@ -37,6 +37,7 @@ class LoginForm extends Component {
   render () {
     const {username, password} = this.state;
   
+
     return (
      <div style={{display:"flex",justifyContent: "center", marginTop: "10px"}}>
        <Card title="Добро пожаловать!" style={{width: "40%",backgroundColor: "#282c34",opacity:"0.90"}}>
@@ -94,6 +95,7 @@ class LoginForm extends Component {
   </Card>
      </div>
      );
+
   }
 }
 
