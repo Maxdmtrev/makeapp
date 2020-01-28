@@ -162,7 +162,7 @@ class ConstructorRoom extends Component {
                 <Card
                  onClick={() => {this.setState ({floor: elem.img});}}
                  hoverable
-                 style={{width: 235}}
+                 style={{width: '100%'}}
                  cover={<img alt="example" src={elem.sampleImage}/>}
                 >
                   <Meta title={elem.title} description={elem.descript}/>
@@ -175,7 +175,7 @@ class ConstructorRoom extends Component {
                 <Card
                  onClick={() => this.setState ({door: elem.img})}
                  hoverable
-                 style={{width: 215}}
+                 style={{width: '100%'}}
                  cover={<img alt="example" src={elem.sampleImage}/>}
                 >
                   <Meta title={elem.title} description={elem.descript}/>
@@ -187,7 +187,7 @@ class ConstructorRoom extends Component {
                 <Card
                  onClick={() => this.setState ({plint: elem.img})}
                  hoverable
-                 style={{width: 215}}
+                 style={{width: '100%'}}
                  cover={<img alt="example" src={elem.sampleImage}/>}
                 >
                   <Meta title={elem.title} description={elem.descript}/>
@@ -199,7 +199,7 @@ class ConstructorRoom extends Component {
                 <Card
                  onClick={() => this.setState ({molding: elem.img})}
                  hoverable
-                 style={{width: 215}}
+                 style={{width: '100%'}}
                  cover={<img alt="example" src={elem.sampleImage}/>}
                 >
                   <Meta title={elem.title} description={elem.descript}/>
@@ -211,7 +211,7 @@ class ConstructorRoom extends Component {
                 <Card
                  onClick={() => this.setState ({podium: elem.img})}
                  hoverable
-                 style={{width: 215}}
+                 style={{width: '100%'}}
                  cover={<img alt="example" src={elem.sampleImage}/>}
                 >
                   <Meta title={elem.title} description={elem.descript}/>
@@ -223,7 +223,7 @@ class ConstructorRoom extends Component {
                 <Card
                  onClick={() => this.setState ({lamp: elem.img})}
                  hoverable
-                 style={{width: 215}}
+                 style={{width: '100%'}}
                  cover={<img alt="example" src={elem.sampleImage}/>}
                 >
                   <Meta title={elem.title} description={elem.descript}/>
@@ -235,7 +235,7 @@ class ConstructorRoom extends Component {
                 <Card
                  onClick={() => this.setState ({energy: elem.img})}
                  hoverable
-                 style={{width: 215}}
+                 style={{width: '100%'}}
                  cover={<img alt="example" src={elem.sampleImage}/>}
                 >
                   <Meta title={elem.title} description={elem.descript}/>

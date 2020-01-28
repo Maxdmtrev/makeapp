@@ -45,7 +45,7 @@ class Navigation extends Component {
           let result = await response.json ();
           this.props.logout (!result);
           this.props.history.push ('/login');
-          this.openNotification(result.user)
+          this.openNotification (result.user);
         }}>
           <Icon type="logout"/> Logout
         </Link>
@@ -54,14 +54,18 @@ class Navigation extends Component {
           <Icon type="login"/> Login
         </Link>
       </Menu.Item>)}
-      
+  
       {this.props.isLogin ? <Menu.Item style={{float: 'right'}}>
-        <Icon type="user"/> {this.props.username}
-      </Menu.Item> : <Menu.Item style={{float: 'right'}}>
-        <Link to="/registration">
-          <Icon type="form"/> Registration
-        </Link>
-      </Menu.Item>}
+         <Link to='/info'>
+           <Icon type="user"/> {this.props.username}
+         </Link>
+       </Menu.Item>
+   
+       : <Menu.Item style={{float: 'right'}}>
+         <Link to="/registration">
+           <Icon type="form"/> Registration
+         </Link>
+       </Menu.Item>}
     </Menu>);
   }
 }
