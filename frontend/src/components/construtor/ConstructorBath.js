@@ -1,7 +1,6 @@
 
 import React, {Component} from 'react';
 import {Button, Card, Col, Collapse, Row} from 'antd';
-import {GetUrlAC} from '../../redux/creators';
 import {connect} from 'react-redux';
 import image from "../../img/bath/kerama_wall/kerama_belkanto.png"
 import ceramic from "../../img/construct_bath/kerama_belkanto_fregat.png";
@@ -21,8 +20,8 @@ class ConstructorBath extends Component {
   constructor (props) {
     super (props);
     this.state = {
-      width: '800px',
-      height: '600px',
+      width: '100%',
+      // height: '600px',
       wall: image,
       ceramic: ceramic,
       floor: floor,
@@ -41,7 +40,7 @@ class ConstructorBath extends Component {
     return (
       <div>
         <Row>
-          <Col span={14}>
+          <Col span={13}>
             <img key={'1'}
                  style={{position: 'absolute', zIndex: '1',transform:`${this.state.invert}`}}
                  src={this.state.ceramic}
@@ -100,7 +99,7 @@ class ConstructorBath extends Component {
                  alt={'test'}
             />
           </Col>
-          <Col span={10}>
+          <Col span={10} offset={1}>
             <Collapse accordion className={'card-input'}>
               <Panel header="Настенная плитка" key="1">
                 {this.props.storage.keramaWall.map((elem, index) =>
