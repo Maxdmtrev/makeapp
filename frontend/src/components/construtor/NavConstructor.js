@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Tabs} from 'antd';
+import {Tabs,Card} from 'antd';
 import ConstructorRoom from './ConstructorRoom';
 import ConstructorBath from './ConstructorBath';
 import ConstructorKitchen from "./ConstructorKitchen";
@@ -16,8 +16,8 @@ class NavConstructor extends Component {
   
   render () {
     return (
-     <>
-        <Tabs defaultActiveKey="1" style={{minHeight: 800, minWidth: 600}}>
+     <Card style={{margin:4}}>
+        <Tabs defaultActiveKey="1" style={{minHeight: 800, minWidth: 600, }}>
            <TabPane tab="Комната" key="1">
                        <ConstructorRoom cardData={''} cardPrice={''}/>
            </TabPane>
@@ -28,7 +28,7 @@ class NavConstructor extends Component {
              <ConstructorKitchen cardData={''} cardPrice={''}/>
            </TabPane>
         </Tabs>
-         </>
+         </Card>
     );
   }
 }

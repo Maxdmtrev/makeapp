@@ -1,10 +1,19 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {Icon, Menu} from 'antd';
+import {Icon, Menu, notification} from 'antd';
 import {LogoutUserAC} from '../../redux/creators';
 
 class Navigation extends Component {
+  
+  openNotification = (user) => {
+    notification.open({
+      icon: <Icon type="smile" style={{ color: '#108ee9' }} />,
+      message: 'Ждем вас снова.',
+      description:
+       `Всего доброго, ${user}`
+    });
+  };
   
   render () {
     return (<Menu mode="horizontal">
@@ -19,8 +28,8 @@ class Navigation extends Component {
         </Link>
       </Menu.Item>
       <Menu.Item>
-        <Link to="/game">
-          <Icon type="snippets"/> AppartmentDesigh
+        <Link to="/room">
+          <Icon type="snippets"/> AppartmentDesign
         </Link>
       </Menu.Item>
       
@@ -36,6 +45,7 @@ class Navigation extends Component {
           let result = await response.json ();
           this.props.logout (!result);
           this.props.history.push ('/login');
+          this.openNotification(result.user)
         }}>
           <Icon type="logout"/> Logout
         </Link>
