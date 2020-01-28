@@ -118,7 +118,7 @@ class ConstructorBath extends Component {
                         cover={<img alt="example" src={elem.sampleImage}/>}
                   >
                     <Meta title={elem.title} description={elem.descript}/>
-                    <Button style={{ marginTop: 10, marginLeft: 20}} type="primary" onClick={() => window.open(`${elem.href}`)}>Посмотреть</Button>
+                    <Button style={{ marginTop: 10, marginLeft: 20}} type="primary" onClick={() => window.open(`${elem.href}`)}>{elem.price}</Button>
                     </Card>
                   </Col>
                 )}
@@ -134,6 +134,7 @@ class ConstructorBath extends Component {
                       cover={<img alt="example" src={elem.sampleImage}/>}
                   >
                     <Meta title={elem.title} description={elem.descript}/>
+                      <Button style={{ marginTop: 10, marginLeft: 20}} type="primary" onClick={() => window.open(`${elem.href}`)}>{elem.price}</Button>
                     </Card>
                   </Col>
                 )}
@@ -164,6 +165,7 @@ class ConstructorBath extends Component {
                   >
                     <Meta title={elem.title} description={elem.descript}/>
                     </Card>
+                    <Button style={{ marginTop: 10, marginLeft: 20}} type="primary" onClick={() => window.open(`${elem.href}`)}>{elem.price}</Button>
                   </Col>
                 )}
               </Panel>
