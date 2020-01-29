@@ -5,7 +5,12 @@ import {Icon, Menu, notification} from 'antd';
 import {LogoutUserAC} from '../../redux/creators';
 
 class Navigation extends Component {
-  
+  constructor(props) {
+    super(props);
+    this.state = {
+      current: 'home',
+    };
+  }
   openNotification = (user) => {
     notification.open({
       icon: <Icon type="smile" style={{ color: '#108ee9' }} />,
@@ -14,25 +19,33 @@ class Navigation extends Component {
        `Всего доброго, ${user}`
     });
   };
+
+  handleClick = e => {
+    console.log('click ', e);
+    this.setState({
+      current: e.key,
+    });
+  };
   
   render () {
-    return (<Menu mode="horizontal">
-      <Menu.Item>
+    return (
+        <Menu onClick={this.handleClick} mode="horizontal" selectedKeys={[this.state.current]}>
+      <Menu.Item key="home">
         <Link to="/">
           <Icon type="code"/> Home
         </Link>
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item key="slider">
         <Link to="/slider">
           <Icon type="copy"/> Slider
         </Link>
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item key="appart">
         <Link to="/room">
           <Icon type="snippets"/> AppartmentDesign
         </Link>
       </Menu.Item>
-      <Menu.Item>
+      <Menu.Item key="list">
         <Link to="/list">
           <Icon type="diff" />  List
         </Link>
