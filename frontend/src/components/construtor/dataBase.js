@@ -1,3 +1,4 @@
+
 import image222 from "../../img/room/default(2).png";
 import image444 from "../../img/room/bimetal.png";
 import image255 from "../../img/construct/window.png";
@@ -86,6 +87,7 @@ import imgClassic from "../../img/preset/exquisite-classic.png";
 import imgPeach from "../../img/preset/peach-dreams.png";
 import imgVivaro from "../../img/preset/vivaro-alpine.png";
 import imgCaramel from "../../img/preset/cold-caramel.png";
+
 
 export default {
   srcDef: [
