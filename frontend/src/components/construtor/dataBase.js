@@ -17,6 +17,7 @@ import image11 from "../../img/room/floor/dubwhite.jpg";
 import image11p from "../../img/room/floor/dubwhite.png";
 import image12 from "../../img/room/floor/klennatural.jpg";
 import image12p from "../../img/room/floor/klennatural.png";
+import floorR1p from '../../img/room/floor/dubcuba.png'
 import image13 from "../../img/room/door/dg-nyuta-graphite.jpg";
 import image13p from "../../img/room/door/dg-nyuta-graphite.png";
 import image14 from "../../img/room/door/dg-nyuta-white.jpg";
@@ -91,7 +92,9 @@ import toilet2p from "../../img/bath/toilet/roca_gap.png";
 import keramaWall4p from "../../img/bath/kerama_wall/kerama_kaleidoskop_white_beige.png";
 import floor3p from "../../img/bath/kerama_floor/kerama_fregat_dark.png";
 import floor2p from "../../img/bath/kerama_floor/kerama_fregat_beige.png";
+import floor4p from "../../img/bath/kerama_floor/kerama_prostone_dark.png";
 import keramaWall3p from "../../img/bath/kerama_wall/kerama_belkanto.png";
+import keramaWall7p from "../../img/bath/kerama_wall/kerama_prostone_avellino_black.png";
 import bath1p from "../../img/bath/bath/cersanit_octavia.png";
 import locker1p from "../../img/bath/locker/locker_white.png";
 import locker2p from "../../img/bath/locker/locker_wood.png";
@@ -645,82 +648,83 @@ export default {
     {
       title: "Cold Caramel",
       img: imgCaramel,
-      floor: image6p,
+      floor: floorR1p,
       light: light3p,
-      door: image13p,
+      door: image18p,
       elecric: elecric1p,
-      molding: molding1p,
-      srcPlint: plint1p,
-      background: "rgb(137, 146, 154)",
+      molding: molding2p,
+      srcPlint: plint4p,
+      background: "rgb(191, 180, 165)",
+      floorBath: floor4p,
+      keramaWall: keramaWall3p,
+      toilet: toilet2p,
+      bath: bath1p,
+      locker: locker1p
+    },
+    
+    {
+      title: "Peach Dreams",
+      img: imgPeach,
+      floor: floorR1p,
+      light: light3p,
+      door: image20p,
+      elecric: elecric2p,
+      molding: molding2p,
+      srcPlint: plint2p,
+      background: "rgb(233, 222, 215)",
       floorBath: floor2p,
       keramaWall: keramaWall3p,
       toilet: toilet1p,
       bath: bath1p,
-      locker: locker1p
+      locker: locker2p
+    },
+    {
+      title: "Excuisite  Classics",
+      img: imgClassic,
+      floor: image10p,
+      light: light3p,
+      door: image18p,
+      elecric: elecric1p,
+      molding: molding1p,
+      srcPlint: plint5p,
+      background: "rgb(116, 123, 131)",
+      floorBath: floor4p,
+      keramaWall: keramaWall7p,
+      toilet: toilet1p,
+      bath: bath1p,
+      locker: locker2p
+    },
+    {
+      title: "Vivaro Alpine",
+      img: imgVivaro,
+      floor: image8p,
+      light: light3p,
+      door: image15p,
+      elecric: elecric1p,
+      molding: molding1p,
+      srcPlint: plint1p,
+      background: "rgb(179, 187, 193)",
+      floorBath: floor3p,
+      keramaWall: keramaWall7p,
+      toilet: toilet1p,
+      bath: bath1p,
+      locker: locker2p
     },
     {
       title: "Elegant White",
       img: imgElegant,
-      floor: image8p,
-      light: light1p,
-      door: image16p,
+      floor: image11p,
+      light: light3p,
+      door: image18p,
       elecric: elecric1p,
-      molding: molding1p,
-      srcPlint: plint1p,
-      background: "rgb(67, 88, 118)",
+      molding: molding2p,
+      srcPlint: plint4p,
+      background: "rgb(246, 246, 246)",
       floorBath: floor3p,
       keramaWall: keramaWall4p,
       toilet: toilet2p,
       bath: bath1p,
-      locker: locker2p
-    },
-    {
-      title: "Cold Caramel",
-      img: imgCaramel,
-      floor: image6p,
-      light: light3p,
-      door: image13p,
-      elecric: elecric1p,
-      molding: molding1p,
-      srcPlint: plint1p,
-      background: "rgb(137, 146, 154)",
-      floorBath: floor2p,
-      keramaWall: keramaWall3p,
-      toilet: toilet1p,
-      bath: bath1p,
-      locker: locker2p
-    },
-    {
-      title: "Cold Caramel",
-      img: imgCaramel,
-      floor: image6p,
-      light: light3p,
-      door: image13p,
-      elecric: elecric1p,
-      molding: molding1p,
-      srcPlint: plint1p,
-      background: "rgb(137, 146, 154)",
-      floorBath: floor2p,
-      keramaWall: keramaWall3p,
-      toilet: toilet1p,
-      bath: bath1p,
-      locker: locker2p
-    },
-    {
-      title: "Cold Caramel",
-      img: imgCaramel,
-      floor: image6p,
-      light: light3p,
-      door: image13p,
-      elecric: elecric1p,
-      molding: molding1p,
-      srcPlint: plint1p,
-      background: "rgb(137, 146, 154)",
-      floorBath: floor2p,
-      keramaWall: keramaWall3p,
-      toilet: toilet1p,
-      bath: bath1p,
-      locker: locker2p
+      locker: locker1p
     }
   ]
 };
