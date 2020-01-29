@@ -1,4 +1,3 @@
-
 import image222 from "../../img/room/default(2).png";
 import image444 from "../../img/room/bimetal.png";
 import image255 from "../../img/construct/window.png";
@@ -87,7 +86,15 @@ import imgClassic from "../../img/preset/exquisite-classic.png";
 import imgPeach from "../../img/preset/peach-dreams.png";
 import imgVivaro from "../../img/preset/vivaro-alpine.png";
 import imgCaramel from "../../img/preset/cold-caramel.png";
-
+import toilet1p from "../../img/bath/toilet/cersanit_parva.png";
+import toilet2p from "../../img/bath/toilet/roca_gap.png";
+import keramaWall4p from "../../img/bath/kerama_wall/kerama_kaleidoskop_white_beige.png";
+import floor3p from "../../img/bath/kerama_floor/kerama_fregat_dark.png";
+import floor2p from "../../img/bath/kerama_floor/kerama_fregat_beige.png";
+import keramaWall3p from "../../img/bath/kerama_wall/kerama_belkanto.png";
+import bath1p from "../../img/bath/bath/cersanit_octavia.png";
+import locker1p from "../../img/bath/locker/locker_white.png";
+import locker2p from "../../img/bath/locker/locker_wood.png";
 
 export default {
   srcDef: [
@@ -644,7 +651,12 @@ export default {
       elecric: elecric1p,
       molding: molding1p,
       srcPlint: plint1p,
-      background: "rgb(137, 146, 154)"
+      background: "rgb(137, 146, 154)",
+      floorBath: floor2p,
+      keramaWall: keramaWall3p,
+      toilet: toilet1p,
+      bath: bath1p,
+      locker: locker1p
     },
     {
       title: "Elegant White",
@@ -655,7 +667,12 @@ export default {
       elecric: elecric1p,
       molding: molding1p,
       srcPlint: plint1p,
-      background: "rgb(67, 88, 118)"
+      background: "rgb(67, 88, 118)",
+      floorBath: floor3p,
+      keramaWall: keramaWall4p,
+      toilet: toilet2p,
+      bath: bath1p,
+      locker: locker2p
     },
     {
       title: "Cold Caramel",
@@ -666,7 +683,12 @@ export default {
       elecric: elecric1p,
       molding: molding1p,
       srcPlint: plint1p,
-      background: "rgb(137, 146, 154)"
+      background: "rgb(137, 146, 154)",
+      floorBath: floor2p,
+      keramaWall: keramaWall3p,
+      toilet: toilet1p,
+      bath: bath1p,
+      locker: locker2p
     },
     {
       title: "Cold Caramel",
@@ -677,7 +699,12 @@ export default {
       elecric: elecric1p,
       molding: molding1p,
       srcPlint: plint1p,
-      background: "rgb(137, 146, 154)"
+      background: "rgb(137, 146, 154)",
+      floorBath: floor2p,
+      keramaWall: keramaWall3p,
+      toilet: toilet1p,
+      bath: bath1p,
+      locker: locker2p
     },
     {
       title: "Cold Caramel",
@@ -688,7 +715,12 @@ export default {
       elecric: elecric1p,
       molding: molding1p,
       srcPlint: plint1p,
-      background: "rgb(137, 146, 154)"
+      background: "rgb(137, 146, 154)",
+      floorBath: floor2p,
+      keramaWall: keramaWall3p,
+      toilet: toilet1p,
+      bath: bath1p,
+      locker: locker2p
     }
   ]
 };
