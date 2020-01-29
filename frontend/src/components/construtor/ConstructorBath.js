@@ -203,7 +203,7 @@ class ConstructorBath extends Component {
                   <Col key={index} span={11} style={{margin: 6}}>
                     <Card
                         onClick={() =>{ this.setState ({locker: elem.img});
-                        this.props.addPriceLocker(elem.price);
+                        this.props.addPriceLocker({price: elem.price, title: elem.title, href: elem.href});
                         }}
                         hoverable
                         style={{width: 215}}

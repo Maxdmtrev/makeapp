@@ -47,11 +47,27 @@ class List extends Component {
               Бельканто
             </Button>
           </div>
-          <div>
-            <h1>{this.props.priceToilet.title}</h1>
+          <Row gutter={16}>
+            <Col span={12}>
+              <Statistic title="Туалет" value={this.props.priceToilet.title} />
+            </Col>
+            <Col span={12}>
+              <Statistic title="Цена (RUB)" />
+              <Button onClick={() =>  window.open(`${this.props.priceToilet.href}`)} > Цена: {this.props.priceToilet.price}</Button>
+
+            </Col>
+          </Row>
+          <Row gutter={16}>
+            <div>
+              <h1>{this.props.priceToilet.title}</h1>
+              {/*<h1>{this.props.priceToilet.price}</h1>*/}
+              <Button onClick={() =>  window.open(`${this.props.priceToilet.href}`)} > Цена: {this.props.priceToilet.price}</Button>
+            </div>
+            <Col>
+            <h1>{this.props.priceLocker.title}</h1>
             {/*<h1>{this.props.priceToilet.price}</h1>*/}
-            <Button onClick={() =>  window.open(`${this.props.priceToilet.href}`)} > Цена: {this.props.priceToilet.price}</Button>
-          </div>
+            <Button onClick={() =>  window.open(`${this.props.priceLocker.href}`)} > Цена: {this.props.priceLocker.price}</Button>
+            </Col>
         </Row>
         <div>
           <Row gutter={16}>
@@ -76,13 +92,15 @@ class List extends Component {
             </p>
           </Dragger>,
         </div>
+        </Row>
       </div>
   )
 }}
 
 function mapStateToProps(store) {
   return {
-    priceToilet: store.priceToilet
+    priceToilet: store.priceToilet,
+    priceLocker: store.priceLocker,
   };
 }
 

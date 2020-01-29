@@ -32,11 +32,11 @@ class ConstructorKitchen extends Component {
              alt={'test'}
           />
           <img key={'2'}
-               style={{position: 'absolute', zIndex: '0',transform:`${this.state.invert}`}}
-               src={this.state.kitchen}
-               width={this.state.width}
-               height={this.state.height}
-               alt={'test'}
+             style={{position: 'absolute', zIndex: '2',transform:`${this.state.invert}`}}
+             src={this.state.kitchen}
+             width={this.state.width}
+             height={this.state.height}
+             alt={'test'}
           />
         </Col>
         <Col span={10}>
@@ -55,6 +55,20 @@ class ConstructorKitchen extends Component {
                 </Col>
               )}
             </Panel>
+            <Panel header="Кухня" key="2">
+              {this.props.storage.kitchen.map((elem, index) =>
+                  <Col key={index} span={11} style={{margin: 6}}>
+                    <Card
+                        onClick={(e) => this.setState({kitchen: elem.img})}
+                        hoverable
+                        style={{width: 215}}
+                        cover={<img alt="example" src={elem.sampleImage}/>}
+                    >
+                      <Meta title={elem.title} description={elem.descript}/>
+                    </Card>
+                  </Col>
+              )}
+            </Panel>
           </Collapse>
         </Col>
       </Row>
@@ -71,7 +85,7 @@ function mapStateToProps(store) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    addUrlAC: (data) => {
+    addCeramicAC: (data) => {
       dispatch(GetUrlAC(data));
     }
   };
