@@ -3,15 +3,15 @@ const router = express.Router ();
 const User = require ('../models/users');
 const bcrypt = require ('bcrypt');
 const saltRounds = 10;
-// let Minio = require ('minio');
-//
-// let s3Client = new Minio.Client ({
-//   endPoint: 'play.min.io',
-//   port: 9000,
-//   useSSL: true,
-//   accessKey: 'Q3AM3UQ867SPQQA43P2F',
-//   secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
-// });
+let Minio = require ('minio');
+
+let s3Client = new Minio.Client ({
+  endPoint: 'play.min.io',
+  port: 9000,
+  useSSL: true,
+  accessKey: 'Q3AM3UQ867SPQQA43P2F',
+  secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
+});
 
 
 router.route ('/get').get (async (req, res) => {
