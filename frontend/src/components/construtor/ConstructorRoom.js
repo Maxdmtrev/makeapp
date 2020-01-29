@@ -35,7 +35,7 @@ class ConstructorRoom extends Component {
       wall: wall_base,
       wall1: wall_default,
       paint: paint,
-      changeColor: "black",
+      changeColor: "beige",
       floor: floor,
       door: door,
       plint: plint,
@@ -83,7 +83,7 @@ class ConstructorRoom extends Component {
                 style={{
                   position: "absolute",
                   zIndex: "4",
-                  opacity: "0.5",
+                  opacity: "0.9",
                   transform: `${this.state.invert}`,
                   background: `${this.props.presetStorage.background ||
                     this.state.changeColor}`
