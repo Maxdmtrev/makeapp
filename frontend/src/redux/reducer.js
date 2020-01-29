@@ -26,7 +26,7 @@ import dataBase from "../components/construtor/dataBase";
 import dataBase2 from "../components/construtor/dataBase2";
 import dataBase3 from "../components/construtor/dataBase3";
 
-const initialState = {
+const state = {
   constStore: dataBase,
   bathStore: dataBase2,
   kitchenStore: dataBase3,
@@ -59,7 +59,7 @@ const initialState = {
   selectedPreset: {}
 };
 
-export default function(oldState = initialState, action) {
+export default function(oldState = state, action) {
   switch (action.type) {
     case PRICE_DOOR:
       return {
@@ -159,6 +159,7 @@ export default function(oldState = initialState, action) {
       newRoomCard.countRoom = action.countRoom;
       newRoomCard.desPrice = action.desPrice;
       newRoomCard.perePlanPrice = action.perePlanPrice;
+      newRoomCard.price = action.price;
       return {
         ...oldState,
         roomCard: newRoomCard

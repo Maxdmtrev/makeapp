@@ -4,9 +4,7 @@ import { SetPresetAC } from "../../redux/creators";
 import { Card, Row, Col } from "antd";
 
 class Slider extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
   setPreset = elem => {
     this.props.addPreset(elem);
   };

@@ -20,7 +20,7 @@ class Home extends Component {
       desPrice: 0,
       perePlan: false,
       perePlanPrice: 0,
-      change: true
+      change: true,
     };
   }
   
@@ -29,7 +29,7 @@ class Home extends Component {
       this.loadMap ();
     }
   }
-  
+
   componentDidUpdate (prevProps, prevState) {
     if (this.state.change !== prevState.change && this.state.change) {
       this.loadMap ();
@@ -40,12 +40,6 @@ class Home extends Component {
     new this.props.ymaps.SuggestView ('suggest', {
       results: 5, offset: [0, 5]
     });
-  };
-  
-  countPrice = () => {
-    
-    let totalPrice = (this.props.roomCard.m2 * 10000) + (this.props.roomCard.countBath * 30000) + (this.props.roomCard.countDoor * 10000) + (this.props.roomCard.countRoom *this.props.roomCard.perePlanPrice) + (this.props.roomCard.desPrice * this.props.roomCard.m2);
-    return totalPrice;
   };
   
   render () {
@@ -139,9 +133,20 @@ class Home extends Component {
              <Col offset={2} span={2}>
                <Form.Item>
                  <Button type="primary" htmlType="submit" onClick={() => {
-                   if ((address, m2, countBath, countDoor, countRoom) !== null) {
-                     this.setState ({change: !change});
-                     this.props.addCardAC (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice);
+                   let totalPrice = (this.state.m2 * 10000) + (this.state.countBath * 30000) + (this.state.countDoor * 10000) + (this.state.countRoom * this.state.perePlanPrice) + (this.state.desPrice * this.state.m2);
+                   if (address!== null&&m2!== null&& countBath!== null&& countDoor!== null&& countRoom !== null) {
+                     this.props.addCardAC (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice, totalPrice);
+                     this.setState ({
+                       change: !change,
+                       address: null,
+                       m2: null,
+                       countBath: null,
+                       countDoor: null,
+                       countRoom: null,
+                       desPrice: 0,
+                       perePlanPrice: 0,
+                       price: 0
+                     });
                    }
                  }}>
                    Перейти к расчету
@@ -157,8 +162,8 @@ class Home extends Component {
              <p style={{color: 'white'}}>{roomCard.countRoom} -комнатная квартира площадью {roomCard.m2} м2</p>
              <p style={{color: 'white'}}>Количество санузлов: {roomCard.countBath}</p>
              <p style={{color: 'white'}}>Количество дверей: {roomCard.countDoor}</p>
-             
-             <p style={{color: 'white'}}>Начальная стоимость дизайн проекта: {this.countPrice ()} </p>
+  
+             <p style={{color: 'white'}}>Начальная стоимость дизайн проекта: {this.props.roomCard.price} </p>
              <Button onClick={() => {
                this.setState ({change: !change});
              }}>Изменить</Button>
@@ -177,8 +182,8 @@ function mapStateToProps (store) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    addCardAC: (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice) => {
-      dispatch (GetCardAC (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice));
+    addCardAC: (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice, price) => {
+      dispatch (GetCardAC (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice, price));
     }
   };
 }

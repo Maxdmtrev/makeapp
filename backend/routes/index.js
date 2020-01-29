@@ -112,8 +112,8 @@ router.route ('/login')
  .get (async (req, res) => {
    if (req.session.user) {
      const host = req.session.user._id;
-     const findUSer = await User.find ({_id: host}).populate ('list');
-     return res.json ({result: true, user: req.session.user.username, todolist: findUSer[0].list});
+     // const findUSer = await User.find ({_id: host}).populate ('list');
+     return res.json ({result: true, user: req.session.user.username});
    }
    else {
      return res.json ({result: false, user: null});
