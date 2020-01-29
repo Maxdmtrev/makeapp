@@ -22,7 +22,6 @@ import molding from "../../img/room/molding/molding_simple.png";
 import podium from "../../img/room/sill/light_wood.png";
 import lamp from "../../img/room/light/lightstar.png";
 import energy from "../../img/room/electric/legrand.png";
-import Slider from "../render/Slider";
 import potolor from "../../img/room/default(2).png";
 import bimetal from "../../img/room/bimetal.png";
 import okno from "../../img/construct/window.png";
@@ -56,7 +55,7 @@ class ConstructorRoom extends Component {
   render() {
     return (
       <div>
-        <Slider />
+        {/*<Slider />*/}
         <Row>
           <Affix offsetTop={10}>
             <Col style={{ margin: 5 }} span={13}>
@@ -73,7 +72,7 @@ class ConstructorRoom extends Component {
                alt={"test"}
               />
               <img
-               key={"1"}
+               key={"2"}
                style={{
                  position: "absolute",
                  zIndex: "7",
@@ -85,7 +84,7 @@ class ConstructorRoom extends Component {
                alt={"test"}
               />
               <img
-               key={"1"}
+               key={"3"}
                style={{
                  position: "absolute",
                  zIndex: "7",
@@ -97,7 +96,7 @@ class ConstructorRoom extends Component {
                alt={"test"}
               />
               <img
-                key={"1"}
+                key={"4"}
                 style={{
                   position: "absolute",
                   zIndex: "2",
@@ -109,7 +108,7 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
-                key={"2"}
+                key={"5"}
                 style={{
                   position: "absolute",
                   zIndex: "3",
@@ -121,7 +120,7 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
-                key={"2"}
+                key={"6"}
                 style={{
                   position: "absolute",
                   zIndex: "5",
@@ -134,7 +133,7 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
-                key={"3"}
+                key={"7"}
                 style={{
                   position: "absolute",
                   zIndex: "4",
@@ -148,7 +147,7 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
-                key={"4"}
+                key={"8"}
                 style={{
                   position: "absolute",
                   zIndex: "5",
@@ -160,7 +159,7 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
-                key={"5"}
+                key={"9"}
                 style={{
                   position: "absolute",
                   zIndex: "9",
@@ -172,7 +171,7 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
-                key={"6"}
+                key={"10"}
                 style={{
                   position: "absolute",
                   zIndex: "8",
@@ -184,7 +183,7 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
-                key={"7"}
+                key={"11"}
                 style={{
                   position: "absolute",
                   zIndex: "8",
@@ -196,7 +195,7 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
-                key={"8"}
+                key={"12"}
                 style={{
                   position: "absolute",
                   zIndex: "10",
@@ -208,7 +207,7 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
-                key={"9"}
+                key={"13"}
                 style={{
                   position: "absolute",
                   zIndex: "8",
@@ -220,7 +219,7 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
-                key={"10"}
+                key={"14"}
                 style={{
                   position: "absolute",
                   zIndex: "5",

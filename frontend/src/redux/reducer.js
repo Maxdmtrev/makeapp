@@ -60,6 +60,7 @@ const state = {
 };
 
 export default function(oldState = state, action) {
+  console.log (oldState.constStore);
   switch (action.type) {
     case PRICE_DOOR:
       return {

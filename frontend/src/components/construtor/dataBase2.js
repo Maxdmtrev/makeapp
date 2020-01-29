@@ -58,11 +58,6 @@ import keramaWall9 from "../../img/bath/kerama_wall/kerama_prostone_grey_fregat.
 import keramaWall9p from "../../img/bath/kerama_wall/kerama_prostone_grey_fregat.png";
 import keramaWall10 from "../../img/bath/kerama_wall/kerama_prostone_grey_fregat_beige.jpg";
 import keramaWall10p from "../../img/bath/kerama_wall/kerama_prostone_grey_fregat_beige.png";
-import imgElegant from "../../img/preset/elegant-white.png";
-import imgClassic from "../../img/preset/exquisite-classic.png";
-import imgPeach from "../../img/preset/peach-dreams.png";
-import imgVivaro from "../../img/preset/vivaro-alpine.png";
-import imgCaramel from "../../img/preset/cold-caramel.png";
 
 export default {
 
@@ -333,43 +328,6 @@ export default {
       href: 'https://santehnika-online.ru/product/stalnaya_vanna_roca_princess_n_170_sm/',
       descript:
         "Стальная ванна с ручками и противоскользящим покрытием. Длина: 170см, Ширина: 70см, Глубина: 43см, Объём: 190л"
-    }
-  ],
-  preset: [
-    {
-      title: "Cold Caramel",
-      img: imgCaramel,
-      floor: floor2p,
-      keramaWall: keramaWall3p,
-      toilet: toilet1p
-    },
-    {
-      title: "Elegant White",
-      img: imgElegant,
-      floor: floor3p,
-      keramaWall: keramaWall4p,
-      toilet: toilet2p
-    },
-    {
-      title: "Cold Caramel",
-      img: imgCaramel,
-      floor: floor2p,
-      keramaWall: keramaWall3p,
-      toilet: toilet1p
-    },
-    {
-      title: "Cold Caramel",
-      img: imgCaramel,
-      floor: floor2p,
-      keramaWall: keramaWall3p,
-      toilet: toilet1p
-    },
-    {
-      title: "Cold Caramel",
-      img: imgCaramel,
-      floor: floor2p,
-      keramaWall: keramaWall3p,
-      toilet: toilet1p
     }
   ]
 };
