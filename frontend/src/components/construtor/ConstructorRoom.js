@@ -79,11 +79,23 @@ class ConstructorRoom extends Component {
                 alt={"test"}
               />
               <img
+                key={"2"}
+                style={{
+                  position: "absolute",
+                  zIndex: "5",
+                  opacity: "0.4",
+                  transform: `${this.state.invert}`
+                }}
+                src={this.state.wall1}
+                width={this.state.width}
+                height={this.state.height}
+                alt={"test"}
+              />
+              <img
                 key={"3"}
                 style={{
                   position: "absolute",
                   zIndex: "4",
-                  opacity: "0.9",
                   transform: `${this.state.invert}`,
                   background: `${this.props.presetStorage.background ||
                     this.state.changeColor}`
