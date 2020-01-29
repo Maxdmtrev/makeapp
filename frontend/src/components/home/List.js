@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {  Icon, } from 'antd';
 import { Statistic, Row, Col, Button, Descriptions} from 'antd';
 import { Upload, message } from 'antd';
+import {connect} from 'react-redux';
 
 const { Dragger } = Upload;
 
@@ -46,6 +47,11 @@ class List extends Component {
               Бельканто
             </Button>
           </div>
+          <div>
+            <h1>{this.props.priceToilet.title}</h1>
+            {/*<h1>{this.props.priceToilet.price}</h1>*/}
+            <Button onClick={() =>  window.open(`${this.props.priceToilet.href}`)} > Цена: {this.props.priceToilet.price}</Button>
+          </div>
         </Row>
         <div>
           <Row gutter={16}>
@@ -74,5 +80,11 @@ class List extends Component {
   )
 }}
 
+function mapStateToProps(store) {
+  return {
+    priceToilet: store.priceToilet
+  };
+}
 
-export default List;
+
+export default connect(mapStateToProps)(List);

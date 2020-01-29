@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {Card, Col, Collapse, Row} from 'antd';
 import {GetUrlAC} from '../../redux/creators';
 import {connect} from 'react-redux';
-import ceramic_white from '../../img/kitchen/new2.effectsResult.effectsResult.png';
+import ceramic_white from '../../img/kitchen/1.effectsResult.png';
+import kitchen from '../../img/kitchen/2.effectsResult.png';
 
 const {Meta} = Card;
 const {Panel} = Collapse;
@@ -13,6 +14,7 @@ class ConstructorKitchen extends Component {
     this.state = {
       width: '100%',
       ceramic: ceramic_white,
+      kitchen: kitchen,
       invert: "scale(-1,1)"
     }
   }
@@ -28,6 +30,13 @@ class ConstructorKitchen extends Component {
              width={this.state.width}
              height={this.state.height}
              alt={'test'}
+          />
+          <img key={'2'}
+               style={{position: 'absolute', zIndex: '0',transform:`${this.state.invert}`}}
+               src={this.state.kitchen}
+               width={this.state.width}
+               height={this.state.height}
+               alt={'test'}
           />
         </Col>
         <Col span={10}>

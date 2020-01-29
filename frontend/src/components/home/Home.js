@@ -161,7 +161,6 @@ class Home extends Component {
              <p style={{color: 'white'}}>Начальная стоимость дизайн проекта: {this.countPrice ()} </p>
              <Button onClick={() => {
                this.setState ({change: !change});
-               // this.loadMap()
              }}>Изменить</Button>
            </Card>
          </Col>

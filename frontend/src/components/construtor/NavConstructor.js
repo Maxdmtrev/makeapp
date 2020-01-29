@@ -19,13 +19,13 @@ class NavConstructor extends Component {
 
      <Card style={{margin:4}}>
         <Tabs defaultActiveKey="1" style={{minHeight: 800, minWidth: 600, }}>
-           <TabPane tab="Комната" key="">
+           <TabPane tab="Комната" key="1">
                        <ConstructorRoom cardData={''} cardPrice={''}/>
            </TabPane>
-           <TabPane tab="Санузел" key="1">
+           <TabPane tab="Санузел" key="2">
              <ConstructorBath cardData={''} cardPrice={''}/>
            </TabPane>
-           <TabPane tab="Кухня" key="">
+           <TabPane tab="Кухня" key="3">
              <ConstructorKitchen cardData={''} cardPrice={''}/>
            </TabPane>
         </Tabs>

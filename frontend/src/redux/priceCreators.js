@@ -64,6 +64,6 @@ export const AddPriceDoorAC = (data) => {
 };export const AddPriceToiletAC = (data) => {
   return {
     type: PRICE_TOILET,
-    priceToilet:data
+    priceToilet: data
   };
 };
