@@ -51,10 +51,12 @@ class Navigation extends Component {
           this.props.logout (!result);
           this.props.history.push ('/login');
           this.openNotification (result.user);
+          localStorage.removeItem("state")
         }}>
           <Icon type="logout"/> Logout
         </Link>
-      </Menu.Item>) : (<Menu.Item style={{float: 'right'}}>
+      </Menu.Item>) : (<Menu.Item style={{float: 'right'}}
+      >
         <Link to="/login">
           <Icon type="login"/> Login
         </Link>

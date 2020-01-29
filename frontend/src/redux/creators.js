@@ -45,7 +45,8 @@ export const GetCardAC = (
   countDoor,
   countRoom,
   desPrice,
-  perePlanPrice
+  perePlanPrice,
+  price
 ) => {
   return {
     type: GET_CARD,
@@ -55,7 +56,8 @@ export const GetCardAC = (
     countDoor: countDoor,
     countRoom: countRoom,
     desPrice: desPrice,
-    perePlanPrice: perePlanPrice
+    perePlanPrice: perePlanPrice,
+    price:price
   };
 };
 export const GetMapAC = map => {

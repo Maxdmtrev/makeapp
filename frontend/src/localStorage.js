@@ -10,11 +10,14 @@ export const loadState = () => {
 };
 
 export const saveState=(state)=>{
+
 try{
-  const serializedState=JSON.stringify(state)
-  localStorage.setItem("state",serializedState)
+  const toSave = {...state};
+  delete toSave.ymaps;
+  const serializedState=JSON.stringify(toSave)
+  localStorage.setItem('state',serializedState)
 }
 catch (e) {
-  console.log(e)
+  console.log("mi tyt",e)
 }
 }
