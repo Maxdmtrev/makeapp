@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import {Button, Card, Col, Collapse, Row} from 'antd';
 import {connect} from 'react-redux';
@@ -153,7 +152,7 @@ class ConstructorBath extends Component {
                   <Col key={index} span={11} style={{margin: 6}}>
                     <Card
                       onClick={() =>{ this.setState ({toilet: elem.img});
-                      this.props.addPriceToilet(elem.price);
+                      this.props.addPriceToilet({price: elem.price, title: elem.title, href: elem.href});
                       }}
                       hoverable
                       style={{width: 215}}

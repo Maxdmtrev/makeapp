@@ -1,86 +1,93 @@
-import image222 from '../../img/room/default(2).png';
-import image444 from '../../img/room/bimetal.png';
-import image255 from '../../img/construct/window.png';
-import image5 from '../../img/room/floor/darkcherry.jpg';
-import image5p from '../../img/room/floor/darkcherry.png';
-import image6 from '../../img/room/floor/darkchocolate.jpg';
-import image6p from '../../img/room/floor/darkchocolate.png';
-import image7 from '../../img/room/floor/dubbordo.jpg';
-import image7p from '../../img/room/floor/dubbordo.png';
-import image8 from '../../img/room/floor/dublight.jpg';
-import image8p from '../../img/room/floor/dublight.png';
-import image9 from '../../img/room/floor/dublightgrey.jpg';
-import image9p from '../../img/room/floor/dublightgrey.png';
-import image10 from '../../img/room/floor/dubmount.jpg';
-import image10p from '../../img/room/floor/dubmount.png';
-import image11 from '../../img/room/floor/dubwhite.jpg';
-import image11p from '../../img/room/floor/dubwhite.png';
-import image12 from '../../img/room/floor/klennatural.jpg';
-import image12p from '../../img/room/floor/klennatural.png';
-import image13 from '../../img/room/door/dg-nyuta-graphite.jpg';
-import image13p from '../../img/room/door/dg-nyuta-graphite.png';
-import image14 from '../../img/room/door/dg-nyuta-white.jpg';
-import image14p from '../../img/room/door/dg-nyuta-white.png';
-import image15 from '../../img/room/door/dorren-white.jpg';
-import image15p from '../../img/room/door/dorren-white.png';
-import image16 from '../../img/room/door/glanta-grey.jpg';
-import image16p from '../../img/room/door/glanta-grey.png';
-import image17 from '../../img/room/door/glanta-light-grey.jpg';
-import image17p from '../../img/room/door/glanta-light-grey.png';
-import image18 from '../../img/room/door/glanta-white.jpg';
-import image18p from '../../img/room/door/glanta-white.png';
-import image19 from '../../img/room/door/profildoors_1vg.jpg';
-import image19p from '../../img/room/door/profildoors_1vg.png';
-import image20 from '../../img/room/door/profildoors_1z.jpg';
-import image20p from '../../img/room/door/profildoors_1z.png';
-import image21 from '../../img/room/door/profildoors_u100_antracite.jpg';
-import image21p from '../../img/room/door/profildoors_u100_antracite.png';
-import image22 from '../../img/room/door/profildoors_u100_black.jpg';
-import image22p from '../../img/room/door/profildoors_u100_black.png';
-import plint1 from '../../img/room/plint/curved_white.jpg';
-import plint1p from '../../img/room/plint/curved_white.png';
-import plint2 from '../../img/room/plint/flat_transparent.jpg';
-import plint2p from '../../img/room/plint/flat_transparent.png';
-import plint3 from '../../img/room/plint/flat_white_small.jpg';
-import plint3p from '../../img/room/plint/flat_white_small.png';
-import plint4 from '../../img/room/plint/flat_white.jpg';
-import plint4p from '../../img/room/plint/flat_white.png';
-import plint5 from '../../img/room/plint/high_white.jpg';
-import plint5p from '../../img/room/plint/high_white.png';
-import plint6 from '../../img/room/plint/profil_doors_brown.jpg';
-import plint6p from '../../img/room/plint/profil_doors_brown.png';
-import sill1 from '../../img/room/sill/black_wood.jpg';
-import sill1p from '../../img/room/sill/black_wood.png';
-import sill2 from '../../img/room/sill/dark_wood.jpg';
-import sill2p from '../../img/room/sill/dark_wood.png';
-import sill3 from '../../img/room/sill/ginger_wood.jpg';
-import sill3p from '../../img/room/sill/ginger_wood.png';
-import sill4 from '../../img/room/sill/light_wood.jpg';
-import sill4p from '../../img/room/sill/light_wood.png';
-import sill5 from '../../img/room/sill/middle_wood.jpg';
-import sill5p from '../../img/room/sill/middle_wood.png';
-import sill6 from '../../img/room/sill/plastic.jpg';
-import sill6p from '../../img/room/sill/plastic.png';
-import light1 from '../../img/room/light/lightstar_rullo_black.jpg';
-import light1p from '../../img/room/light/lightstar_rullo_black.png';
-import light2 from '../../img/room/light/lightstar_rullo.jpg';
-import light2p from '../../img/room/light/lightstar_rullo.png';
-import light3 from '../../img/room/light/lightstar_singo.jpg';
-import light3p from '../../img/room/light/lightstar_singo.png';
-import light4 from '../../img/room/light/lightstar_unitario_black_tablet.jpg';
-import light4p from '../../img/room/light/lightstar_unitario_black_tablet.png';
-import light5 from '../../img/room/light/lightstar.jpg';
-import light5p from '../../img/room/light/lightstar.png';
-import light6 from '../../img/room/light/melody.jpg';
-import light6p from '../../img/room/light/melody.png';
-import molding1 from '../../img/room/molding/molding_simple.jpg';
-import molding1p from '../../img/room/molding/molding_simple.png';
-import molding2 from '../../img/room/molding/molding_small.jpg';
-import molding2p from '../../img/room/molding/molding_small.png';
-import elecric1 from '../../img/room/electric/legrand.jpg';
-import elecric1p from '../../img/room/electric/legrand.png';
-import elecric2 from '../../img/room/electric/legrand_black.jpg';
-import elecric2p from '../../img/room/electric/legrand_black.png';
+
+import image222 from "../../img/room/default(2).png";
+import image444 from "../../img/room/bimetal.png";
+import image255 from "../../img/construct/window.png";
+import image5 from "../../img/room/floor/darkcherry.jpg";
+import image5p from "../../img/room/floor/darkcherry.png";
+import image6 from "../../img/room/floor/darkchocolate.jpg";
+import image6p from "../../img/room/floor/darkchocolate.png";
+import image7 from "../../img/room/floor/dubbordo.jpg";
+import image7p from "../../img/room/floor/dubbordo.png";
+import image8 from "../../img/room/floor/dublight.jpg";
+import image8p from "../../img/room/floor/dublight.png";
+import image9 from "../../img/room/floor/dublightgrey.jpg";
+import image9p from "../../img/room/floor/dublightgrey.png";
+import image10 from "../../img/room/floor/dubmount.jpg";
+import image10p from "../../img/room/floor/dubmount.png";
+import image11 from "../../img/room/floor/dubwhite.jpg";
+import image11p from "../../img/room/floor/dubwhite.png";
+import image12 from "../../img/room/floor/klennatural.jpg";
+import image12p from "../../img/room/floor/klennatural.png";
+import image13 from "../../img/room/door/dg-nyuta-graphite.jpg";
+import image13p from "../../img/room/door/dg-nyuta-graphite.png";
+import image14 from "../../img/room/door/dg-nyuta-white.jpg";
+import image14p from "../../img/room/door/dg-nyuta-white.png";
+import image15 from "../../img/room/door/dorren-white.jpg";
+import image15p from "../../img/room/door/dorren-white.png";
+import image16 from "../../img/room/door/glanta-grey.jpg";
+import image16p from "../../img/room/door/glanta-grey.png";
+import image17 from "../../img/room/door/glanta-light-grey.jpg";
+import image17p from "../../img/room/door/glanta-light-grey.png";
+import image18 from "../../img/room/door/glanta-white.jpg";
+import image18p from "../../img/room/door/glanta-white.png";
+import image19 from "../../img/room/door/profildoors_1vg.jpg";
+import image19p from "../../img/room/door/profildoors_1vg.png";
+import image20 from "../../img/room/door/profildoors_1z.jpg";
+import image20p from "../../img/room/door/profildoors_1z.png";
+import image21 from "../../img/room/door/profildoors_u100_antracite.jpg";
+import image21p from "../../img/room/door/profildoors_u100_antracite.png";
+import image22 from "../../img/room/door/profildoors_u100_black.jpg";
+import image22p from "../../img/room/door/profildoors_u100_black.png";
+import plint1 from "../../img/room/plint/curved_white.jpg";
+import plint1p from "../../img/room/plint/curved_white.png";
+import plint2 from "../../img/room/plint/flat_transparent.jpg";
+import plint2p from "../../img/room/plint/flat_transparent.png";
+import plint3 from "../../img/room/plint/flat_white_small.jpg";
+import plint3p from "../../img/room/plint/flat_white_small.png";
+import plint4 from "../../img/room/plint/flat_white.jpg";
+import plint4p from "../../img/room/plint/flat_white.png";
+import plint5 from "../../img/room/plint/high_white.jpg";
+import plint5p from "../../img/room/plint/high_white.png";
+import plint6 from "../../img/room/plint/profil_doors_brown.jpg";
+import plint6p from "../../img/room/plint/profil_doors_brown.png";
+import sill1 from "../../img/room/sill/black_wood.jpg";
+import sill1p from "../../img/room/sill/black_wood.png";
+import sill2 from "../../img/room/sill/dark_wood.jpg";
+import sill2p from "../../img/room/sill/dark_wood.png";
+import sill3 from "../../img/room/sill/ginger_wood.jpg";
+import sill3p from "../../img/room/sill/ginger_wood.png";
+import sill4 from "../../img/room/sill/light_wood.jpg";
+import sill4p from "../../img/room/sill/light_wood.png";
+import sill5 from "../../img/room/sill/middle_wood.jpg";
+import sill5p from "../../img/room/sill/middle_wood.png";
+import sill6 from "../../img/room/sill/plastic.jpg";
+import sill6p from "../../img/room/sill/plastic.png";
+import light1 from "../../img/room/light/lightstar_rullo_black.jpg";
+import light1p from "../../img/room/light/lightstar_rullo_black.png";
+import light2 from "../../img/room/light/lightstar_rullo.jpg";
+import light2p from "../../img/room/light/lightstar_rullo.png";
+import light3 from "../../img/room/light/lightstar_singo.jpg";
+import light3p from "../../img/room/light/lightstar_singo.png";
+import light4 from "../../img/room/light/lightstar_unitario_black_tablet.jpg";
+import light4p from "../../img/room/light/lightstar_unitario_black_tablet.png";
+import light5 from "../../img/room/light/lightstar.jpg";
+import light5p from "../../img/room/light/lightstar.png";
+import light6 from "../../img/room/light/melody.jpg";
+import light6p from "../../img/room/light/melody.png";
+import molding1 from "../../img/room/molding/molding_simple.jpg";
+import molding1p from "../../img/room/molding/molding_simple.png";
+import molding2 from "../../img/room/molding/molding_small.jpg";
+import molding2p from "../../img/room/molding/molding_small.png";
+import elecric1 from "../../img/room/electric/legrand.jpg";
+import elecric1p from "../../img/room/electric/legrand.png";
+import elecric2 from "../../img/room/electric/legrand_black.jpg";
+import elecric2p from "../../img/room/electric/legrand_black.png";
+import imgElegant from "../../img/preset/elegant-white.png";
+import imgClassic from "../../img/preset/exquisite-classic.png";
+import imgPeach from "../../img/preset/peach-dreams.png";
+import imgVivaro from "../../img/preset/vivaro-alpine.png";
+import imgCaramel from "../../img/preset/cold-caramel.png";
+
 
 export default {
   srcDef: [
@@ -119,7 +126,6 @@ export default {
       price: 462,
       href: "https://www.terrem.ru/product/arbiton_paint_it_mp0601/",
       descript: "Древесно-волокнистый плинтус под покраску Aberhof"
-     
     },
     {
       sampleImage: plint2,
@@ -128,7 +134,7 @@ export default {
       id: null,
       img: plint2p,
       price: 462,
-      href:"https://www.terrem.ru/product/arbiton_paint_it_mp0601/",
+      href: "https://www.terrem.ru/product/arbiton_paint_it_mp0601/",
       descript:
         "Древесно-волокнистый плинтус Aberhof высотой 60мм, окрашенный в цвет стен"
     },
@@ -149,7 +155,7 @@ export default {
       id: null,
       img: plint4p,
       price: 375,
-      href:"https://www.terrem.ru/product/aberhof_art_801_art801/",
+      href: "https://www.terrem.ru/product/aberhof_art_801_art801/",
       descript: "Древесно-волокнистый плинтус под покраску Aberhof"
     },
     {
@@ -169,7 +175,8 @@ export default {
       id: null,
       img: plint6p,
       price: 640,
-      href:"https://www.terrem.ru/product/plintus_falquon_canyon_andiroba_d2913/",
+      href:
+        "https://www.terrem.ru/product/plintus_falquon_canyon_andiroba_d2913/",
       descript: "Плинтус из эко-шпона ProfilDoors"
     }
   ],
@@ -181,7 +188,7 @@ export default {
       id: null,
       sampleImage: sill1,
       price: 750,
-      href:"https://podokonnik.msk.ru/catalog/katalog/chernyiy_satin",
+      href: "https://podokonnik.msk.ru/catalog/katalog/chernyiy_satin",
       descript: "Шлифованный, обработанный масловоском OSMO Черное"
     },
 
@@ -192,7 +199,7 @@ export default {
       id: null,
       sampleImage: sill2,
       price: 500,
-      href:"https://podokonnik.msk.ru/catalog/katalog/venge_mat#content",
+      href: "https://podokonnik.msk.ru/catalog/katalog/venge_mat#content",
       descript: "Шлифованный, обработанный масловоском OSMO Венге"
     },
     {
@@ -202,7 +209,7 @@ export default {
       id: null,
       sampleImage: sill3,
       price: 700,
-      href:"https://podokonnik.msk.ru/catalog/katalog/oreh_matovyiy#content",
+      href: "https://podokonnik.msk.ru/catalog/katalog/oreh_matovyiy#content",
       descript: "Шлифованный, обработанный масловоском OSMO Орех"
     },
 
@@ -213,7 +220,8 @@ export default {
       id: null,
       sampleImage: sill4,
       price: 500,
-      href:"https://podokonnik.msk.ru/catalog/katalog/svetlyiy_dub_mat#content",
+      href:
+        "https://podokonnik.msk.ru/catalog/katalog/svetlyiy_dub_mat#content",
       descript: "Шлифованный, обработанный масловоском OSMO Бук Дымчатый"
     },
     {
@@ -223,7 +231,7 @@ export default {
       id: null,
       sampleImage: sill5,
       price: 500,
-      href:"https://podokonnik.msk.ru/catalog/katalog/zolotoy_dub_mat#content",
+      href: "https://podokonnik.msk.ru/catalog/katalog/zolotoy_dub_mat#content",
       descript: "Шлифованный, обработанный масловоском OSMO Янтарь"
     },
     {
@@ -233,7 +241,7 @@ export default {
       id: null,
       sampleImage: sill6,
       price: 657,
-      href:"https://podokonnik.msk.ru/catalog/katalog/belyiy_mat#content",
+      href: "https://podokonnik.msk.ru/catalog/katalog/belyiy_mat#content",
       descript: "Стандартный подоконник ПВХ, белый"
     }
   ],
@@ -243,8 +251,10 @@ export default {
       zIndex: 9,
       title: "Lightstar Rullo Чёрный",
       id: null,
-      sampleImage: light1, price: 932,
-      href:"https://www.eseolight.ru/catcbsi/potolochnye_svetilniki/lightstar/spotlights/rullo_214487/",
+      sampleImage: light1,
+      price: 932,
+      href:
+        "https://www.eseolight.ru/catcbsi/potolochnye_svetilniki/lightstar/spotlights/rullo_214487/",
       descript: "Точечные светильники. Диаметр 6см"
     },
 
@@ -253,8 +263,10 @@ export default {
       zIndex: 9,
       title: "Lightstar Rullo",
       id: null,
-      sampleImage: light2, price: 1252,
-      href:"https://www.eseolight.ru/catcbsi/potolochnye_svetilniki/lightstar/spotlights/rullo_216486/",
+      sampleImage: light2,
+      price: 1252,
+      href:
+        "https://www.eseolight.ru/catcbsi/potolochnye_svetilniki/lightstar/spotlights/rullo_216486/",
       descript: "Точечные светильники. Диаметр 6см"
     },
     {
@@ -262,8 +274,10 @@ export default {
       zIndex: 9,
       title: "Lightstar Singo",
       id: null,
-      sampleImage: light3, price: 1473,
-      href:"https://svetilnik-online.ru/svetilnik-tochechnyj-lightstar-singo-x2-011612",
+      sampleImage: light3,
+      price: 1473,
+      href:
+        "https://svetilnik-online.ru/svetilnik-tochechnyj-lightstar-singo-x2-011612",
       descript: "Люстры LED и точечные светильники"
     },
 
@@ -272,8 +286,9 @@ export default {
       zIndex: 9,
       title: "Lightstar Unitario Чёрный / Tablet",
       id: null,
-      sampleImage: light4, price: 10357,
-      href:"https://lightstarshop.ru/catalog/bra/bra_lightstar_763690.html",
+      sampleImage: light4,
+      price: 10357,
+      href: "https://lightstarshop.ru/catalog/bra/bra_lightstar_763690.html",
       descript: "Люстры LED и точечные светильники"
     },
     {
@@ -281,8 +296,10 @@ export default {
       zIndex: 9,
       title: "Lightstar Tablet",
       id: null,
-      sampleImage: light5, price: 243,
-      href:"https://lightstarshop.ru/catalog/vstraivaemye/vstraivaemyy_svetilnik_lightstar_gx53_tablet_white_212110.html",
+      sampleImage: light5,
+      price: 243,
+      href:
+        "https://lightstarshop.ru/catalog/vstraivaemye/vstraivaemyy_svetilnik_lightstar_gx53_tablet_white_212110.html",
       descript: "Точечные светильники. Диаметр 11см"
     },
     {
@@ -290,8 +307,10 @@ export default {
       zIndex: 9,
       title: "IKEA Melody",
       id: null,
-      sampleImage: light6, price: 799,
-      href:"https://www.ikea.com/ru/ru/p/melodi-podvesnoy-svetilnik-belyy-80386545/",
+      sampleImage: light6,
+      price: 799,
+      href:
+        "https://www.ikea.com/ru/ru/p/melodi-podvesnoy-svetilnik-belyy-80386545/",
       descript: "Стандартный светильник или установка ваших люстр"
     }
   ],
@@ -301,8 +320,10 @@ export default {
       zIndex: 9,
       title: "Резная галтель",
       id: null,
-      sampleImage: molding1, price: 40,
-      href:"https://koldvor.ru/catalog/stroimaterialy/pogonaj/plintus/galtel-plintus-potolochnyi-lipa-1530",
+      sampleImage: molding1,
+      price: 40,
+      href:
+        "https://koldvor.ru/catalog/stroimaterialy/pogonaj/plintus/galtel-plintus-potolochnyi-lipa-1530",
       descript: "ПВХ галтель высотой 30мм"
     },
 
@@ -311,8 +332,10 @@ export default {
       zIndex: 9,
       title: "Незаметная галтель",
       id: null,
-      sampleImage: molding2, price: 40,
-      href:"https://koldvor.ru/catalog/stroimaterialy/pogonaj/plintus/plintus-reznoi-sort-e-58-mm",
+      sampleImage: molding2,
+      price: 40,
+      href:
+        "https://koldvor.ru/catalog/stroimaterialy/pogonaj/plintus/plintus-reznoi-sort-e-58-mm",
       descript: "Стандартный элемент натяжного потолка"
     }
   ],
@@ -322,8 +345,9 @@ export default {
       zIndex: 9,
       title: "Legrand Etika (Франция)",
       id: null,
-      sampleImage: elecric1, price: 150,
-      href:"https://www.legrand2.ru/shop_legrand_672221.html",
+      sampleImage: elecric1,
+      price: 150,
+      href: "https://www.legrand2.ru/shop_legrand_672221.html",
       descript: ""
     },
 
@@ -332,8 +356,9 @@ export default {
       zIndex: 9,
       title: "Legrand Etika Black (Франция)",
       id: null,
-      sampleImage: elecric2, price: 230,
-      href:"https://www.legrand2.ru/shop_show_752040.html",
+      sampleImage: elecric2,
+      price: 230,
+      href: "https://www.legrand2.ru/shop_show_752040.html",
       descript: ""
     }
   ],
@@ -403,8 +428,9 @@ export default {
       zIndex: 1,
       title: "Доска темной вишни лакированная",
       id: null,
-      img: image5p, price: 1295,
-      href:"https://www.ostmarket.ru/laminat/571/5619/",
+      img: image5p,
+      price: 1295,
+      href: "https://www.ostmarket.ru/laminat/571/5619/",
       descript:
         "Quick-Step Perspective UF865. Размеры: 138х15,6х0,95см. Класс 32. Влагостойкий. 4 V-образные фаски."
     },
@@ -413,8 +439,10 @@ export default {
       zIndex: 2,
       title: "Шоколад темный",
       id: null,
-      img: image6p, price: 860,
-      href:"https://allam.ru/laminat-quick-step-dub-tyomnyj-shokolad-cxp088-12313?utm_source=market&utm_term=12313&_openstat=bWFya2V0LnlhbmRleC5ydTvQm9Cw0LzQuNC90LDRgiBRdWljay1TdGVwICjQmtCy0LjQuiDRgdGC0LXQvykgQ0xJWEZMT09SIFBMVVMg0JTRg9CxINGC0ZHQvNC90YvQuSDRiNC-0LrQvtC70LDQtCBDWFAwODggMzIg0LrQu9Cw0YHRgSA4INC80Lw7YU1HbHFOckZWd25SbVdPc3d1bzZXZzs",
+      img: image6p,
+      price: 860,
+      href:
+        "https://allam.ru/laminat-quick-step-dub-tyomnyj-shokolad-cxp088-12313?utm_source=market&utm_term=12313&_openstat=bWFya2V0LnlhbmRleC5ydTvQm9Cw0LzQuNC90LDRgiBRdWljay1TdGVwICjQmtCy0LjQuiDRgdGC0LXQvykgQ0xJWEZMT09SIFBMVVMg0JTRg9CxINGC0ZHQvNC90YvQuSDRiNC-0LrQvtC70LDQtCBDWFAwODggMzIg0LrQu9Cw0YHRgSA4INC80Lw7YU1HbHFOckZWd25SbVdPc3d1bzZXZzs",
       descript:
         "Quick-Step Clixfloor Plus CXP 088 Темный Шоколад. Размеры: 120х19х0,8см. Класс 32. 4-х сторонние фаски"
     },
@@ -423,8 +451,9 @@ export default {
       zIndex: 1,
       title: "Дуб бордо",
       id: null,
-      img: image7p, price: 1300,
-      href:"https://www.ostmarket.ru/laminat/2294/71766/",
+      img: image7p,
+      price: 1300,
+      href: "https://www.ostmarket.ru/laminat/2294/71766/",
       descript:
         "Quick-Step Impressive IM1995. Размеры: 138х19х0,8см. Класс 32. Влагостойкий. 4 V-образные фаски"
     },
@@ -433,8 +462,9 @@ export default {
       zIndex: 2,
       title: "Дуб светлый",
       id: null,
-      img: image8p, price: 1300,
-      href:"https://www.ostmarket.ru/laminat/2294/926228/",
+      img: image8p,
+      price: 1300,
+      href: "https://www.ostmarket.ru/laminat/2294/926228/",
       descript:
         "Quick-Step Impressive IM1847. Размеры: 138х19х0,8см. Класс 32. Влагостойкий. 4 V-образные фаски"
     },
@@ -443,8 +473,9 @@ export default {
       zIndex: 2,
       title: "Доска дуба фантазийного светло-серого",
       id: null,
-      img: image9p, price: 1300,
-      href:"https://www.ostmarket.ru/laminat/2294/177375/",
+      img: image9p,
+      price: 1300,
+      href: "https://www.ostmarket.ru/laminat/2294/177375/",
       descript:
         "Quick-Step Impressive IM3560. Размеры: 138х19х0,8см. Класс 32. Влагостойкий. 4 V-образные фаски"
     },
@@ -453,8 +484,9 @@ export default {
       zIndex: 2,
       title: "Дуб горный коричневый",
       id: null,
-      img: image10p, price: 1300,
-      href:"https://www.ostmarket.ru/laminat/2294/71759/",
+      img: image10p,
+      price: 1300,
+      href: "https://www.ostmarket.ru/laminat/2294/71759/",
       descript:
         "Quick-Step Classic CLM4091. Дуб горный коричневый. Размеры: 120х19х0,8см. Класс 32. Микрофаски"
     },
@@ -463,8 +495,9 @@ export default {
       zIndex: 2,
       title: "Доска белого дуба лакированная",
       id: null,
-      img: image11p, price: 1300,
-      href:"https://www.ostmarket.ru/laminat/2294/71767/",
+      img: image11p,
+      price: 1300,
+      href: "https://www.ostmarket.ru/laminat/2294/71767/",
       descript:
         "Quick-Step Impressive IM3105. Размеры: 138х19х0,8см. Класс 32. Влагостойкий. 4 V-образные фаски"
     },
@@ -473,8 +506,9 @@ export default {
       zIndex: 2,
       title: "Клен натуральный",
       id: null,
-      img: image12p, price: 1300,
-      href:"https://www.ostmarket.ru/laminat/571/8492/",
+      img: image12p,
+      price: 1300,
+      href: "https://www.ostmarket.ru/laminat/571/8492/",
       descript:
         "Quick-Step Perspective UF862. Размеры: 138х15,6х0,95см. Класс 32. Влагостойкий. 4 V-образные фаски"
     }
@@ -485,8 +519,10 @@ export default {
       zIndex: 1,
       title: "ВФД Ньюта ДГ, графит",
       id: null,
-      img: image13p, price: 20000,
-      href:"https://vfd.ru/catalog/interior-doors/mezhkomnatnaya-dver-nyuta-dg/",
+      img: image13p,
+      price: 20000,
+      href:
+        "https://vfd.ru/catalog/interior-doors/mezhkomnatnaya-dver-nyuta-dg/",
       descript: "Плоское глухое полотно темно-серого цвета"
     },
     {
@@ -494,9 +530,11 @@ export default {
       zIndex: 1,
       title: "ВФД Ньюта ДГ, белая",
       id: null,
-      img: image14p, price: 15000,
-      href:"https://vfd.ru/catalog/interior-doors/mezhkomnatnaya-dver-nyuta-dg/",
-  
+      img: image14p,
+      price: 15000,
+      href:
+        "https://vfd.ru/catalog/interior-doors/mezhkomnatnaya-dver-nyuta-dg/",
+
       descript: "Плоское глухое полотно белого цвета"
     },
     {
@@ -504,9 +542,11 @@ export default {
       zIndex: 1,
       title: "ВФД Доррен, белая",
       id: null,
-      img: image15p, price: 18000,
-      href:"https://vfd.ru/catalog/interior-doors/mezhkomnatnaya-dver-dorren-dg/",
-  
+      img: image15p,
+      price: 18000,
+      href:
+        "https://vfd.ru/catalog/interior-doors/mezhkomnatnaya-dver-dorren-dg/",
+
       descript: "Полотно с филенками белого цвета"
     },
     {
@@ -514,9 +554,11 @@ export default {
       zIndex: 1,
       title: "ВФД Гланта, темно-серая",
       id: null,
-      img: image16p, price: 19000,
-      href:"https://vfd.ru/catalog/interior-doors/stockholm-tsvetnye-dveri-pokrytye-emalyu/mezhkomnatnaya-dver-glanta-dg/",
-  
+      img: image16p,
+      price: 19000,
+      href:
+        "https://vfd.ru/catalog/interior-doors/stockholm-tsvetnye-dveri-pokrytye-emalyu/mezhkomnatnaya-dver-glanta-dg/",
+
       descript: "Полотно с филенками темно-серого цвета"
     },
     {
@@ -524,9 +566,11 @@ export default {
       zIndex: 1,
       title: "ВФД Гланта, светло-серая",
       id: null,
-      img: image17p, price: 17000,
-      href:"https://vfd.ru/catalog/interior-doors/stockholm-tsvetnye-dveri-pokrytye-emalyu/mezhkomnatnaya-dver-glanta-dg/",
-  
+      img: image17p,
+      price: 17000,
+      href:
+        "https://vfd.ru/catalog/interior-doors/stockholm-tsvetnye-dveri-pokrytye-emalyu/mezhkomnatnaya-dver-glanta-dg/",
+
       descript: "Полотно с филенками светло-серого цвета"
     },
     {
@@ -534,9 +578,11 @@ export default {
       zIndex: 1,
       title: "ВФД Гланта, белая",
       id: null,
-      img: image18p, price: 16000,
-      href:"https://vfd.ru/catalog/interior-doors/stockholm-tsvetnye-dveri-pokrytye-emalyu/mezhkomnatnaya-dver-glanta-dg/",
-  
+      img: image18p,
+      price: 16000,
+      href:
+        "https://vfd.ru/catalog/interior-doors/stockholm-tsvetnye-dveri-pokrytye-emalyu/mezhkomnatnaya-dver-glanta-dg/",
+
       descript: "Полотно с филенками белого цвета"
     },
     {
@@ -544,9 +590,11 @@ export default {
       zIndex: 1,
       title: "Profil Doors 1VG (Россия)",
       id: null,
-      img: image19p, price: 27515,
-      href:"https://xn--b1adbdpavwdfjcfo3b8i.xn--p1ai/item_mdv__profildoors_profilvg____0_26431.html",
-  
+      img: image19p,
+      price: 27515,
+      href:
+        "https://xn--b1adbdpavwdfjcfo3b8i.xn--p1ai/item_mdv__profildoors_profilvg____0_26431.html",
+
       descript:
         "Черная матовая дверь. Клееный массив хвойных пород дерева и MDF"
     },
@@ -555,9 +603,11 @@ export default {
       zIndex: 1,
       title: "Profil Doors 1Z (Россия)",
       id: null,
-      img: image20p, price: 8602,
-      href:"https://xn--b1adbdpavwdfjcfo3b8i.xn--p1ai/item_mdv__profildoors_profilz____0_25631.html",
-  
+      img: image20p,
+      price: 8602,
+      href:
+        "https://xn--b1adbdpavwdfjcfo3b8i.xn--p1ai/item_mdv__profildoors_profilz____0_25631.html",
+
       descript:
         "Клееный массив хвойных пород дерева и MDF. Кромка полотна двери изготовлена из алюминия"
     },
@@ -566,9 +616,10 @@ export default {
       zIndex: 1,
       title: "Profil Doors U100 Антрацит (Россия)",
       id: null,
-      img: image21p, price: 8050,
-      href:"https://dveri-profil-doors.ru/products/u-100-antracit",
-  
+      img: image21p,
+      price: 8050,
+      href: "https://dveri-profil-doors.ru/products/u-100-antracit",
+
       descript: "Глухая МДФ дверь с филенками"
     },
     {
@@ -576,10 +627,68 @@ export default {
       zIndex: 1,
       title: "Profil Doors U100 Чёрный (Россия)",
       id: null,
-      img: image22p, price: 6426,
-      href:"https://dveri-profil-doors.ru/products/u1-chernaya-matovaya",
-  
+      img: image22p,
+      price: 6426,
+      href: "https://dveri-profil-doors.ru/products/u1-chernaya-matovaya",
+
       descript: "Глухая МДФ дверь с филенками"
+    }
+  ],
+  preset: [
+    {
+      title: "Cold Caramel",
+      img: imgCaramel,
+      floor: image6p,
+      light: light3p,
+      door: image13p,
+      elecric: elecric1p,
+      molding: molding1p,
+      srcPlint: plint1p,
+      background: "rgb(137, 146, 154)"
+    },
+    {
+      title: "Elegant White",
+      img: imgElegant,
+      floor: image8p,
+      light: light1p,
+      door: image16p,
+      elecric: elecric1p,
+      molding: molding1p,
+      srcPlint: plint1p,
+      background: "rgb(67, 88, 118)"
+    },
+    {
+      title: "Cold Caramel",
+      img: imgCaramel,
+      floor: image6p,
+      light: light3p,
+      door: image13p,
+      elecric: elecric1p,
+      molding: molding1p,
+      srcPlint: plint1p,
+      background: "rgb(137, 146, 154)"
+    },
+    {
+      title: "Cold Caramel",
+      img: imgCaramel,
+      floor: image6p,
+      light: light3p,
+      door: image13p,
+      elecric: elecric1p,
+      molding: molding1p,
+      srcPlint: plint1p,
+      background: "rgb(137, 146, 154)"
+    },
+    {
+      title: "Cold Caramel",
+      img: imgCaramel,
+      floor: image6p,
+      light: light3p,
+      door: image13p,
+      elecric: elecric1p,
+      molding: molding1p,
+      srcPlint: plint1p,
+      background: "rgb(137, 146, 154)"
     }
   ]
 };
