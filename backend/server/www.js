@@ -6,11 +6,11 @@ const session = require ('express-session');
 const Filestore = require ('session-file-store') (session);
 const indexRouter = require ('../routes/index');
 const bodyParser = require ('body-parser');
-
+require('dotenv').config()
 
 const mongoose = require ('mongoose');
 const app = express ();
-mongoose.connect ('mongodb://localhost:27017/todolist', {
+mongoose.connect (`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@clusterelbrus-ntmbz.mongodb.net/makeApp?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
