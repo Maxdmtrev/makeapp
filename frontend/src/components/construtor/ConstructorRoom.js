@@ -23,6 +23,9 @@ import podium from "../../img/room/sill/light_wood.png";
 import lamp from "../../img/room/light/lightstar.png";
 import energy from "../../img/room/electric/legrand.png";
 import Slider from "../render/Slider";
+import potolor from "../../img/room/default(2).png";
+import bimetal from "../../img/room/bimetal.png";
+import okno from "../../img/construct/window.png";
 
 const { Meta } = Card;
 const { Panel } = Collapse;
@@ -31,6 +34,9 @@ class ConstructorRoom extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      okno:okno,
+      bimetal:bimetal,
+      potolor:potolor,
       width: "100%",
       wall: wall_base,
       wall1: wall_default,
@@ -54,6 +60,42 @@ class ConstructorRoom extends Component {
         <Row>
           <Affix offsetTop={10}>
             <Col style={{ margin: 5 }} span={13}>
+              <img
+               key={"1"}
+               style={{
+                 position: "absolute",
+                 zIndex: "7",
+                 transform: `${this.state.invert}`
+               }}
+               src={this.state.okno}
+               width={this.state.width}
+               height={this.state.height}
+               alt={"test"}
+              />
+              <img
+               key={"1"}
+               style={{
+                 position: "absolute",
+                 zIndex: "7",
+                 transform: `${this.state.invert}`
+               }}
+               src={this.state.bimetal}
+               width={this.state.width}
+               height={this.state.height}
+               alt={"test"}
+              />
+              <img
+               key={"1"}
+               style={{
+                 position: "absolute",
+                 zIndex: "7",
+                 transform: `${this.state.invert}`
+               }}
+               src={this.state.potolor}
+               width={this.state.width}
+               height={this.state.height}
+               alt={"test"}
+              />
               <img
                 key={"1"}
                 style={{
@@ -189,26 +231,6 @@ class ConstructorRoom extends Component {
                 height={this.state.height}
                 alt={"test"}
               />
-              {this.props.storage ? (
-                <div>
-                  {this.props.storage.srcDef.map((elem, index) => (
-                    <img
-                      key={index}
-                      style={{
-                        position: "absolute",
-                        zIndex: elem.zIndex,
-                        transform: `${this.state.invert}`
-                      }}
-                      src={elem.img}
-                      width={this.state.width}
-                      alt={"test"}
-                      height={this.state.height}
-                    />
-                  ))}
-                </div>
-              ) : (
-                "...Load"
-              )}
             </Col>
           </Affix>
           <Col span={10} style={{ float: "right" }}>

@@ -1,6 +1,6 @@
 const {Schema} = require ('mongoose');
 const mongoose = require ('mongoose');
-const bathSchema = new Schema ({
+const roomSchema = new Schema ({
   img: {type: String},
   title: {type: String},
   sampleImage: {type: String },
@@ -9,4 +9,4 @@ const bathSchema = new Schema ({
   descript: {type: String}
 });
 
-module.exports = mongoose.model ('bathBases', bathSchema);
+module.exports = mongoose.model ('roomBases', roomSchema);
