@@ -281,14 +281,12 @@ class ConstructorBath extends Component {
                 {this.props.storage.locker.map((elem, index) => (
                   <Col key={index} span={11} style={{ margin: 6 }}>
                     <Card
-                      onClick={() => {
-                        this.props.clearPresetAC();
-                        this.setState({ locker: elem.img });
-                        this.props.addPriceLocker(elem.price);
-                      }}
-                      hoverable
-                      style={{ width: 215 }}
-                      cover={<img alt="example" src={elem.sampleImage} />}
+                        onClick={() =>{ this.setState ({locker: elem.img});
+                        this.props.addPriceLocker({price: elem.price, title: elem.title, href: elem.href});
+                        }}
+                        hoverable
+                        style={{width: 215}}
+                        cover={<img alt="example" src={elem.sampleImage}/>}
                     >
                       <Meta title={elem.title} description={elem.descript} />
                       <Button
