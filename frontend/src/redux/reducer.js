@@ -60,7 +60,7 @@ const state = {
 };
 
 export default function(oldState = state, action) {
-  console.log (oldState.constStore);
+  // console.log (action.data.srcDoor);
   switch (action.type) {
     case PRICE_DOOR:
       return {
@@ -138,7 +138,9 @@ export default function(oldState = state, action) {
       return {
         ...oldState,
         isLogin: action.isLogin,
-        username: action.username
+        username: action.username,
+        // constStore:action.data
+        
       };
     case LOGOUT_USER:
       return {

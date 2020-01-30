@@ -30,12 +30,19 @@ class Routers extends Component {
       const res = await response.json ();
       if (res.result) {
         localStorage.setItem ('login', res.user);
-        this.props.submit (res.result, res.user, res.todolist);
+        // console.log ( res.room);
+        this.props.submit (res.result, res.user);
       }
       else {
         localStorage.removeItem("login")
       }
     }
+  }
+  
+  totalPrice=()=>{
+    const{priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
+    let sumPrice=priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
+    return sumPrice
   }
   
   render () {
@@ -61,6 +68,8 @@ class Routers extends Component {
           <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <BackTop style={{ left: "50px"}} />
+          <h2>{this.totalPrice()}</h2>
+          
         </Footer>
       </Layout>
 
@@ -79,7 +88,20 @@ function mapDispatchToProps (dispatch) {
 
 function mapStateToProps (store) {
   return {
-    isLogin: store.isLogin, username: store.username, ymaps: store.ymaps
+    isLogin: store.isLogin, username: store.username, ymaps: store.ymaps,roomCard: store.roomCard,
+    priceDoor: store.priceDoor,
+    priceElectric: store.priceElectric,
+    priceFloor: store.priceFloor,
+    priceLight: store.priceLight,
+    priceMolding: store.priceMolding,
+    pricePlint: store.pricePlint,
+    priceSill: store.priceSill,
+    priceBath: store.priceBath,
+    priceBathfloor: store.priceBathfloor,
+    priceKeramaWall: store.priceKeramaWall,
+    priceLocker: store.priceLocker,
+    priceShower: store.priceShower,
+    priceToilet: store.priceToilet,
   };
 }
 

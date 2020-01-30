@@ -35,22 +35,25 @@ class Navigation extends Component {
           <Icon type="code"/> Home
         </Link>
       </Menu.Item>
-      <Menu.Item key="slider">
+
+      {this.props.isLogin ?      <Menu.Item>
         <Link to="/slider">
           <Icon type="copy"/> Slider
         </Link>
-      </Menu.Item>
-      <Menu.Item key="appart">
+      </Menu.Item>:<></>}
+      {this.props.isLogin ?
+        <Menu.Item>
         <Link to="/room">
           <Icon type="snippets"/> AppartmentDesign
         </Link>
-      </Menu.Item>
-      <Menu.Item key="list">
+      </Menu.Item>:<></>}
+      {this.props.isLogin ?
+      <Menu.Item>
+
         <Link to="/list">
           <Icon type="diff" />  List
         </Link>
-      </Menu.Item>
-      
+      </Menu.Item>:<></>}
       {this.props.isLogin ? (<Menu.Item style={{float: 'right'}}>
         <Link to="/logout" onClick={async (e) => {
           e.preventDefault ();

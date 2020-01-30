@@ -1,6 +1,7 @@
 const express = require ('express');
 const router = express.Router ();
 const User = require ('../models/users');
+const Room = require ('../models/roomShema');
 const bcrypt = require ('bcrypt');
 const saltRounds = 10;
 let Minio = require ('minio');
@@ -14,14 +15,13 @@ let s3Client = new Minio.Client ({
 });
 
 
-router.route ('/get').get (async (req, res) => {
+router.route ('/room').get (async (req, res) => {
   if (req.session.user) {
-    const host = req.session.user._id;
-    const findUSer = await User.findOne ({_id: host}).populate ('list');
-    return res.json ({result: findUSer.list, status: true});
+    const findRoom = await Room.find ({});
+    return res.json ({room:findRoom});
   }
   else {
-    return res.json ({result: null, status: false});
+    return res.end()
   }
 });
 
@@ -111,9 +111,11 @@ router.route ('/signIn')
 router.route ('/login')
  .get (async (req, res) => {
    if (req.session.user) {
-     const host = req.session.user._id;
+     // const host = req.session.user._id;
+     const findRoom = await Room.findOne ({});
+     
      // const findUSer = await User.find ({_id: host}).populate ('list');
-     return res.json ({result: true, user: req.session.user.username});
+     return res.json ({result: true, user: req.session.user.username,room:findRoom});
    }
    else {
      return res.json ({result: false, user: null});
