@@ -349,7 +349,7 @@ export default {
       descript: "Стандартный элемент натяжного потолка"
     }
   ],
-  elecric: [
+  electric: [
     {
       img: elecric1p,
       zIndex: 9,

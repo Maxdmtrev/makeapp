@@ -25,7 +25,6 @@ import energy from "../../img/room/electric/legrand.png";
 import potolor from "../../img/room/default(2).png";
 import bimetal from "../../img/room/bimetal.png";
 import okno from "../../img/construct/window.png";
-import Badge from './Badge';
 
 const { Meta } = Card;
 const { Panel } = Collapse;
@@ -238,25 +237,24 @@ class ConstructorRoom extends Component {
               <Panel header="Стены" key="0">
                 {this.props.storage.colorWall.map((elem, index) => (
                   <Col key={index} span={12} style={{ padding: 5 }}>
-                    <Badge style={{ width: "100%", background: elem.background }}/>
-                    {/*<Card*/}
-                    {/*  onClick={() => {*/}
-                    {/*    this.props.clearPresetAC();*/}
-                    {/*    this.setState({ changeColor: elem.background });*/}
-                    {/*  }}*/}
-                    {/*  hoverable*/}
-                    {/*  style={{ width: "100%", background: elem.background }}*/}
-                    {/*>*/}
-                    {/*  <Meta*/}
-                    {/*    style={{*/}
-                    {/*      textShadow:*/}
-                    {/*        "#C3C3C3 1px 1px 0, #C3C3C3 -1px -1px 0, #C3C3C3 -1px 1px 0, #C3C3C3 1px -1px 0",*/}
-                    {/*      font: "1em Arial"*/}
-                    {/*    }}*/}
-                    {/*    title={elem.title}*/}
-                    {/*    description={elem.descript}*/}
-                    {/*  />*/}
-                    {/*</Card>*/}
+                    <Card
+                      onClick={() => {
+                        this.props.clearPresetAC();
+                        this.setState({ changeColor: elem.background });
+                      }}
+                      hoverable
+                      style={{ width: "100%", background: elem.background }}
+                    >
+                      <Meta
+                        style={{
+                          textShadow:
+                            "#C3C3C3 1px 1px 0, #C3C3C3 -1px -1px 0, #C3C3C3 -1px 1px 0, #C3C3C3 1px -1px 0",
+                          font: "1em Arial"
+                        }}
+                        title={elem.title}
+                        description={elem.descript}
+                      />
+                    </Card>
                   </Col>
                 ))}
               </Panel>
@@ -370,7 +368,7 @@ class ConstructorRoom extends Component {
                 ))}
               </Panel>
               <Panel header="Электрика" key="8">
-                {this.props.storage.elecric.map((elem, index) => (
+                {this.props.storage.electric.map((elem, index) => (
                   <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
                       onClick={() => {
