@@ -3,7 +3,6 @@ import {Route, Router} from 'react-router';
 import RegistrationForm from './components/users/RegForm';
 import Home from './components/home/Home';
 import List from './components/home/List'
-import Slider from './components/render/Slider';
 import NavConstructor from './components/construtor/NavConstructor';
 import Navigation from './components/users/Navigation';
 import Login from './components/users/LoginForm';
@@ -48,19 +47,15 @@ class Routers extends Component {
   
   render () {
     return (<Router history={customHistory}>
-      <Layout style={{ backgroundColor: "white"}} >
+      <Layout style={{ backgroundColor: "white", minHeight:1000}}  >
         <Header style={{margin: 5}}>
-        
-            <Navigation history={customHistory}/>
-    
-         
+                    <Navigation history={customHistory}/>
         </Header>
         <Content >
           {this.props.ymaps ? <Route exact path="/" component={Home}/> : <>loading</>}
-    
+  
           <Route path='/login' component={Login}/>
           <Route path='/room' component={NavConstructor}/>
-          <Route path='/slider' component={Slider}/>
           <Route path='/registration' component={RegistrationForm}/>
           <Route path='/list' component={List} />
         </Content>
@@ -68,7 +63,7 @@ class Routers extends Component {
           <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""/>
-          <BackTop style={{ left: "50px"}} />
+          <BackTop  />
           <h2>{this.totalPrice()}</h2>
           
         </Footer>

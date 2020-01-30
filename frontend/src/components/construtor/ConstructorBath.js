@@ -20,15 +20,14 @@ import {
 } from "../../redux/priceCreators";
 import { ClearPresetAC } from "../../redux/creators";
 
-
-const { Meta } = Card;
-const { Panel } = Collapse;
+const {Meta} = Card;
+const {Panel} = Collapse;
 
 class ConstructorBath extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super (props);
     this.state = {
-      width: "100%",
+      width: '100%',
       // height: '600px',
       wall: image,
       ceramic: ceramic,
@@ -44,7 +43,6 @@ class ConstructorBath extends Component {
   }
 
   render() {
-    // console.log(this.props.storage);
     return (
       <div>
         <Row>
@@ -186,8 +184,7 @@ class ConstructorBath extends Component {
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ floor: elem.img });
-                        this.props.addPriceBathFloor((elem.price));
-                      }}
+                        this.props.addPriceBathFloor((elem.price));}}
                       hoverable
                       style={{ width: 215 }}
                       cover={<img alt="example" src={elem.sampleImage} />}
@@ -253,7 +250,7 @@ class ConstructorBath extends Component {
                         this.props.clearPresetAC();
                         this.setState({ bath: elem.img });
                         this.props.addPriceBath((elem.price));
-                      }}
+}}
                       hoverable
                       style={{ width: 215 }}
                       cover={<img alt="example" src={elem.sampleImage} />}
@@ -285,8 +282,13 @@ class ConstructorBath extends Component {
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ shower: elem.img });
-                        this.props.addPriceShower((elem.price));
-                      }}
+this.props.addPriceShower(elem.price);
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });}}
                       hoverable
                       style={{ width: 215 }}
                       cover={<img alt="example" src={elem.sampleImage} />}
@@ -315,14 +317,19 @@ class ConstructorBath extends Component {
                 {this.props.storage.locker.map((elem, index) => (
                   <Col key={index} span={11} style={{ margin: 6 }}>
                     <Card
-                      onClick={() =>{
-                      this.setState ({locker: elem.img});
-                      this.props.addPriceLocker((elem.price));
-                      }}
-                      hoverable
-                      style={{width: 235, fontSize: 12}}
-                      cover={<img alt="example" src={elem.sampleImage}/>}
-                    >
+                        onClick={() =>{ this.setState ({locker: elem.img});
+                        this.props.addPriceLocker((elem.price));
+  
+                          this.props.addActionPriceAC({
+                        price: elem.price,
+                        title: elem.title,
+                        href: elem.href,
+                        descript: elem.descript
+                        });
+                        }}
+                        hoverable
+                        style={{width: 215}}
+                        cover={<img alt="example" src={elem.sampleImage}/>}>
                       <Meta title={elem.title} description={elem.descript} />
                       <span
                         style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}

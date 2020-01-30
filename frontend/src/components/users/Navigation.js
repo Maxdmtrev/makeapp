@@ -35,12 +35,6 @@ class Navigation extends Component {
           <Icon type="code"/> Home
         </Link>
       </Menu.Item>
-
-      {this.props.isLogin ?      <Menu.Item>
-        <Link to="/slider">
-          <Icon type="copy"/> Slider
-        </Link>
-      </Menu.Item>:<></>}
       {this.props.isLogin ?
         <Menu.Item>
         <Link to="/room">

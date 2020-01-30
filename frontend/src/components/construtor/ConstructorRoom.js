@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import { Affix, Card, Col, Collapse, Row } from "antd";
 import {
-  AddPriceDoorAC,
-  AddPriceElectricAC,
-  AddPriceFloorAC,
-  AddPriceLightAC,
-  AddPriceMoldingAC,
-  AddPricePlintAC,
-  AddPriceSillAC
-} from "../../redux/priceCreators";
+  AddActionAC, AddPriceDoorAC, AddPriceElectricAC, AddPriceFloorAC, AddPriceLightAC, AddPriceMoldingAC, AddPricePlintAC, AddPriceSillAC
+} from '../../redux/priceCreators';
 
 import { ClearPresetAC } from "../../redux/creators";
 import { connect } from "react-redux";
@@ -253,6 +247,12 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.props.addPriceFloor(elem.price);
                         this.setState({ floor: elem.img });
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
                       }}
                       hoverable
                       style={{ width: "100%" }}
@@ -272,6 +272,12 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.setState({ door: elem.img });
                         this.props.addPriceDoor(elem.price);
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
                       }}
                       hoverable
                       style={{ width: "100%" }}
@@ -290,6 +296,12 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.props.addPricePlint(elem.price);
                         this.setState({ plint: elem.img });
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
                       }}
                       hoverable
                       style={{ width: "100%" }}
@@ -308,6 +320,12 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.props.addPriceSill(elem.price);
                         this.setState({ molding: elem.img });
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
                       }}
                       hoverable
                       style={{ width: "100%" }}
@@ -326,6 +344,12 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.props.addPriceMolding(elem.price);
                         this.setState({ podium: elem.img });
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
                       }}
                       hoverable
                       style={{ width: "100%" }}
@@ -355,22 +379,28 @@ class ConstructorRoom extends Component {
                 ))}
               </Panel>
               <Panel header="Электрика" key="8">
-                {/*{this.props.storage.electric.map((elem, index) => (*/}
-                {/*  <Col key={index} span={12} style={{ padding: 5 }}>*/}
-                {/*    <Card*/}
-                {/*      onClick={() => {*/}
-                {/*        this.props.clearPresetAC();*/}
-                {/*        this.props.addPriceElectric(elem.price);*/}
-                {/*        this.setState({ energy: elem.img });*/}
-                {/*      }}*/}
-                {/*      hoverable*/}
-                {/*      style={{ width: "100%" }}*/}
-                {/*      cover={<img alt="example" src={elem.sampleImage} />}*/}
-                {/*    >*/}
-                {/*      <Meta title={elem.title} description={elem.descript} />*/}
-                {/*    </Card>*/}
-                {/*  </Col>*/}
-                {/*))}*/}
+                {this.props.storage.electric.map((elem, index) => (
+                  <Col key={index} span={12} style={{ padding: 5 }}>
+                    <Card
+                      onClick={() => {
+                        this.props.clearPresetAC();
+                        this.props.addPriceElectric(elem.price);
+                        this.setState({ energy: elem.img });
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
+                      }}
+                      hoverable
+                      style={{ width: "100%" }}
+                      cover={<img alt="example" src={elem.sampleImage} />}
+                    >
+                      <Meta title={elem.title} description={elem.descript} />
+                    </Card>
+                  </Col>
+                ))}
               </Panel>
             </Collapse>
           </Col>
@@ -412,6 +442,9 @@ function mapDispatchToProps(dispatch) {
     },
     clearPresetAC: () => {
       dispatch(ClearPresetAC());
+    },
+    addActionPriceAC: (data) => {
+      dispatch(AddActionAC(data))
     }
   };
 }

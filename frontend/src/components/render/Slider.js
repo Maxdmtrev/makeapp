@@ -12,10 +12,10 @@ class Slider extends React.Component {
       <div >
         <Row className={"scroll-image"}>
         {this.props.storage.preset.map((elem, index) => (
-          <Col key={index} span={3} ><Card
+          <Col key={index} span={4 } ><Card
             onClick={() => this.setPreset(elem)}
             hoverable
-            style={{ width: 215 }}
+            style={{ margin: 5,width:400 }}
             cover={<img alt="example" src={elem.img} />}
           >{elem.title}</Card>
           </Col>
