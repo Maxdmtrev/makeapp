@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card, Col, Collapse, Row} from 'antd';
+import {Affix, Card, Col, Collapse, Row} from 'antd';
 import {GetUrlAC} from '../../redux/creators';
 import {connect} from 'react-redux';
 import ceramic_white from '../../img/kitchen/без плитки.png';
@@ -25,7 +25,8 @@ class ConstructorKitchen extends Component {
     return (
     <div>
       <Row>
-        <Col span={14}>
+        <Affix offsetTop={10}>
+          <Col style={{ margin: 5 }} span={13}>
           {/*<img key={'1'}*/}
           {/*   style={{position: 'absolute', zIndex: '1',transform:`${this.state.invert}`}}*/}
           {/*   src={this.state.ceramic}*/}
@@ -55,7 +56,8 @@ class ConstructorKitchen extends Component {
                alt={'test'}
           />
         </Col>
-        <Col span={10}>
+        </Affix>
+        <Col span={10} style={{ float: "right" }}>
           <Collapse accordion className={'card-input'}>
             <Panel header="Фартук из плитки" key="1">
               {this.props.storage.ceramic.map((elem, index) =>

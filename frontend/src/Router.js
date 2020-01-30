@@ -48,7 +48,7 @@ class Routers extends Component {
         <Header style={{margin: 5}}>
           <Navigation history={customHistory}/>
         </Header>
-        <Content className={'backImg'} >
+        <Content >
           {this.props.ymaps ? <Route exact path="/" component={Home}/> : <>loading</>}
   
           <Route path='/login' component={Login}/>

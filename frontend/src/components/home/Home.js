@@ -3,7 +3,6 @@ import {Button, Card, Checkbox, Col, Form, Input, Row, Select} from 'antd';
 import {GetCardAC} from '../../redux/creators';
 import {connect} from 'react-redux';
 import '../../app.css';
-import Background from '../../img/chairs-2181947.jpg';
 const {Option} = Select;
 
 
