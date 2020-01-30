@@ -3,7 +3,7 @@ import {  Icon, } from 'antd';
 import { Statistic, Row, Col, Button, Descriptions} from 'antd';
 import { Upload, message } from 'antd';
 import {connect} from 'react-redux';
-import Card from "./Card";
+import InfoCard from "./InfoCard";
 
 const { Dragger } = Upload;
 
@@ -29,19 +29,12 @@ class List extends Component {
     };
   return (
       <div>
+
+
+
         <div>
-          {/*  Если есть данные из стора тогда рендер карты : div спиннера или "Загрузите данные" => redirect '/home' */}
-          <Descriptions title="User Info" layout="vertical">
-            <Descriptions.Item label="UserName">Anton</Descriptions.Item>
-            <Descriptions.Item label="Telephone">+7 (925) 111-11-11</Descriptions.Item>
-            <Descriptions.Item label="Live">Россия, Москва</Descriptions.Item>
-            <Descriptions.Item label="Address" span={2}>
-             Россия, Москва, Вавилова, д.1
-            </Descriptions.Item>
-            <Descriptions.Item label="Remark">P.S.</Descriptions.Item>
-          </Descriptions>
+        <InfoCard />
         </div>
-        <Card />
         <div>
           <Row gutter={16}>
             <Col span={12}>

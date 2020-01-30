@@ -355,22 +355,22 @@ class ConstructorRoom extends Component {
                 ))}
               </Panel>
               <Panel header="Электрика" key="8">
-                {this.props.storage.electric.map((elem, index) => (
-                  <Col key={index} span={12} style={{ padding: 5 }}>
-                    <Card
-                      onClick={() => {
-                        this.props.clearPresetAC();
-                        this.props.addPriceElectric(elem.price);
-                        this.setState({ energy: elem.img });
-                      }}
-                      hoverable
-                      style={{ width: "100%" }}
-                      cover={<img alt="example" src={elem.sampleImage} />}
-                    >
-                      <Meta title={elem.title} description={elem.descript} />
-                    </Card>
-                  </Col>
-                ))}
+                {/*{this.props.storage.electric.map((elem, index) => (*/}
+                {/*  <Col key={index} span={12} style={{ padding: 5 }}>*/}
+                {/*    <Card*/}
+                {/*      onClick={() => {*/}
+                {/*        this.props.clearPresetAC();*/}
+                {/*        this.props.addPriceElectric(elem.price);*/}
+                {/*        this.setState({ energy: elem.img });*/}
+                {/*      }}*/}
+                {/*      hoverable*/}
+                {/*      style={{ width: "100%" }}*/}
+                {/*      cover={<img alt="example" src={elem.sampleImage} />}*/}
+                {/*    >*/}
+                {/*      <Meta title={elem.title} description={elem.descript} />*/}
+                {/*    </Card>*/}
+                {/*  </Col>*/}
+                {/*))}*/}
               </Panel>
             </Collapse>
           </Col>
