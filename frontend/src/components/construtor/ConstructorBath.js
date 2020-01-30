@@ -208,7 +208,8 @@ class ConstructorBath extends Component {
                         this.props.addPriceToilet({
                           price: elem.price,
                           title: elem.title,
-                          href: elem.href
+                          href: elem.href,
+                          descript: elem.descript
                         });
                       }}
                       hoverable
