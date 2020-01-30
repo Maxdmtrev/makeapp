@@ -19,7 +19,7 @@ class List extends Component {
   render() {
    
     const {roomCard} = this.props;
-  return (<div style={{display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
+  return (<div className={"backImg"} style={{display: 'flex', justifyContent: 'center', marginTop: '10px',minHeight:1300}}>
    
      <Row style={{margin: 5, padding: 5}}>
        <Col offset={3} span={16}>

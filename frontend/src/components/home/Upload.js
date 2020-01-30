@@ -72,7 +72,7 @@ class UploadImg extends Component {
         </div>
     );
     return (
-        <div className="clearfix">
+        <div className="clearfix" style={{backgroundColor: "white"}}>
           <Upload
               action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
               listType="picture-card"
@@ -80,7 +80,7 @@ class UploadImg extends Component {
               onPreview={this.handlePreview}
               onChange={this.handleChange}
           >
-            {fileList.length >= 8 ? null : uploadButton}
+            {fileList.length >= 5 ? null : uploadButton}
           </Upload>
           <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
             <img alt="example" style={{ width: '100%' }} src={previewImage} />
