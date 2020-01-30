@@ -3,7 +3,6 @@ import {  Icon, } from 'antd';
 import { Statistic, Row, Col, Button, Descriptions} from 'antd';
 import { Upload, message } from 'antd';
 import {connect} from 'react-redux';
-import Card from "./Card";
 
 const { Dragger } = Upload;
 
@@ -41,7 +40,6 @@ class List extends Component {
             <Descriptions.Item label="Remark">P.S.</Descriptions.Item>
           </Descriptions>
         </div>
-        <Card />
         {this.props ?
         <div className={'table'}>
 
