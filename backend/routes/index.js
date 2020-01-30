@@ -1,29 +1,29 @@
 const express = require ('express');
 const router = express.Router ();
 const User = require ('../models/users');
+const Room = require ('../models/roomShema');
 const bcrypt = require ('bcrypt');
 const saltRounds = 10;
-let Minio = require ('minio');
+// let Minio = require ('minio');
+//
+// let s3Client = new Minio.Client ({
+//   endPoint: 'play.min.io',
+//   port: 9000,
+//   useSSL: true,
+//   accessKey: 'Q3AM3UQ867SPQQA43P2F',
+//   secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
+// });
 
-let s3Client = new Minio.Client ({
-  endPoint: 'play.min.io',
-  port: 9000,
-  useSSL: true,
-  accessKey: 'Q3AM3UQ867SPQQA43P2F',
-  secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
-});
 
-
-router.route ('/get').get (async (req, res) => {
-  if (req.session.user) {
-    const host = req.session.user._id;
-    const findUSer = await User.findOne ({_id: host}).populate ('list');
-    return res.json ({result: findUSer.list, status: true});
-  }
-  else {
-    return res.json ({result: null, status: false});
-  }
-});
+// router.route ('/room').get (async (req, res) => {
+//   if (req.session.user) {
+//     const findRoom = await Room.find ({});
+//     return res.json ({room:findRoom});
+//   }
+//   else {
+//     return res.end()
+//   }
+// });
 
 
 // router.route ('/slider').get (async (req, res) => {
@@ -111,7 +111,9 @@ router.route ('/signIn')
 router.route ('/login')
  .get (async (req, res) => {
    if (req.session.user) {
-     const host = req.session.user._id;
+     // const host = req.session.user._id;
+     // const findRoom = await Room.findOne ({});
+     
      // const findUSer = await User.find ({_id: host}).populate ('list');
      return res.json ({result: true, user: req.session.user.username});
    }

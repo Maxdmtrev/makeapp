@@ -55,7 +55,6 @@ class ConstructorRoom extends Component {
   render() {
     return (
       <div>
-        {/*<Slider />*/}
         <Row>
           <Affix offsetTop={10}>
             <Col style={{ margin: 5 }} span={13}>
@@ -356,7 +355,7 @@ class ConstructorRoom extends Component {
                 ))}
               </Panel>
               <Panel header="Электрика" key="8">
-                {this.props.storage.elecric.map((elem, index) => (
+                {this.props.storage.electric.map((elem, index) => (
                   <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
                       onClick={() => {

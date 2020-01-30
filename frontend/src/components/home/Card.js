@@ -1,6 +1,9 @@
-import { Table, Button } from 'antd';
+import { Table } from 'antd';
 import React, {Component} from 'react';
 import {connect} from "react-redux";
+
+import {Link} from 'react-router-dom';
+
 
 
 class Card extends Component {
@@ -17,12 +20,15 @@ const columns = [
   { title: 'Цена', dataIndex: 'price', key: 'price' },
   { title: 'Ссылка', dataIndex: 'href', key: 'href' },
 
-  // {
-  //   title: 'Action',
-  //   dataIndex: '',
-  //   key: 'x',
-  // },
+  {
+    title: 'Action',
+    dataIndex: '',
+    key: 'x',
+    render: () => <Link>Delete</Link>,
+  },
 ];
+
+
 
 // const data = [
 //   {

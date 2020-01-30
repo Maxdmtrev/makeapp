@@ -13,6 +13,12 @@ class LoginForm extends Component {
     };
   }
   
+  // async componentDidMount () {
+  //   let response = await fetch ('/get');
+  //   let result = await response.json ();
+  //   this.props.onView (result.result, result.status);
+  // }
+  
   openOkNotification = () => {
     notification.open({
       
