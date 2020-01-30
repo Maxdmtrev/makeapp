@@ -41,13 +41,7 @@ class Navigation extends Component {
           <Icon type="snippets"/> AppartmentDesign
         </Link>
       </Menu.Item>:<></>}
-      {this.props.isLogin ?
-      <Menu.Item>
 
-        <Link to="/list">
-          <Icon type="diff" />  List
-        </Link>
-      </Menu.Item>:<></>}
       {this.props.isLogin ? (<Menu.Item style={{float: 'right'}}>
         <Link to="/logout" onClick={async (e) => {
           e.preventDefault ();
@@ -72,7 +66,7 @@ class Navigation extends Component {
         </Link>
       </Menu.Item>)}
   
-      {this.props.isLogin ? <Menu.Item style={{float: 'right'}}>
+      {this.props.isLogin ? <Menu.Item >
          <Link to='/info'>
            <Icon type="user"/> {this.props.username}
          </Link>

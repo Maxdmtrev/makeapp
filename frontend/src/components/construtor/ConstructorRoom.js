@@ -253,7 +253,7 @@ class ConstructorRoom extends Component {
                       style={{ width: "100%" }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
                       <span
                        style={{marginRight:30, marginLeft: 20, color: "blue"}}
                       >
@@ -287,9 +287,9 @@ class ConstructorRoom extends Component {
                       style={{ width: "100%" }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
                       <span
-                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
                       >
                         {elem.price}
                       </span>
@@ -301,7 +301,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
@@ -320,10 +320,10 @@ class ConstructorRoom extends Component {
                       style={{ width: "100%" }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
                       <span
-                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
-                      >
+                     style={{marginRight:30, marginLeft: 20, color: "blue"}}
+                    >
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -334,7 +334,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
@@ -353,9 +353,9 @@ class ConstructorRoom extends Component {
                       style={{ width: "100%" }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
                       <span
-                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
                       >
                         {elem.price}
                       </span>
@@ -367,7 +367,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
@@ -386,9 +386,9 @@ class ConstructorRoom extends Component {
                       style={{ width: "100%" }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
                       <span
-                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
                       >
                         {elem.price}
                       </span>
@@ -400,7 +400,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
@@ -418,9 +418,9 @@ class ConstructorRoom extends Component {
                       style={{ width: "100%" }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
                       <span
-                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
                       >
                         {elem.price}
                       </span>
@@ -432,7 +432,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
@@ -451,9 +451,9 @@ class ConstructorRoom extends Component {
                       style={{ width: "100%" }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
                       <span
-                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
                       >
                         {elem.price}
                       </span>
@@ -465,7 +465,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}

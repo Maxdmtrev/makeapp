@@ -1,26 +1,14 @@
 import React, {Component} from 'react';
-import {Card, Col, Icon, message, Row, Upload,} from 'antd';
+import {Card, Col, Row} from 'antd';
 import {connect} from 'react-redux';
 
 import InfoCard from './infoCard';
 import UploadImg from './Upload';
 
-const { Dragger } = Upload;
+
 
 class List extends Component {
 
-  onChange(info) {
-    const { status } = info.file;
-    if (status !== 'uploading') {
-      console.log(info.file, info.fileList);
-    }
-    if (status === 'done') {
-      message.success(`${info.file.name} file uploaded successfully.`);
-    } else if (status === 'error') {
-      message.error(`${info.file.name} file upload failed.`);
-    }
-  }
-  
   totalPrice=()=>{
     const{priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
 
@@ -29,9 +17,7 @@ class List extends Component {
   }
 
   render() {
-    const prop = {
-      name: 'file', multiple: true, action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
-    };
+   
     const {roomCard} = this.props;
   return (<div style={{display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
    
@@ -45,27 +31,14 @@ class List extends Component {
          
            <p style={{color: 'white'}}>Начальная стоимость дизайн проекта: {this.props.roomCard.price} </p>
            <p style={{color: 'white'}}>Общая стоимось: {this.totalPrice()} </p>
-       
          </Card>
        </Col>
-  
        <Col offset={3} span={16}>
          <InfoCard/>
        </Col>
-  
        <Col offset={3} span={16}>
-         {/*<Dragger {...prop}>*/}
-         {/*  <p className="ant-upload-drag-icon">*/}
-         {/*    <Icon type="inbox"/>*/}
-         {/*  </p>*/}
-         {/*  <p className="ant-upload-text">Click or drag file to this area to upload</p>*/}
-         {/*  <p className="ant-upload-hint">*/}
-         {/*    Support for a single or bulk upload. Strictly prohibit from uploading company data or other*/}
-         {/*    band files*/}
-         {/*  </p>*/}
-         {/*</Dragger>*/}
+         <UploadImg />
        </Col>
-       <UploadImg />
      </Row>
       </div>
   )

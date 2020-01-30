@@ -57,15 +57,16 @@ class Routers extends Component {
           <Route path='/login' component={Login}/>
           <Route path='/room' component={NavConstructor}/>
           <Route path='/registration' component={RegistrationForm}/>
-          <Route path='/list' component={List} />
+          <Route path='/info' component={List} />
         </Content>
-        <Footer style={{ backgroundColor: "white"}} >Контакты:
+        <Footer style={{ backgroundColor: "white" , display:'flex', justifyContent: 'space-between'}} >Контакты:
+          
           <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""/>
-          <BackTop  />
-          <h1 style={{float:"right"}}> Итоговая стоимость:  {this.totalPrice()}</h1>
           
+          <h1 style={{float:"right"}}> Итоговая стоимость:  {this.totalPrice()}</h1>
+          <BackTop style={{bottom: 60 }} />
         </Footer>
       </Layout>
 
