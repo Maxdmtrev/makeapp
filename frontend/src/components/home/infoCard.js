@@ -29,6 +29,7 @@ const columns = [
 
 return (
     <Table
+     style={{backgroundColor:'white'}}
      rowKey="uid"
       columns={columns}
       expandedRowRender={e => <span>{e.descript}</span>}

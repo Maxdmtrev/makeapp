@@ -45,7 +45,7 @@ class Routers extends Component {
   
   render () {
     return (<Router history={customHistory}>
-      <Layout style={{ backgroundColor: "white", minHeight:1200}}  >
+      <Layout  style={{ backgroundColor: "white", minHeight:1200}}  >
         <Header style={{margin: 5}}>
                     <Navigation history={customHistory}/>
         </Header>

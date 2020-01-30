@@ -45,10 +45,10 @@ class Home extends Component {
   render () {
     const {address, m2, countBath, countDoor, countRoom, change, desPrice, perePlanPrice} = this.state;
     const {roomCard} = this.props;
-    return (<div style={{display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
+    return (<div className={"backImg"} style={{display: 'flex', justifyContent: 'center', marginTop: '10px', minHeight:1300}}>
       
       {change ?
-       <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: '#282c34', width: '60%', opacity: '0.90'}}>
+       <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: '#282c34', width: '60%', height:"1%", opacity: '0.90'}}>
          <Form>
            <Row style={{margin: 5, padding: 5}}>
            <Col offset={2} span={12}>
