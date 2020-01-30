@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
-import {Card, Col, Row, } from 'antd';
+import {Card, Col, Row} from 'antd';
 import {connect} from 'react-redux';
-
 import InfoCard from './infoCard';
 import UploadImg from './Upload';
 
-// const { Dragger } = Upload;
-
 class List extends Component {
 
-  
   totalPrice=()=>{
     const{priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
 
@@ -18,11 +14,9 @@ class List extends Component {
   }
 
   render() {
-    const prop = {
-      name: 'file', multiple: true, action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
-    };
+   
     const {roomCard} = this.props;
-  return (<div style={{display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
+  return (<div className={"backImg"} style={{display: 'flex', justifyContent: 'center', marginTop: '10px',minHeight:1300}}>
    
      <Row style={{margin: 5, padding: 5}}>
        <Col offset={3} span={16}>
@@ -40,8 +34,8 @@ class List extends Component {
          <InfoCard/>
        </Col>
        <Col offset={3} span={16}>
+         <UploadImg />
        </Col>
-       <UploadImg />
      </Row>
       </div>
   )

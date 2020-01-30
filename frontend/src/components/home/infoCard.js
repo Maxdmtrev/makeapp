@@ -20,15 +20,17 @@ const columns = [
   { title: 'Цена', dataIndex: 'price', key: 'price' },
 
   {
-    title: 'Action',
+    title: 'Ссылка',
     dataIndex: 'href',
     key: 'href',
-    render: (e) => <Link  onClick={()=>{window.open(e)}}>URL</Link>,
+    render: (e) => <Link to="#" onClick={()=>{window.open(e)}}>Где купить!</Link>,
   },
 ];
 
 return (
     <Table
+     style={{backgroundColor:'white'}}
+     rowKey="uid"
       columns={columns}
       expandedRowRender={e => <span>{e.descript}</span>}
       dataSource={this.props.priceAction}
@@ -39,8 +41,6 @@ return (
 
 function mapStateToProps(store) {
   return {
-    // priceToilet: store.priceToilet,
-    // priceLocker: store.priceLocker,
     priceAction: store.priceAction
   };
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Card, Col, Collapse, Row, Icon } from "antd";
+import {Button, Card, Col, Collapse, Row, Icon, Affix} from 'antd';
 import { connect } from "react-redux";
 import image from "../../img/bath/kerama_wall/kerama_belkanto.png";
 import ceramic from "../../img/construct_bath/kerama_belkanto_fregat.png";
@@ -46,6 +46,7 @@ class ConstructorBath extends Component {
     return (
       <div>
         <Row>
+          <Affix offsetTop={10}>
           <Col span={13}>
             <img
               key={"1"}
@@ -139,11 +140,12 @@ class ConstructorBath extends Component {
               alt={"test"}
             />
           </Col>
-          <Col span={10} offset={1}>
+          </Affix>
+          <Col span={10}  style={{ float: "right" }}>
             <Collapse accordion className={"card-input"}>
               <Panel header="Настенная плитка" key="1">
                 {this.props.storage.keramaWall.map((elem, index) => (
-                  <Col key={index} span={11} style={{ margin: 6 }}>
+                  <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
                       name={index}
                       onClick={event => {
@@ -153,11 +155,12 @@ class ConstructorBath extends Component {
                         this.props.addPriceKeramaWall((elem.price));
                       }}
                       hoverable
-                      style={{ width: 215, border: `${this.state.border}` }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
-                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
+                      <span
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
+                      >
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -168,7 +171,7 @@ class ConstructorBath extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
@@ -176,18 +179,19 @@ class ConstructorBath extends Component {
 
               <Panel header="Напольная плитка" key="2">
                 {this.props.storage.floor.map((elem, index) => (
-                  <Col key={index} span={11} style={{ margin: 6 }}>
+                  <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ floor: elem.img });
                         this.props.addPriceBathFloor((elem.price));}}
                       hoverable
-                      // style={{ width: 215 }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
-                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
+                      <span
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
+                      >
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -198,14 +202,14 @@ class ConstructorBath extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
               </Panel>
               <Panel header="Унитаз" key="3">
                 {this.props.storage.toilet.map((elem, index) => (
-                  <Col key={index} span={11} style={{ margin: 6 }}>
+                  <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
                       onClick={() => {
                         this.props.clearPresetAC();
@@ -213,11 +217,12 @@ class ConstructorBath extends Component {
                         this.props.addPriceToilet((elem.price));
                       }}
                       hoverable
-                      style={{ width: 215 }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
-                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
+                      <span
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
+                      >
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -228,14 +233,14 @@ class ConstructorBath extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
               </Panel>
               <Panel header="Ванна" key="4">
                 {this.props.storage.bath.map((elem, index) => (
-                  <Col key={index} span={11} style={{ margin: 6 }}>
+                  <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
                       onClick={() => {
                         this.props.clearPresetAC();
@@ -243,11 +248,12 @@ class ConstructorBath extends Component {
                         this.props.addPriceBath((elem.price));
 }}
                       hoverable
-                      style={{ width: 215 }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
-                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
+                      <span
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
+                      >
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -258,14 +264,14 @@ class ConstructorBath extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
               </Panel>
               <Panel header="Душевая стойка" key="5">
                 {this.props.storage.shower.map((elem, index) => (
-                  <Col key={index} span={11} style={{ margin: 6 }}>
+                  <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
                       onClick={() => {
                         this.props.clearPresetAC();
@@ -278,11 +284,12 @@ class ConstructorBath extends Component {
                           descript: elem.descript
                         });}}
                       hoverable
-                      style={{ width: 215 }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
-                      <Meta title={elem.title} description={elem.descript} />
-                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
+                      <span
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
+                      >
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -293,7 +300,7 @@ class ConstructorBath extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
@@ -312,10 +319,11 @@ class ConstructorBath extends Component {
                           });
                         }}
                         hoverable
-                        style={{width: 215}}
                         cover={<img alt="example" src={elem.sampleImage}/>}>
-                      <Meta title={elem.title} description={elem.descript} />
-                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
+                      <Meta title={elem.title} style={{marginBottom:5}} description={elem.descript} />
+                      <span
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
+                      >
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -326,7 +334,7 @@ class ConstructorBath extends Component {
                           descript: elem.descript
                         });
                       }}
-                      ><Icon type="shopping" /></Button>
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}

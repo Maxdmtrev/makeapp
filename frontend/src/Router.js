@@ -12,7 +12,6 @@ import {connect} from 'react-redux';
 import 'antd/dist/antd.css';
 import '../src/app.css';
 import {Icon, Layout, BackTop} from 'antd';
-import Background from "./img/chairs-2181947.jpg";
 
 const {Header, Footer, Content} = Layout;
 
@@ -37,18 +36,15 @@ class Routers extends Component {
       }
     }
   }
-  
   totalPrice=()=>{
     const{priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
-    // console.log (priceElectric);
     let sumPrice=priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
     return sumPrice
   }
   
   render () {
-    return (
-        <Router history={customHistory}>
-      <Layout style={{ backgroundColor: "white", minHeight:1000}}  >
+    return (<Router history={customHistory}>
+      <Layout  style={{ backgroundColor: "white", minHeight:1200}}  >
         <Header style={{margin: 5}}>
           <Navigation history={customHistory}/>
         </Header>
@@ -58,15 +54,15 @@ class Routers extends Component {
           <Route path='/login' component={Login}/>
           <Route path='/room' component={NavConstructor}/>
           <Route path='/registration' component={RegistrationForm}/>
-          <Route path='/list' component={List} />
+          <Route path='/info' component={List} />
         </Content>
-        <Footer style={{ backgroundColor: "white"}} >Контакты:
+        <Footer style={{ backgroundColor: "white" , display:'flex', justifyContent: 'space-between'}} >Контакты:
+          
           <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""/>
-          <BackTop  />
-          <h2>{this.totalPrice()}</h2>
-          
+          <h1 style={{float:"right"}}> Итоговая стоимость:  {this.totalPrice()}</h1>
+          <BackTop style={{bottom: 60 }} />
         </Footer>
       </Layout>
 
