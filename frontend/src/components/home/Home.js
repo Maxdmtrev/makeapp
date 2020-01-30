@@ -49,7 +49,8 @@ class Home extends Component {
       
       {change ?
        <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: '#282c34', width: '60%', opacity: '0.90'}}>
-         <Form><Row style={{margin: 5, padding: 5}}>
+         <Form>
+           <Row style={{margin: 5, padding: 5}}>
            <Col offset={2} span={12}>
              <Form.Item label="Адрес" hasFeedback>
                <Input type="text" name="address" style={{width: '100%'}} id="suggest" placeholder="Название улицы"
@@ -158,7 +159,7 @@ class Home extends Component {
        </Card> : <Row>
          <Col>
            <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: '#282c34', width: '100%'}}>
-             <h2 style={{color: 'white'}}> Ваш адрес{roomCard.address}</h2>
+             <h2 style={{color: 'white'}}> Ваш адрес: {roomCard.address}</h2>
              <p style={{color: 'white'}}>{roomCard.countRoom} -комнатная квартира площадью {roomCard.m2} м2</p>
              <p style={{color: 'white'}}>Количество санузлов: {roomCard.countBath}</p>
              <p style={{color: 'white'}}>Количество дверей: {roomCard.countDoor}</p>

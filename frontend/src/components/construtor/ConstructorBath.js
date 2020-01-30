@@ -1,34 +1,26 @@
-import React, { Component } from "react";
-import { Button, Card, Col, Collapse, Row } from "antd";
-import { connect } from "react-redux";
-import image from "../../img/bath/kerama_wall/kerama_belkanto.png";
-import ceramic from "../../img/construct_bath/kerama_belkanto_fregat.png";
-import thumb from "../../img/construct_bath/godmorgon_white.png";
-import toilet from "../../img/construct_bath/cersanit_parva.png";
-import floor from "../../img/construct_bath/bravat_opal.png";
-import shower from "../../img/construct_bath/bravat_opal.png";
-import bath from "../../img/bath/bath/cersanit_octavia.png";
-import locker from "../../img/bath/locker/locker_white.png";
-import {
-  AddPriceBathAC,
-  AddPriceBathFloorAC,
-  AddPriceKeramaWallAC,
-  AddPriceLockerAC,
-  AddPriceShowerAC,
-  AddPriceToiletAC,
-  AddActionAC
-} from "../../redux/priceCreators";
-import { ClearPresetAC } from "../../redux/creators";
+import React, {Component} from 'react';
+import {Button, Card, Col, Collapse, Row} from 'antd';
+import {connect} from 'react-redux';
+import image from '../../img/bath/kerama_wall/kerama_belkanto.png';
+import ceramic from '../../img/construct_bath/kerama_belkanto_fregat.png';
+import thumb from '../../img/construct_bath/godmorgon_white.png';
+import toilet from '../../img/construct_bath/cersanit_parva.png';
+import floor from '../../img/construct_bath/bravat_opal.png';
+import shower from '../../img/construct_bath/bravat_opal.png';
+import bath from '../../img/bath/bath/cersanit_octavia.png';
+import locker from '../../img/bath/locker/locker_white.png';
+import {AddActionAC, AddPriceBathAC, AddPriceBathFloorAC, AddPriceKeramaWallAC, AddPriceLockerAC, AddPriceShowerAC, AddPriceToiletAC} from '../../redux/priceCreators';
+import {ClearPresetAC} from '../../redux/creators';
 
 
-const { Meta } = Card;
-const { Panel } = Collapse;
+const {Meta} = Card;
+const {Panel} = Collapse;
 
 class ConstructorBath extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super (props);
     this.state = {
-      width: "100%",
+      width: '100%',
       // height: '600px',
       wall: image,
       ceramic: ceramic,
@@ -152,7 +144,8 @@ class ConstructorBath extends Component {
                         event.preventDefault();
                         this.props.clearPresetAC();
                         this.setState({ ceramic: elem.img });
-                        this.props.addPriceKeramaWall({
+                        this.props.addPriceKeramaWall(elem.price);
+                        this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
                           href: elem.href,
@@ -183,7 +176,8 @@ class ConstructorBath extends Component {
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ floor: elem.img });
-                        this.props.addPriceBathFloor({
+                        this.props.addPriceBathFloor(elem.price);
+                        this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
                           href: elem.href,
@@ -214,6 +208,12 @@ class ConstructorBath extends Component {
                         this.props.clearPresetAC();
                         this.setState({ toilet: elem.img });
                         this.props.addPriceToilet(elem.price);
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
                       }}
                       hoverable
                       style={{ width: 215 }}
@@ -238,7 +238,8 @@ class ConstructorBath extends Component {
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ bath: elem.img });
-                        this.props.addPriceBath({
+                        this.props.addPriceBath(elem.price);
+                        this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
                           href: elem.href,
@@ -268,7 +269,8 @@ class ConstructorBath extends Component {
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ shower: elem.img });
-                        this.props.addPriceShower({
+                        this.props.addPriceShower(elem.price);
+                        this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
                           href: elem.href,
@@ -298,7 +300,8 @@ class ConstructorBath extends Component {
 
                         onClick={() =>{ this.setState ({locker: elem.img});
                         this.props.addPriceLocker((elem.price));
- this.props.addActionPriceAC({
+  
+                          this.props.addActionPriceAC({
                         price: elem.price,
                         title: elem.title,
                         href: elem.href,

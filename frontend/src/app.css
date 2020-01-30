@@ -12,17 +12,6 @@
 .ant-checkbox-wrapper{
     color: white !important;
 }
-.ant-carousel .slick-slide {
-    text-align: center;
-    height: 500px;
-    /*line-height: 10px;*/
-    /*background: #282c34;*/
-    overflow: hidden;
-}
-
-.ant-carousel .slick-slide h3 {
-    color: #fff;
-}
 .ant-layout-header{
     height: 50px !important;
     padding: 0 50px;
@@ -54,5 +43,13 @@
     font-size: 20px;
 }
 .scroll-image{
-    overflow: scroll;
+    overflow: hidden;
+}
+.ant-carousel .slick-slide {
+    text-align: center;
+    /*height: 90%;*/
+
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
 }
