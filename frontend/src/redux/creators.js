@@ -21,7 +21,7 @@ export const ReqUserAC = (status, user, data) => {
     type: LOGIN_USER,
     isLogin: status,
     username: user,
-    data: data
+    // data: data
   };
 };
 export const LogoutUserAC = (status, user) => {

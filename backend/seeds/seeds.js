@@ -1,27 +1,32 @@
 // const bathBase = require ('./bathBase');
-// require('dotenv').config()
-// const mongoose = require ('mongoose');
-//
-// mongoose.connect (`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@clusterelbrus-ntmbz.mongodb.net/makeApp?retryWrites=true&w=majority`, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useFindAndModify: false
-// });
-// const Bath = require ('../models/todos');
-//
-//  function bathDB () {
-//  try {
-//    let bb = bathBase.keramaWall.map ((el) => {
-//      const data = new Bath ({
-//        img: el.img, title: el.title
-//      });
-//      data.save ();
-//    });
-//   return   bb;
-//  } catch (e) {
-//  }
-//
-//   mongoose.connection.close ();
-// }
-//
-// bathDB ();
+const Room = require ('../models/roomShema');
+const {dataBase} = require ('./roomBase');
+const mongoose = require ('mongoose');
+
+mongoose.connect (`mongodb+srv://makeapp:123@clusterelbrus-ntmbz.mongodb.net/makeApp?retryWrites=true&w=majority`, {
+  useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false
+});
+
+function bathDB () {
+  try {
+
+    const data = new Room ({
+      srcPlint:dataBase.srcPlint,
+      sill:dataBase.sill,
+      light:dataBase.light,
+      molding:dataBase.margin,
+      elecric:dataBase.elecric,
+      colorWall:dataBase.colorWall,
+      srcSample:dataBase.srcSample,
+      srcDoor:dataBase.srcDoor,
+      preset:dataBase.preset,
+    });
+    data.save ();
+
+  } catch (e) {
+  }
+
+  // mongoose.connection.close ();
+}
+
+bathDB ();

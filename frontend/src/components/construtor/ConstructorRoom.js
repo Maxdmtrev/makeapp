@@ -55,7 +55,6 @@ class ConstructorRoom extends Component {
   render() {
     return (
       <div>
-        {/*<Slider />*/}
         <Row>
           <Affix offsetTop={10}>
             <Col style={{ margin: 5 }} span={13}>
