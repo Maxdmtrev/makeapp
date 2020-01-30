@@ -205,12 +205,7 @@ class ConstructorBath extends Component {
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ toilet: elem.img });
-                        this.props.addPriceToilet({
-                          price: elem.price,
-                          title: elem.title,
-                          href: elem.href,
-                          descript: elem.descript
-                        });
+                        this.props.addPriceToilet(elem.price);
                       }}
                       hoverable
                       style={{ width: 215 }}
@@ -283,7 +278,7 @@ class ConstructorBath extends Component {
                   <Col key={index} span={11} style={{ margin: 6 }}>
                     <Card
                         onClick={() =>{ this.setState ({locker: elem.img});
-                        this.props.addPriceLocker(elem.price);
+                        this.props.addPriceLocker((elem.price));
                         }}
                         hoverable
                         style={{width: 215}}

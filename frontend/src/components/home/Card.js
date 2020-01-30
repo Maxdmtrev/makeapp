@@ -1,13 +1,14 @@
-import { Table, Button } from 'antd';
+import { Table } from 'antd';
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import image from "../../img/bath/kerama_wall/kerama_belkanto.png";
-import ceramic from "../../img/construct_bath/kerama_belkanto_fregat.png";
-import floor from "../../img/construct_bath/bravat_opal.png";
-import bath from "../../img/bath/bath/cersanit_octavia.png";
-import thumb from "../../img/construct_bath/godmorgon_white.png";
-import toilet from "../../img/construct_bath/cersanit_parva.png";
-import locker from "../../img/bath/locker/locker_white.png";
+import {Link} from 'react-router-dom';
+// import image from "../../img/bath/kerama_wall/kerama_belkanto.png";
+// import ceramic from "../../img/construct_bath/kerama_belkanto_fregat.png";
+// import floor from "../../img/construct_bath/bravat_opal.png";
+// import bath from "../../img/bath/bath/cersanit_octavia.png";
+// import thumb from "../../img/construct_bath/godmorgon_white.png";
+// import toilet from "../../img/construct_bath/cersanit_parva.png";
+// import locker from "../../img/bath/locker/locker_white.png";
 
 class Card extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ const columns = [
     title: 'Action',
     dataIndex: '',
     key: 'x',
-    render: () => <a>Delete</a>,
+    render: () => <Link>Delete</Link>,
   },
 ];
 
@@ -35,7 +36,7 @@ const data = [
     key: 1,
     name: `${this.props.priceToilet.title}`,
     price: `${this.props.priceToilet.price}`,
-    href: <a onClick={() =>  window.open(`${this.props.priceToilet.href}`)}>URL</a>,
+    href: <Link onClick={() =>  window.open(`${this.props.priceToilet.href}`)}>URL</Link>,
     description: `${this.props.priceToilet.descript}`,
   },
   {
