@@ -40,7 +40,6 @@ return (
 
 function mapStateToProps(store) {
   return {
- 
     priceAction: store.priceAction
   };
 }

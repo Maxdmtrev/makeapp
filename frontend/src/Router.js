@@ -37,10 +37,8 @@ class Routers extends Component {
       }
     }
   }
-  
   totalPrice=()=>{
     const{priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
-    // console.log (priceElectric);
     let sumPrice=priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
     return sumPrice
   }
@@ -64,7 +62,6 @@ class Routers extends Component {
           <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""/>
-          
           <h1 style={{float:"right"}}> Итоговая стоимость:  {this.totalPrice()}</h1>
           <BackTop style={{bottom: 60 }} />
         </Footer>
