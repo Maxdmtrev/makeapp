@@ -1,41 +1,12 @@
-import {
-  ADD_USER,
-  GET_CARD,
-  GET_MAP,
-  LOGIN_USER,
-  LOGOUT_USER,
-  SET_PRESET,
-  CLEAR_PRESET
-} from "./actions";
-import {
-  PRICE_ACTION,
-  PRICE_DOOR,
-  PRICE_ELECTRIC,
-  PRICE_TOILET,
-  PRICE_SHOWER,
-  PRICE_LOCKER,
-  PRICE_KERAMAWALL,
-  PRICE_BATHFLOOR,
-  PRICE_BATH,
-  PRICE_SILL,
-  PRICE_PLINT,
-  PRICE_MOLDING,
-  PRICE_LIGHT,
-  PRICE_FLOOR
-} from "./price";
-import dataBase from "../components/construtor/dataBase";
-import dataBase2 from "../components/construtor/dataBase2";
-import dataBase3 from "../components/construtor/dataBase3";
+import {ADD_USER, CLEAR_PRESET, GET_CARD, GET_MAP, LOGIN_USER, LOGOUT_USER, SET_PRESET} from './actions';
+import {PRICE_ACTION, PRICE_BATH, PRICE_BATHFLOOR, PRICE_DOOR, PRICE_ELECTRIC, PRICE_FLOOR, PRICE_KERAMAWALL, PRICE_LIGHT, PRICE_LOCKER, PRICE_MOLDING, PRICE_PLINT, PRICE_SHOWER, PRICE_SILL, PRICE_TOILET} from './price';
+import dataBase from '../components/construtor/dataBase';
+import dataBase2 from '../components/construtor/dataBase2';
+import dataBase3 from '../components/construtor/dataBase3';
 
 const state = {
-  constStore: dataBase,
-  bathStore: dataBase2,
-  kitchenStore: dataBase3,
-  roomCard: {
-    address: null,
-    m2: null,
-    countBath: null,
-    countDoor: null,
+  constStore: dataBase, bathStore: dataBase2, kitchenStore: dataBase3, roomCard: {
+    address: null, m2: null, countBath: null, countDoor: null,
     countRoom: null,
     price: null,
     desPrice: 0,
@@ -63,14 +34,11 @@ const state = {
 
 export default function(oldState = state, action) {
   switch (action.type) {
-
     case PRICE_ACTION:
       return {
 ...oldState,
         priceAction: [...oldState.priceAction, action.priceAction],
-
       };
-
     case PRICE_DOOR:
       return {
         ...oldState,
