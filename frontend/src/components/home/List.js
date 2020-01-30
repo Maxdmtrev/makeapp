@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import {Card, Col, Row} from 'antd';
 import {connect} from 'react-redux';
-
 import InfoCard from './infoCard';
 import UploadImg from './Upload';
-
-
 
 class List extends Component {
 
