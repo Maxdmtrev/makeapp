@@ -40,35 +40,31 @@ class List extends Component {
             <Descriptions.Item label="Remark">P.S.</Descriptions.Item>
           </Descriptions>
         </div>
-        <Row>
-          <div>
-            1. Kerama marazzi 'Бельканто'
-            <Button style={{ marginLeft: 20 }} type="primary" onClick={() => window.open('https://santehnika-online.ru/product/kollektsiya_plitki_kerama_marazzi_belkanto/')}>
-              Бельканто
-            </Button>
-          </div>
-          <Row gutter={16}>
-            <Col span={12}>
-              <Statistic title="Туалет" value={this.props.priceToilet.title} />
-            </Col>
-            <Col span={12}>
-              <Statistic title="Цена (RUB)" />
-              <Button onClick={() =>  window.open(`${this.props.priceToilet.href}`)} > Цена: {this.props.priceToilet.price}</Button>
+        {this.props ?
+        <div className={'table'}>
 
-            </Col>
-          </Row>
-          <Row gutter={16}>
+          <Row gutter={18}>
+
             <div>
-              <h1>{this.props.priceToilet.title}</h1>
+
+              {/*<h1>{this.props.priceToilet.title}</h1>*/}
               {/*<h1>{this.props.priceToilet.price}</h1>*/}
-              <Button onClick={() =>  window.open(`${this.props.priceToilet.href}`)} > Цена: {this.props.priceToilet.price}</Button>
+              <Button onClick={() =>  window.open(`${this.props.priceToilet.href}`)} ><h3>1. {this.props.priceToilet.title} / Цена: {this.props.priceToilet.price}</h3></Button>
             </div>
-            <Col>
-            <h1>{this.props.priceLocker.title}</h1>
-            {/*<h1>{this.props.priceToilet.price}</h1>*/}
-            <Button onClick={() =>  window.open(`${this.props.priceLocker.href}`)} > Цена: {this.props.priceLocker.price}</Button>
-            </Col>
+
         </Row>
+          <Row gutter={16}>
+
+            <div>
+              {/*<h1>{this.props.priceToilet.price}</h1>*/}
+              <Button onClick={() =>  window.open(`${this.props.priceLocker.href}`)} ><h3>2. {this.props.priceLocker.title} / Цена: {this.props.priceLocker.price}</h3></Button>
+              {/*</Col>*/}
+            </div>
+
+          </Row>
+
+        </div>
+            : '...Load'}
         <div>
           <Row gutter={16}>
             <Col span={12}>
@@ -92,7 +88,6 @@ class List extends Component {
             </p>
           </Dragger>,
         </div>
-        </Row>
       </div>
   )
 }}
