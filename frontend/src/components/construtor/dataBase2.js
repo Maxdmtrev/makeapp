@@ -66,7 +66,7 @@ export default {
       img: keramaWall1p,
       title: "Kerama Marazzi Бельканто/Фрегат беж",
       sampleImage: keramaWall1,
-      price: 880,
+      price: 1320,
       href: 'https://santehnika-online.ru/product/kollektsiya_plitki_kerama_marazzi_fregat/#1598421',
       descript: "Керамическая плитка 15х40см"
     },

@@ -13,7 +13,6 @@ class NavConstructor extends Component {
   render () {
     return (
      <div>
-   
        <Row style={{margin: 5, padding: 5}}>
          <Col offset={3} span={16}>
            <Card >
@@ -35,11 +34,7 @@ class NavConstructor extends Component {
              </Tabs>
            </Card>
          </Col>
-       </Row>
-    
-
-  
-     
+       </Row>    
 </div>
     );
   }

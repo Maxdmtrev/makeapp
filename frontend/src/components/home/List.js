@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import {Card, Col, Icon, message, Row, Upload,} from 'antd';
 import {connect} from 'react-redux';
+
 import InfoCard from './infoCard';
+
 
 const { Dragger } = Upload;
 
@@ -21,7 +23,7 @@ class List extends Component {
   
   totalPrice=()=>{
     const{priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
-    // console.log (priceElectric);
+
     let sumPrice=priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
     return sumPrice
   }
@@ -64,6 +66,7 @@ class List extends Component {
          </Dragger>,
        </Col>
      </Row>
+
       </div>
   )
 }}
