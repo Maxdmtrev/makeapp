@@ -26,7 +26,7 @@ class UploadImg extends Component {
         uid: '-2',
         name: 'image.png',
         status: 'done',
-        url: 'https://play.min.io/makeapp/preset/cold-caramel.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=Q3AM3UQ867SPQQA43P2F%2F20200129%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20200129T143038Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Signature=046377ff2f5056e5101fd210dd2a2b6b4d5f6a181089adb9e848d6aa804720db',
+        url: 'https://images-cdn.cian.site/realty/uploads/froala_editor/images/Cian_Planirovka3_part2-04_F1MCd05.png',
       },
       {
         uid: '-3',
@@ -43,7 +43,8 @@ class UploadImg extends Component {
       {
         uid: '-5',
         name: 'image.png',
-        status: 'error',
+        status: 'done',
+        url: 'https://lenspecsmu.ru/upload/obj_imgs/18000000000000498/39500000000939731.jpeg'
       },
     ],
   };

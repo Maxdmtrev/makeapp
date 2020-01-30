@@ -11,8 +11,8 @@ import {ReqUserAC} from './redux/creators';
 import {connect} from 'react-redux';
 import 'antd/dist/antd.css';
 import '../src/app.css';
-
 import {Icon, Layout, BackTop} from 'antd';
+import Background from "./img/chairs-2181947.jpg";
 
 const {Header, Footer, Content} = Layout;
 
@@ -46,12 +46,13 @@ class Routers extends Component {
   }
   
   render () {
-    return (<Router history={customHistory}>
+    return (
+        <Router history={customHistory}>
       <Layout style={{ backgroundColor: "white", minHeight:1000}}  >
         <Header style={{margin: 5}}>
-                    <Navigation history={customHistory}/>
+          <Navigation history={customHistory}/>
         </Header>
-        <Content >
+        <Content className={'backImg'} >
           {this.props.ymaps ? <Route exact path="/" component={Home}/> : <>loading</>}
   
           <Route path='/login' component={Login}/>

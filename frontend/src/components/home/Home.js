@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {Button, Card, Checkbox, Col, Form, Input, Row, Select} from 'antd';
 import {GetCardAC} from '../../redux/creators';
 import {connect} from 'react-redux';
-
+import '../../app.css';
+import Background from '../../img/chairs-2181947.jpg';
 const {Option} = Select;
 
 
@@ -45,8 +46,9 @@ class Home extends Component {
   render () {
     const {address, m2, countBath, countDoor, countRoom, change, desPrice, perePlanPrice} = this.state;
     const {roomCard} = this.props;
-    return (<div style={{display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
-      
+    return (
+        <div  style={{display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
+
       {change ?
        <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: '#282c34', width: '60%', opacity: '0.90'}}>
          <Form>
