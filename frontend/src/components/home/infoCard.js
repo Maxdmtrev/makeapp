@@ -23,12 +23,13 @@ const columns = [
     title: 'Action',
     dataIndex: 'href',
     key: 'href',
-    render: (e) => <Link  onClick={()=>{window.open(e)}}>URL</Link>,
+    render: (e) => <Link to="#" onClick={()=>{window.open(e)}}>URL</Link>,
   },
 ];
 
 return (
     <Table
+     rowKey="uid"
       columns={columns}
       expandedRowRender={e => <span>{e.descript}</span>}
       dataSource={this.props.priceAction}
