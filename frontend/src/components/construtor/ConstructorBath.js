@@ -15,7 +15,8 @@ import {
   AddPriceKeramaWallAC,
   AddPriceLockerAC,
   AddPriceShowerAC,
-  AddPriceToiletAC
+  AddPriceToiletAC,
+  AddActionAC
 } from "../../redux/priceCreators";
 import { ClearPresetAC } from "../../redux/creators";
 
@@ -151,10 +152,12 @@ class ConstructorBath extends Component {
                         event.preventDefault();
                         this.props.clearPresetAC();
                         this.setState({ ceramic: elem.img });
-                        this.props.addPriceKeramaWall(elem.price);
-                        // if(event.target.id === index) {
-                        //   this.setState({border: "2px solid black"})
-                        // };
+                        this.props.addPriceKeramaWall({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
                       }}
                       hoverable
                       style={{ width: 215, border: `${this.state.border}` }}
@@ -180,7 +183,12 @@ class ConstructorBath extends Component {
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ floor: elem.img });
-                        this.props.addPriceBathFloor(elem.price);
+                        this.props.addPriceBathFloor({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
                       }}
                       hoverable
                       style={{ width: 215 }}
@@ -230,7 +238,12 @@ class ConstructorBath extends Component {
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ bath: elem.img });
-                        this.props.addPriceBath(elem.price);
+                        this.props.addPriceBath({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
                       }}
                       hoverable
                       style={{ width: 215 }}
@@ -255,7 +268,12 @@ class ConstructorBath extends Component {
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ shower: elem.img });
-                        this.props.addPriceShower(elem.price);
+                        this.props.addPriceShower({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
                       }}
                       hoverable
                       style={{ width: 215 }}
@@ -277,21 +295,29 @@ class ConstructorBath extends Component {
                 {this.props.storage.locker.map((elem, index) => (
                   <Col key={index} span={11} style={{ margin: 6 }}>
                     <Card
+
                         onClick={() =>{ this.setState ({locker: elem.img});
                         this.props.addPriceLocker((elem.price));
+ this.props.addActionPriceAC({
+                        price: elem.price,
+                        title: elem.title,
+                        href: elem.href,
+                        descript: elem.descript
+                        });
                         }}
                         hoverable
                         style={{width: 215}}
                         cover={<img alt="example" src={elem.sampleImage}/>}
+
                     >
                       <Meta title={elem.title} description={elem.descript} />
-                      <Button
-                        style={{ marginTop: 10, marginLeft: 20 }}
+                      <span
+                        style={{ marginTop: 10, marginLeft: 40, color: "blue"}}
                         type="primary"
                         onClick={() => window.open(`${elem.href}`)}
                       >
                         {elem.price}
-                      </Button>
+                      </span>
                     </Card>
                   </Col>
                 ))}
@@ -333,6 +359,9 @@ function mapDispatchToProps(dispatch) {
     },
     clearPresetAC: () => {
       dispatch(ClearPresetAC());
+    },
+    addActionPriceAC: (data) => {
+      dispatch(AddActionAC(data))
     }
   };
 }

@@ -42,31 +42,6 @@ class List extends Component {
           </Descriptions>
         </div>
         <Card />
-        {/*{this.props ?*/}
-        {/*<div className={'table'}>*/}
-        
-        {/*  <Row gutter={18}>*/}
-        
-        {/*    <div>*/}
-        
-        {/*      /!*<h1>{this.props.priceToilet.title}</h1>*!/*/}
-        {/*      /!*<h1>{this.props.priceToilet.price}</h1>*!/*/}
-        {/*      <Button onClick={() =>  window.open(`${this.props.priceToilet.href}`)} ><h3>1. {this.props.priceToilet.title} / Цена: {this.props.priceToilet.price}</h3></Button>*/}
-        {/*    </div>*/}
-        
-        {/*</Row>*/}
-        {/*  <Row gutter={16}>*/}
-        
-        {/*    <div>*/}
-        {/*      /!*<h1>{this.props.priceToilet.price}</h1>*!/*/}
-        {/*      <Button onClick={() =>  window.open(`${this.props.priceLocker.href}`)} ><h3>2. {this.props.priceLocker.title} / Цена: {this.props.priceLocker.price}</h3></Button>*/}
-        {/*      /!*</Col>*!/*/}
-        {/*    </div>*/}
-        
-        {/*  </Row>*/}
-        
-        {/*</div>*/}
-        {/*    : '...Load'}*/}
         <div>
           <Row gutter={16}>
             <Col span={12}>

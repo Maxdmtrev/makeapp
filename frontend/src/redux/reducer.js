@@ -8,6 +8,7 @@ import {
   CLEAR_PRESET
 } from "./actions";
 import {
+  PRICE_ACTION,
   PRICE_DOOR,
   PRICE_ELECTRIC,
   PRICE_TOILET,
@@ -39,7 +40,7 @@ const state = {
     price: null,
     desPrice: 0,
     perePlanPrice: 0
-  },
+    },
   isLogin: false,
   username: null,
   ymaps: null,
@@ -56,12 +57,20 @@ const state = {
   priceLocker: 0,
   priceShower: 0,
   priceToilet: 0,
-  selectedPreset: {}
+  selectedPreset: {},
+  priceAction: []
 };
 
 export default function(oldState = state, action) {
-  // console.log (action.data.srcDoor);
   switch (action.type) {
+
+    case PRICE_ACTION:
+      return {
+...oldState,
+        priceAction: [...oldState.priceAction, action.priceAction],
+
+      };
+
     case PRICE_DOOR:
       return {
         ...oldState,
