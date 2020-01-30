@@ -82,7 +82,7 @@ import elecric1 from "../../img/room/electric/legrand.jpg";
 import elecric1p from "../../img/room/electric/legrand.png";
 import elecric2 from "../../img/room/electric/legrand_black.jpg";
 import elecric2p from "../../img/room/electric/legrand_black.png";
-import imgElegant from "../../img/preset/elegant-white.png";
+// import imgElegant from "../../img/preset/elegant-white.png";
 import imgClassic from "../../img/preset/exquisite-classic.png";
 import imgPeach from "../../img/preset/peach-dreams.png";
 import imgVivaro from "../../img/preset/vivaro-alpine.png";
@@ -705,26 +705,26 @@ export default {
       srcPlint: plint1p,
       background: "rgb(179, 187, 193)",
       floorBath: floor3p,
-      keramaWall: keramaWall7p,
-      toilet: toilet1p,
-      bath: bath1p,
-      locker: locker2p
-    },
-    {
-      title: "Elegant White",
-      img: imgElegant,
-      floor: image11p,
-      light: light3p,
-      door: image18p,
-      elecric: elecric1p,
-      molding: molding2p,
-      srcPlint: plint4p,
-      background: "rgb(246, 246, 246)",
-      floorBath: floor3p,
       keramaWall: keramaWall4p,
       toilet: toilet2p,
       bath: bath1p,
       locker: locker1p
-    }
+    },
+    // {
+    //   title: "Elegant White",
+    //   img: imgElegant,
+    //   floor: image11p,
+    //   light: light3p,
+    //   door: image18p,
+    //   elecric: elecric1p,
+    //   molding: molding2p,
+    //   srcPlint: plint4p,
+    //   background: "rgb(246, 246, 246)",
+    //   floorBath: floor3p,
+    //   keramaWall: keramaWall4p,
+    //   toilet: toilet2p,
+    //   bath: bath1p,
+    //   locker: locker1p
+    // }
   ]
 };

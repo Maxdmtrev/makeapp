@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Affix, Card, Col, Collapse, Row } from "antd";
+import {Affix, Button, Card, Col, Collapse, Icon, Row} from 'antd';
 import {
   AddActionAC, AddPriceDoorAC, AddPriceElectricAC, AddPriceFloorAC, AddPriceLightAC, AddPriceMoldingAC, AddPricePlintAC, AddPriceSillAC
 } from '../../redux/priceCreators';
@@ -247,6 +247,19 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.props.addPriceFloor(elem.price);
                         this.setState({ floor: elem.img });
+                        
+                      }}
+                      hoverable
+                      style={{ width: "100%" }}
+                      cover={<img alt="example" src={elem.sampleImage} />}
+                    >
+                      <Meta title={elem.title} description={elem.descript} />
+                      <span
+                       style={{marginRight:30, marginLeft: 20, color: "blue"}}
+                      >
+                        {elem.price}
+                      </span>
+                      <Button onClick={() => {
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -254,11 +267,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      hoverable
-                      style={{ width: "100%" }}
-                      cover={<img alt="example" src={elem.sampleImage} />}
-                    >
-                      <Meta title={elem.title} description={elem.descript} />
+                      ><Icon type="heart" /> Добавить в избранное</Button>
                     </Card>
                   </Col>
                 ))}
@@ -272,6 +281,19 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.setState({ door: elem.img });
                         this.props.addPriceDoor(elem.price);
+                        
+                      }}
+                      hoverable
+                      style={{ width: "100%" }}
+                      cover={<img alt="example" src={elem.sampleImage} />}
+                    >
+                      <Meta title={elem.title} description={elem.descript} />
+                      <span
+                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                      >
+                        {elem.price}
+                      </span>
+                      <Button onClick={() => {
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -279,11 +301,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      hoverable
-                      style={{ width: "100%" }}
-                      cover={<img alt="example" src={elem.sampleImage} />}
-                    >
-                      <Meta title={elem.title} description={elem.descript} />
+                      ><Icon type="shopping" /></Button>
                     </Card>
                   </Col>
                 ))}
@@ -296,6 +314,19 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.props.addPricePlint(elem.price);
                         this.setState({ plint: elem.img });
+                        
+                      }}
+                      hoverable
+                      style={{ width: "100%" }}
+                      cover={<img alt="example" src={elem.sampleImage} />}
+                    >
+                      <Meta title={elem.title} description={elem.descript} />
+                      <span
+                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                      >
+                        {elem.price}
+                      </span>
+                      <Button onClick={() => {
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -303,11 +334,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      hoverable
-                      style={{ width: "100%" }}
-                      cover={<img alt="example" src={elem.sampleImage} />}
-                    >
-                      <Meta title={elem.title} description={elem.descript} />
+                      ><Icon type="shopping" /></Button>
                     </Card>
                   </Col>
                 ))}
@@ -320,6 +347,19 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.props.addPriceSill(elem.price);
                         this.setState({ molding: elem.img });
+                        
+                      }}
+                      hoverable
+                      style={{ width: "100%" }}
+                      cover={<img alt="example" src={elem.sampleImage} />}
+                    >
+                      <Meta title={elem.title} description={elem.descript} />
+                      <span
+                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                      >
+                        {elem.price}
+                      </span>
+                      <Button onClick={() => {
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -327,11 +367,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      hoverable
-                      style={{ width: "100%" }}
-                      cover={<img alt="example" src={elem.sampleImage} />}
-                    >
-                      <Meta title={elem.title} description={elem.descript} />
+                      ><Icon type="shopping" /></Button>
                     </Card>
                   </Col>
                 ))}
@@ -344,6 +380,19 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.props.addPriceMolding(elem.price);
                         this.setState({ podium: elem.img });
+                        
+                      }}
+                      hoverable
+                      style={{ width: "100%" }}
+                      cover={<img alt="example" src={elem.sampleImage} />}
+                    >
+                      <Meta title={elem.title} description={elem.descript} />
+                      <span
+                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                      >
+                        {elem.price}
+                      </span>
+                      <Button onClick={() => {
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -351,11 +400,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      hoverable
-                      style={{ width: "100%" }}
-                      cover={<img alt="example" src={elem.sampleImage} />}
-                    >
-                      <Meta title={elem.title} description={elem.descript} />
+                      ><Icon type="shopping" /></Button>
                     </Card>
                   </Col>
                 ))}
@@ -374,6 +419,20 @@ class ConstructorRoom extends Component {
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} description={elem.descript} />
+                      <span
+                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                      >
+                        {elem.price}
+                      </span>
+                      <Button onClick={() => {
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
+                      }}
+                      ><Icon type="shopping" /></Button>
                     </Card>
                   </Col>
                 ))}
@@ -386,6 +445,19 @@ class ConstructorRoom extends Component {
                         this.props.clearPresetAC();
                         this.props.addPriceElectric(elem.price);
                         this.setState({ energy: elem.img });
+                        
+                      }}
+                      hoverable
+                      style={{ width: "100%" }}
+                      cover={<img alt="example" src={elem.sampleImage} />}
+                    >
+                      <Meta title={elem.title} description={elem.descript} />
+                      <span
+                       style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
+                      >
+                        {elem.price}
+                      </span>
+                      <Button onClick={() => {
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -393,11 +465,7 @@ class ConstructorRoom extends Component {
                           descript: elem.descript
                         });
                       }}
-                      hoverable
-                      style={{ width: "100%" }}
-                      cover={<img alt="example" src={elem.sampleImage} />}
-                    >
-                      <Meta title={elem.title} description={elem.descript} />
+                      ><Icon type="shopping" /></Button>
                     </Card>
                   </Col>
                 ))}

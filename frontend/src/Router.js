@@ -47,7 +47,7 @@ class Routers extends Component {
   
   render () {
     return (<Router history={customHistory}>
-      <Layout style={{ backgroundColor: "white", minHeight:1000}}  >
+      <Layout style={{ backgroundColor: "white", minHeight:1200}}  >
         <Header style={{margin: 5}}>
                     <Navigation history={customHistory}/>
         </Header>
@@ -64,7 +64,7 @@ class Routers extends Component {
           <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""/>
           <BackTop  />
-          <h2>{this.totalPrice()}</h2>
+          <h1 style={{float:"right"}}> Итоговая стоимость:  {this.totalPrice()}</h1>
           
         </Footer>
       </Layout>

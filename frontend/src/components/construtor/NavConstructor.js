@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Tabs, Card, Row, Col} from 'antd';
+import {Tabs, Row, Col} from 'antd';
 import ConstructorRoom from './ConstructorRoom';
 import ConstructorBath from './ConstructorBath';
 import ConstructorKitchen from "./ConstructorKitchen";
@@ -14,14 +14,11 @@ class NavConstructor extends Component {
     return (
      <div>
        <Row style={{margin: 5, padding: 5}}>
-         <Col offset={3} span={16}>
-           <Card >
+         <Col style={{margin: 5, padding: 5}} offset={0} span={24}>
              <Slider/>
-           </Card>
          </Col>
-         <Col offset={3} span={16}>
-           <Card style={{margin:4}}>
-             <Tabs defaultActiveKey="1" style={{minHeight: 600 , minWidth: 600, }}>
+         <Col style={{margin: 5, padding: 5}} offset={0} span={24}>
+             <Tabs defaultActiveKey="1" style={{minHeight: 900 , minWidth: 600, }}>
                <TabPane tab="Комната" key="1">
                  <ConstructorRoom cardData={''} cardPrice={''}/>
                </TabPane>
@@ -32,7 +29,6 @@ class NavConstructor extends Component {
                  <ConstructorKitchen cardData={''} cardPrice={''}/>
                </TabPane>
              </Tabs>
-           </Card>
          </Col>
        </Row>    
 </div>
