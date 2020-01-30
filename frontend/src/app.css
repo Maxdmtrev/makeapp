@@ -21,9 +21,12 @@
 
 }
 .ant-card-body{
-    padding: 10px !important;
+    padding: 20px !important;
 }
 
+.ant-card-head{
+    font-size: 21px !important;
+}
 .ant-card  {
     border-radius: 3px;
 }

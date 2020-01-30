@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Card, Col, Collapse, Row, Icon } from "antd";
+import {Button, Card, Col, Collapse, Row, Icon, Affix} from 'antd';
 import { connect } from "react-redux";
 import image from "../../img/bath/kerama_wall/kerama_belkanto.png";
 import ceramic from "../../img/construct_bath/kerama_belkanto_fregat.png";
@@ -46,6 +46,7 @@ class ConstructorBath extends Component {
     return (
       <div>
         <Row>
+          <Affix offsetTop={10}>
           <Col span={13}>
             <img
               key={"1"}
@@ -139,7 +140,8 @@ class ConstructorBath extends Component {
               alt={"test"}
             />
           </Col>
-          <Col span={10} offset={1}>
+          </Affix>
+          <Col span={10}  style={{ float: "right" }}>
             <Collapse accordion className={"card-input"}>
               <Panel header="Настенная плитка" key="1">
                 {this.props.storage.keramaWall.map((elem, index) => (
