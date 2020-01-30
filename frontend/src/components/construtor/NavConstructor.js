@@ -14,12 +14,12 @@ class NavConstructor extends Component {
     return (
      <div>
        <Row style={{margin: 5, padding: 5}}>
-         <Col offset={3} span={16}>
+         <Col offset={2} span={22}>
            <Card >
              <Slider/>
            </Card>
          </Col>
-         <Col offset={3} span={16}>
+         <Col offset={2} span={22}>
            <Card style={{margin:4}}>
              <Tabs defaultActiveKey="1" style={{minHeight: 600 , minWidth: 600, }}>
                <TabPane tab="Комната" key="1">

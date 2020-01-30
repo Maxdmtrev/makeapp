@@ -157,10 +157,7 @@ class ConstructorBath extends Component {
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} description={elem.descript} />
-                      <span
-                          style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
-                          onClick={() => window.open(`${elem.href}`)}
-                      >
+                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -186,14 +183,11 @@ class ConstructorBath extends Component {
                         this.setState({ floor: elem.img });
                         this.props.addPriceBathFloor((elem.price));}}
                       hoverable
-                      style={{ width: 215 }}
+                      // style={{ width: 215 }}
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} description={elem.descript} />
-                      <span
-                          style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
-                          onClick={() => window.open(`${elem.href}`)}
-                      >
+                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -223,10 +217,7 @@ class ConstructorBath extends Component {
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} description={elem.descript} />
-                      <span
-                          style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
-                          onClick={() => window.open(`${elem.href}`)}
-                      >
+                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -256,10 +247,7 @@ class ConstructorBath extends Component {
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} description={elem.descript} />
-                      <span
-                          style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
-                          onClick={() => window.open(`${elem.href}`)}
-                      >
+                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -282,7 +270,7 @@ class ConstructorBath extends Component {
                       onClick={() => {
                         this.props.clearPresetAC();
                         this.setState({ shower: elem.img });
-this.props.addPriceShower(elem.price);
+                        this.props.addPriceShower(elem.price);
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -294,10 +282,7 @@ this.props.addPriceShower(elem.price);
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} description={elem.descript} />
-                      <span
-                          style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
-                          onClick={() => window.open(`${elem.href}`)}
-                      >
+                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
                         {elem.price}
                       </span>
                       <Button onClick={() => {
@@ -319,22 +304,18 @@ this.props.addPriceShower(elem.price);
                     <Card
                         onClick={() =>{ this.setState ({locker: elem.img});
                         this.props.addPriceLocker((elem.price));
-  
-                          this.props.addActionPriceAC({
-                        price: elem.price,
-                        title: elem.title,
-                        href: elem.href,
-                        descript: elem.descript
-                        });
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                          });
                         }}
                         hoverable
                         style={{width: 215}}
                         cover={<img alt="example" src={elem.sampleImage}/>}>
                       <Meta title={elem.title} description={elem.descript} />
-                      <span
-                        style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}
-                        onClick={() => window.open(`${elem.href}`)}
-                      >
+                      <span style={{ marginTop: 10, marginLeft: 50, marginRight: 40, color: "blue"}}>
                         {elem.price}
                       </span>
                       <Button onClick={() => {
