@@ -28,22 +28,20 @@ const columns = [
 ];
 
 return (
-
     <Table
      rowKey="uid"
       columns={columns}
       expandedRowRender={e => <span>{e.descript}</span>}
       dataSource={this.props.priceAction}
     />
-
-  )
-}
+    )
+  }
 }
 
 function mapStateToProps(store) {
   return {
-    priceToilet: store.priceToilet,
-    priceLocker: store.priceLocker,
+    // priceToilet: store.priceToilet,
+    // priceLocker: store.priceLocker,
     priceAction: store.priceAction
   };
 }
