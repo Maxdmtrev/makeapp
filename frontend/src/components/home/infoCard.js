@@ -20,10 +20,10 @@ const columns = [
   { title: 'Цена', dataIndex: 'price', key: 'price' },
 
   {
-    title: 'Action',
+    title: 'Ссылка',
     dataIndex: 'href',
     key: 'href',
-    render: (e) => <Link to="#" onClick={()=>{window.open(e)}}>URL</Link>,
+    render: (e) => <Link to="#" onClick={()=>{window.open(e)}}>Где купить!</Link>,
   },
 ];
 
@@ -40,8 +40,6 @@ return (
 
 function mapStateToProps(store) {
   return {
-    // priceToilet: store.priceToilet,
-    // priceLocker: store.priceLocker,
     priceAction: store.priceAction
   };
 }
