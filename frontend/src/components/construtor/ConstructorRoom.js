@@ -51,7 +51,7 @@ class ConstructorRoom extends Component {
       <div>
         <Row>
           <Affix offsetTop={10}>
-            <Col style={{ margin: 5 }} span={13}>
+            <Col span={13}>
               <img
                key={"1"}
                style={{
