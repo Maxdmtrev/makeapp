@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Affix, Card, Col, Collapse, Row} from 'antd';
+import {Affix, Button, Card, Col, Collapse, Icon, Row} from 'antd';
 import {GetUrlAC} from '../../redux/creators';
 import {connect} from 'react-redux';
 import ceramic_white from '../../img/kitchen/без плитки.png';
@@ -26,21 +26,7 @@ class ConstructorKitchen extends Component {
     <div>
       <Row>
         <Affix offsetTop={10}>
-          <Col style={{ margin: 5 }} span={13}>
-          {/*<img key={'1'}*/}
-          {/*   style={{position: 'absolute', zIndex: '1',transform:`${this.state.invert}`}}*/}
-          {/*   src={this.state.ceramic}*/}
-          {/*   width={this.state.width}*/}
-          {/*   height={this.state.height}*/}
-          {/*   alt={'test'}*/}
-          {/*/>*/}
-          {/*<img key={'2'}*/}
-          {/*   style={{position: 'absolute', zIndex: '2',transform:`${this.state.invert}`}}*/}
-          {/*   src={this.state.kitchen}*/}
-          {/*   width={this.state.width}*/}
-          {/*   height={this.state.height}*/}
-          {/*   alt={'test'}*/}
-          {/*/>*/}
+          <Col span={13}>
           <img key={'1'}
                style={{position: 'absolute', zIndex: '1',transform:`${this.state.invert}`}}
                src={this.state.ceramic}
@@ -48,7 +34,7 @@ class ConstructorKitchen extends Component {
                height={this.state.height}
                alt={'test'}
           />
-          <img key={'1'}
+          <img key={'2'}
                style={{position: 'absolute', zIndex: '2',transform:`${this.state.invert}`}}
                src={this.state.wall}
                width={this.state.width}
@@ -61,32 +47,45 @@ class ConstructorKitchen extends Component {
           <Collapse accordion className={'card-input'}>
             <Panel header="Фартук из плитки" key="1">
               {this.props.storage.ceramic.map((elem, index) =>
-                <Col key={index} span={11} style={{margin: 6}}>
+                <Col key={index} span={12} style={{padding: 5}}>
                   <Card
                     onClick={(e) => this.setState({wall: elem.img})}
                     hoverable
-                    style={{width: 215}}
                     cover={<img alt="example" src={elem.sampleImage}/>}
                   >
                     <Meta title={elem.title} description={elem.descript}/>
+                    <span
+                        style={{marginRight:30, marginLeft: 20, color: "blue"}}
+                    >
+                        {elem.price}
+                      </span>
+                    <Button onClick={() => {
+                      this.props.addActionPriceAC({
+                        price: elem.price,
+                        title: elem.title,
+                        href: elem.href,
+                        descript: elem.descript
+                      });
+                    }}
+                    ><Icon type="heart" /> Добавить в избранное</Button>
                   </Card>
                 </Col>
               )}
             </Panel>
-            <Panel header="Кухня" key="2">
-              {this.props.storage.kitchen.map((elem, index) =>
-                  <Col key={index} span={11} style={{margin: 6}}>
-                    <Card
-                        onClick={(e) => this.setState({kitchen: elem.img})}
-                        hoverable
-                        style={{width: 215}}
-                        cover={<img alt="example" src={elem.sampleImage}/>}
-                    >
-                      <Meta title={elem.title} description={elem.descript}/>
-                    </Card>
-                  </Col>
-              )}
-            </Panel>
+            {/*<Panel header="Кухня" key="1">*/}
+            {/*  {this.props.storage.kitchen.map((elem, index) =>*/}
+            {/*      <Col key={index} span={11} style={{margin: 6}}>*/}
+            {/*        <Card*/}
+            {/*            onClick={(e) => this.setState({kitchen: elem.img})}*/}
+            {/*            hoverable*/}
+            {/*            style={{width: 215}}*/}
+            {/*            cover={<img alt="example" src={elem.sampleImage}/>}*/}
+            {/*        >*/}
+            {/*          <Meta title={elem.title} description={elem.descript}/>*/}
+            {/*        </Card>*/}
+            {/*      </Col>*/}
+            {/*  )}*/}
+            {/*</Panel>*/}
           </Collapse>
         </Col>
       </Row>

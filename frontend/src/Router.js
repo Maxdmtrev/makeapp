@@ -58,9 +58,15 @@ class Routers extends Component {
         </Content>
         <Footer style={{ backgroundColor: "white" , display:'flex', justifyContent: 'space-between'}} >Контакты:
           
-          <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""/>
-          <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""/>
-          <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""/>
+          <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""
+            onClick={() => {window.open('https://www.instagram.com/elbrus.bootcamp/')}}
+          />
+          <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""
+            onClick={() => {window.open('https://slack.com/intl/en-ru/')}}
+          />
+          <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""
+            onClick={() => {window.open('https://elbrusboot.camp/')}}
+          />
           <h1 style={{float:"right"}}> Итоговая стоимость:  {this.totalPrice()}</h1>
           <BackTop style={{bottom: 60 }} />
         </Footer>
