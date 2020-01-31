@@ -9,6 +9,8 @@ import image1 from '../../img/kitchen/klemanso_white.jpg';
 import image2 from '../../img/kitchen/kerama_avellino_black.jpg';
 import image3 from '../../img/kitchen/плитка серая.jpg';
 import image4 from '../../img/kitchen/klemanso_green.jpg';
+import image5 from '../../img/kitchen/kitchen_icon_white.png';
+import image6 from '../../img/kitchen/kitchen_icon_gray.jpg';
 
 export default {
   ceramic: [
@@ -43,15 +45,15 @@ export default {
   ],
   kitchen: [
     { img: png5,
-      title: 'Кухня с деревянным фасадо',
-      sampleImage: image1,
+      title: 'Кухня с светлым фасадом',
+      sampleImage: image5,
       price: 31690,
       href: 'https://www.ikea.com/ru/ru/p/knokshult-kuhnya-glyancevyy-belyy-s99305356/',
       descript: 'IKEA kitchen white'
     },
     { img: png6,
       title: 'Кухня с темным фасадом',
-      sampleImage: image2,
+      sampleImage: image6,
       price: 27690,
       href: 'https://www.ikea.com/ru/ru/p/knokshult-kuhnya-seryy-s39184183/',
       descript: 'IKEA kitchen black'
