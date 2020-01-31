@@ -45,7 +45,8 @@ class Home extends Component {
   render () {
     const {address, m2, countBath, countDoor, countRoom, change, desPrice, perePlanPrice} = this.state;
     const {roomCard} = this.props;
-    return (<div className={"backImg"} style={{display: 'flex', justifyContent: 'center', marginTop: '10px', minHeight:1300}}>
+    return (<div className={"backImg"} style={{display: 'flex', justifyContent: 'center', marginTop: '10px', minHeight:1300,
+    paddingTop:50}}>
       {change ?
        <Card title="Калькулятор ремонта квартиры" style={{backgroundColor: '#282c34', width: '60%', height:"1%", opacity: '0.90'}}>
          <Form>

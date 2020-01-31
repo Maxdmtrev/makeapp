@@ -16,8 +16,8 @@ class List extends Component {
   render() {
    
     const {roomCard} = this.props;
-  return (<div className={"backImg"} style={{display: 'flex', justifyContent: 'center', marginTop: '10px',minHeight:1300}}>
-   
+  return (<div className={"backImg"} style={{display: 'flex', justifyContent: 'center', marginTop: '10px',minHeight:1300,paddingTop:50}}>
+    {this.props.isLogin ?
      <Row style={{margin: 5, padding: 5}}>
        <Col offset={3} span={16}>
          <Card title={"Добро пожаловать: " +this.props.username} style={{backgroundColor: '#282c34', width: '100%', opacity: '0.90'}}>
@@ -37,6 +37,7 @@ class List extends Component {
          <UploadImg />
        </Col>
      </Row>
+     :<h1>Шуруй регаться, что встал! </h1>}
       </div>
   )
 }}
