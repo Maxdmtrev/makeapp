@@ -45,8 +45,8 @@ class LoginForm extends Component {
   
 
     return (
-     <div style={{display:"flex",justifyContent: "center", marginTop: "10px"}}>
-       <Card title="Добро пожаловать!" style={{width: "40%",backgroundColor: "#282c34",opacity:"0.90"}}>
+     <div className={"backImg"} style={{display:"flex",justifyContent: "center", marginTop: "10px",minHeight:1300,paddingTop:50}}>
+       <Card title="Добро пожаловать!" style={{width: "40%",backgroundColor: "#282c34",opacity:"0.90", height:"10%"}}>
        <Col offset={0} span={24} >
 {this.props.isLogin === false ? (<Form layout="horizontal">
            <Form.Item label="Username">

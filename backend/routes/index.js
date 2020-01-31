@@ -137,10 +137,14 @@ router.route ('/login')
 router.route ('/logout')
  .get (async (req, res) => {
    if (req.session.user) {
-    let user=req.session.user.username
+     let user = req.session.user.username;
      await req.session.destroy ();
      await res.clearCookie ('user_sid');
      await res.json ({result: true, user: user});
+   }
+   else {
+     await res.json ({result: false});
+  
    }
    await res.end ();
    
