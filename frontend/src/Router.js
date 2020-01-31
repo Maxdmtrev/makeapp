@@ -37,8 +37,8 @@ class Routers extends Component {
     }
   }
   totalPrice=()=>{
-    const{priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
-    let sumPrice=priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
+    const{priceKitchen, priceApron, priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
+    let sumPrice=priceApron+priceKitchen+priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
     return sumPrice
   }
   
@@ -101,6 +101,8 @@ function mapStateToProps (store) {
     priceLocker: store.priceLocker,
     priceShower: store.priceShower,
     priceToilet: store.priceToilet,
+    priceApron: store.priceApron,
+    priceKitchen: store.priceKitchen,
   };
 }
 

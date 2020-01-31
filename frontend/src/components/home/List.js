@@ -7,9 +7,9 @@ import UploadImg from './Upload';
 class List extends Component {
 
   totalPrice=()=>{
-    const{priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
+    const{priceKitchen, priceApron, priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
 
-    let sumPrice=priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
+    let sumPrice=priceKitchen+priceApron+priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
     return sumPrice
   }
 
@@ -58,6 +58,8 @@ function mapStateToProps(store) {
     priceLocker: store.priceLocker,
     priceShower: store.priceShower,
     priceToilet: store.priceToilet,
+    priceKitchen: store.priceKitchen,
+    priceApron: store.priceApron
   };
 }
 

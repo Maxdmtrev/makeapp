@@ -277,12 +277,7 @@ class ConstructorBath extends Component {
                         this.props.clearPresetAC();
                         this.setState({ shower: elem.img });
                         this.props.addPriceShower(elem.price);
-                        this.props.addActionPriceAC({
-                          price: elem.price,
-                          title: elem.title,
-                          href: elem.href,
-                          descript: elem.descript
-                        });}}
+                      }}
                       hoverable
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
@@ -311,12 +306,6 @@ class ConstructorBath extends Component {
                     <Card
                         onClick={() =>{ this.setState ({locker: elem.img});
                         this.props.addPriceLocker((elem.price));
-                        this.props.addActionPriceAC({
-                          price: elem.price,
-                          title: elem.title,
-                          href: elem.href,
-                          descript: elem.descript
-                          });
                         }}
                         hoverable
                         cover={<img alt="example" src={elem.sampleImage}/>}>
