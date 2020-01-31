@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {Affix, Button, Card, Col, Collapse, Icon, Row} from 'antd';
-import {GetUrlAC} from '../../redux/creators';
+// import {GetUrlAC} from '../../redux/creators';
 import {connect} from 'react-redux';
 import ceramic_white from '../../img/kitchen/без плитки.png';
-import kitchen from '../../img/kitchen/2.effectsResult.png';
-import wall from '../../img/kitchen/плитка серая.png'
+import kitchen from '../../img/kitchen/кухня1.1.png';
+import wall from '../../img/kitchen/плитка серая.png';
+import {AddActionAC, AddPriceKitchenAC, AddPriceApronAC} from "../../redux/priceCreators";
 
 const {Meta} = Card;
 const {Panel} = Collapse;
@@ -41,6 +42,13 @@ class ConstructorKitchen extends Component {
                height={this.state.height}
                alt={'test'}
           />
+            <img key={'3'}
+                 style={{position: 'absolute', zIndex: '3',transform:`${this.state.invert}`}}
+                 src={this.state.kitchen}
+                 width={this.state.width}
+                 height={this.state.height}
+                 alt={'test'}
+            />
         </Col>
         </Affix>
         <Col span={10} style={{ float: "right" }}>
@@ -49,7 +57,10 @@ class ConstructorKitchen extends Component {
               {this.props.storage.ceramic.map((elem, index) =>
                 <Col key={index} span={12} style={{padding: 5}}>
                   <Card
-                    onClick={(e) => this.setState({wall: elem.img})}
+                    onClick={(e) => {
+                      this.setState({wall: elem.img});
+                      this.props.addApronAC((elem.price));
+                    }}
                     hoverable
                     cover={<img alt="example" src={elem.sampleImage}/>}
                   >
@@ -72,20 +83,37 @@ class ConstructorKitchen extends Component {
                 </Col>
               )}
             </Panel>
-            {/*<Panel header="Кухня" key="1">*/}
-            {/*  {this.props.storage.kitchen.map((elem, index) =>*/}
-            {/*      <Col key={index} span={11} style={{margin: 6}}>*/}
-            {/*        <Card*/}
-            {/*            onClick={(e) => this.setState({kitchen: elem.img})}*/}
-            {/*            hoverable*/}
-            {/*            style={{width: 215}}*/}
-            {/*            cover={<img alt="example" src={elem.sampleImage}/>}*/}
-            {/*        >*/}
-            {/*          <Meta title={elem.title} description={elem.descript}/>*/}
-            {/*        </Card>*/}
-            {/*      </Col>*/}
-            {/*  )}*/}
-            {/*</Panel>*/}
+            <Panel header="Кухня" key="2">
+              {this.props.storage.kitchen.map((elem, index) =>
+                  <Col key={index} span={11} style={{margin: 6}}>
+                    <Card
+                        onClick={(e) => {
+                          this.setState({kitchen: elem.img});
+                          this.props.addKitchenAC((elem.price));
+                        }}
+
+                        hoverable
+                        cover={<img alt="example" src={elem.sampleImage}/>}
+                    >
+                      <Meta title={elem.title} description={elem.descript}/>
+                      <span
+                          style={{marginRight:30, marginLeft: 20, color: "blue"}}
+                      >
+                        {elem.price}
+                      </span>
+                      <Button onClick={() => {
+                        this.props.addActionPriceAC({
+                          price: elem.price,
+                          title: elem.title,
+                          href: elem.href,
+                          descript: elem.descript
+                        });
+                      }}
+                      ><Icon type="heart" /> Добавить в избранное</Button>
+                    </Card>
+                  </Col>
+              )}
+            </Panel>
           </Collapse>
         </Col>
       </Row>
@@ -102,8 +130,14 @@ function mapStateToProps(store) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    addCeramicAC: (data) => {
-      dispatch(GetUrlAC(data));
+    addActionPriceAC: (data) => {
+      dispatch(AddActionAC(data))
+    },
+    addKitchenAC: (data) => {
+      dispatch(AddPriceKitchenAC(data))
+    },
+    addApronAC: (data) => {
+      dispatch(AddPriceApronAC(data))
     }
   };
 }

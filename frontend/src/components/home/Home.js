@@ -184,7 +184,7 @@ function mapStateToProps (store) {
 function mapDispatchToProps (dispatch) {
   return {
     addCardAC: (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice, price) => {
-      dispatch (GetCardAC (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice, price));
+      dispatch (GetCardAC (address, m2, countBath, countDoor, countRoom, desPrice, perePlanPrice, price, ));
     }
   };
 }

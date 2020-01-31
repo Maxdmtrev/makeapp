@@ -1,4 +1,4 @@
-import {PRICE_ACTION, PRICE_DOOR,PRICE_ELECTRIC,PRICE_FLOOR,PRICE_LIGHT,PRICE_MOLDING,PRICE_PLINT,PRICE_SILL,PRICE_BATH,PRICE_BATHFLOOR,PRICE_KERAMAWALL,PRICE_LOCKER,PRICE_SHOWER,PRICE_TOILET} from "./price"
+import {PRICE_ACTION, PRICE_DOOR,PRICE_ELECTRIC,PRICE_FLOOR,PRICE_LIGHT,PRICE_MOLDING,PRICE_PLINT,PRICE_SILL,PRICE_BATH,PRICE_BATHFLOOR,PRICE_KERAMAWALL,PRICE_LOCKER,PRICE_SHOWER,PRICE_TOILET, PRICE_KITCHEN, PRICE_APRON} from "./price"
 
 
 export const AddPriceDoorAC = (data) => {
@@ -74,3 +74,17 @@ export const AddActionAC = (data) => {
     priceAction: data
   };
 };
+
+export const AddPriceKitchenAC = (data) => {
+  return {
+    type: PRICE_KITCHEN,
+    priceKitchen: data
+  }
+};
+
+export const AddPriceApronAC = (data) => {
+  return {
+    type: PRICE_APRON,
+    priceApron: data
+  }
+}
