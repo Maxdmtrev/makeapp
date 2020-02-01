@@ -4,6 +4,6 @@
   "private": true,
   "scripts": {
     "start": "cd back && npm install && npm start",
-    "heroku-postbuild": "cd front && npm install && npm run build && cp -r build ../backend/"
+    "heroku-postbuild": "cd frontend && npm install && npm run build && cp -r build ../backend/"
   }
 }
