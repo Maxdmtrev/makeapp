@@ -1,7 +1,7 @@
 const express = require ('express');
 const router = express.Router ();
 const User = require ('../models/users');
-const Room = require ('../models/roomShema');
+// const Room = require ('../models/roomShema');
 const bcrypt = require ('bcrypt');
 const saltRounds = 10;
 // let Minio = require ('minio');
@@ -10,8 +10,8 @@ const saltRounds = 10;
 //   endPoint: 'play.min.io',
 //   port: 9000,
 //   useSSL: true,
-//   accessKey: 'Q3AM3UQ867SPQQA43P2F',
-//   secretKey: 'zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG'
+//   accessKey: process.env.MINIO_KEY,
+//   secretKey: process.env.MINIO_SECRET
 // });
 
 
@@ -101,7 +101,6 @@ router.route ('/signIn')
      });
      await user.save ();
      req.session.user = user;
-     console.log (req.session.user.username);
      await res.json ({result: true});
    } catch (e) {
      return await res.json ({result: false, error: e});

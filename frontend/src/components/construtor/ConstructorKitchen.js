@@ -58,6 +58,7 @@ class ConstructorKitchen extends Component {
                 <Col key={index} span={12} style={{padding: 5}}>
                   <Card
                     onClick={(e) => {
+                      e.preventDefault()
                       this.setState({wall: elem.img});
                       this.props.addApronAC((elem.price));
                     }}
@@ -70,7 +71,8 @@ class ConstructorKitchen extends Component {
                     >
                         {elem.price}
                       </span>
-                    <Button onClick={() => {
+                    <Button onClick={(e) => {
+                      e.preventDefault()
                       this.props.addActionPriceAC({
                         price: elem.price,
                         title: elem.title,
@@ -88,6 +90,7 @@ class ConstructorKitchen extends Component {
                   <Col key={index} span={11} style={{margin: 6}}>
                     <Card
                         onClick={(e) => {
+                          e.preventDefault()
                           this.setState({kitchen: elem.img});
                           this.props.addKitchenAC((elem.price));
                         }}
@@ -101,7 +104,8 @@ class ConstructorKitchen extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,

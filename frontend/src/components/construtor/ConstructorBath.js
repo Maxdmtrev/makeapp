@@ -163,7 +163,8 @@ class ConstructorBath extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -194,7 +195,8 @@ class ConstructorBath extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -225,7 +227,8 @@ class ConstructorBath extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -256,7 +259,8 @@ class ConstructorBath extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -287,7 +291,8 @@ class ConstructorBath extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -315,7 +320,8 @@ class ConstructorBath extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
