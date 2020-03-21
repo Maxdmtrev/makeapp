@@ -5,17 +5,19 @@ export const loadState = () => {
       return undefined;
     }
     return JSON.parse (serializedState);
-  } catch (err) { return undefined; }
+  } catch (err) {
+    return undefined;
+  }
   
 };
 
-export const saveState=(state)=>{
+export const saveState = (state) => {
 
 try{
   const toSave = {...state};
   delete toSave.ymaps;
-  const serializedState=JSON.stringify(toSave)
-  localStorage.setItem('state',serializedState)
+  const serializedState = JSON.stringify(toSave)
+  localStorage.setItem('state', serializedState)
 }
 catch (e) {
   console.log("mi tyt",e)

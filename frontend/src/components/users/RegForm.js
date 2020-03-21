@@ -5,36 +5,34 @@ import {AddUserAC} from '../../redux/creators';
 import {connect} from 'react-redux';
 
 class RegForm extends React.Component {
-  
+
   constructor (props) {
     super (props);
     this.state = {
       username: null, password: null, email: null
     };
   }
-  
+
   openOkNotification = () => {
     notification.open({
       icon: <Icon type="smile" style={{ color: '#108ee9' }} />,
       message: 'Регистрация прошла успешно',
-      description:
-        `Добро пожаловать: ${this.props.username}`
-      
+      description: `Добро пожаловать: ${this.props.username}`
     });
   };
- openNotification = () => {
+
+  openNotification = () => {
     notification.open({
       icon: <Icon type="frown" style={{ color: '#108ee9' }} />,
       message: 'Произошла ошибка',
-      description:
-       'Данный пользователь уже существует',
-     
+      description: 'Данный пользователь уже существует',
     });
   };
   
   render () {
     const {username, email, password} = this.state;
-    return (<div className={"backImg"} style={{display:"flex",justifyContent: "center", marginTop: "10px",minHeight:1300,paddingTop:50}}>
+    return (
+        <div className={"backImg"} style={{display: "flex", justifyContent: "center", marginTop: "10px", minHeight: 1300, paddingTop: 50}}>
        <Card title="Поле регистрации."
              style={{
                width: '40%',
@@ -46,26 +44,24 @@ class RegForm extends React.Component {
          {this.props.isLogin === false ? <Col offset={0} span={24}>
             <Form>
               <Form.Item
-               label={<span>
-              Username&nbsp;
-                 <Tooltip title="Имя пользователя должно быть уникальным.">
-                <Icon type="question-circle-o"/>
-              </Tooltip>
-            </span>}>
+               label = {<span>Username&nbsp;
+                  <Tooltip title="Имя пользователя должно быть уникальным.">
+                    <Icon type="question-circle-o"/>
+                  </Tooltip>
+                </span>}>
                 <Input
-                 
                  prefix={<Icon type="user" style={{color: 'rgba(0,0,0,.25)'}}/>}
                  placeholder="Username"
                  autoComplete="Username"
                  required="required"
-                 value={username} onChange={(e) => {
+                 value={username}
+                 onChange={(e) => {
                   this.setState ({username: e.target.value});
-                }}/>
+                  }}/>
               </Form.Item>
               
               <Form.Item label="Password" hasFeedback={true}>
                 <Input.Password
-                 
                  prefix={<Icon type="lock" style={{color: 'rgba(0,0,0,.25)'}}/>}
                  type="password"
                  required="required"
@@ -77,7 +73,6 @@ class RegForm extends React.Component {
               </Form.Item>
               <Form.Item label="E-mail">
                 <Input
-                 
                  prefix={<Icon type="mail" style={{color: 'rgba(0,0,0,.25)'}}/>}
                  required="required"
                  placeholder="Email"
@@ -115,13 +110,8 @@ class RegForm extends React.Component {
               </Form.Item>
             </Form>
           </Col>
-          
           : (<Redirect to="/"/>)}
-       
-       
        </Card>
-     
-     
      </div>);
   }
 }

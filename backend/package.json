@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx nodemon --ignore './server/sessions' ./server/www"
+    "start": "node ./server/www",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "dependencies": {
     "bcrypt": "^3.0.7",

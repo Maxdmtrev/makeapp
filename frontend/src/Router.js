@@ -18,6 +18,7 @@ const {Header, Footer, Content} = Layout;
 const customHistory = createBrowserHistory ();
 
 class Routers extends Component {
+
   async componentDidMount () {
     if (localStorage.getItem ('login')) {
       const response = await fetch (`/login`, {
@@ -28,7 +29,6 @@ class Routers extends Component {
       const res = await response.json ();
       if (res.result) {
         localStorage.setItem ('login', res.user);
-        // console.log ( res.room);
         this.props.submit (res.result, res.user);
       }
       else {
@@ -36,17 +36,21 @@ class Routers extends Component {
       }
     }
   }
-  totalPrice=()=>{
-    const{priceKitchen,priceApron,priceDoor,priceElectric,priceFloor,priceLight,priceMolding,pricePlint,priceSill,priceBath,priceBathfloor,priceKeramaWall,priceLocker,priceShower,priceToilet,roomCard} =this.props
-    let sumPrice=priceApron+priceKitchen+priceDoor+priceElectric+priceFloor+priceLight+priceMolding+pricePlint+priceSill+priceBath+priceBathfloor+priceKeramaWall+priceLocker+priceShower+priceToilet+roomCard.price
+  totalPrice = () => {
+    const {priceKitchen, priceApron, priceDoor, priceElectric, priceFloor, priceLight, priceMolding, pricePlint,
+      priceSill, priceBath, priceBathfloor, priceKeramaWall, priceLocker, priceShower, priceToilet, roomCard} = this.props;
+    let sumPrice = priceApron + priceKitchen + priceDoor + priceElectric + priceFloor + priceLight + priceMolding +
+        pricePlint + priceSill + priceBath + priceBathfloor + priceKeramaWall + priceLocker + priceShower +
+        priceToilet + roomCard.price;
     return sumPrice
-  }
+  };
   
   render () {
-    return (<Router history={customHistory}>
-      <Layout  style={{ backgroundColor: "white", minHeight:1200}}  >
+    return (
+        <Router history={customHistory}>
+        <Layout  style={{ backgroundColor: "white", minHeight:1200}}  >
         <Header style={{margin: 5}}>
-          <Navigation history={customHistory}/>
+        <Navigation history={customHistory}/>
         </Header>
         <Content >
           {this.props.ymaps ? <Route exact path="/" component={Home}/> : <>loading</>}

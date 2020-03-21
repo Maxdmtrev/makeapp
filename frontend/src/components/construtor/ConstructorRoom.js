@@ -243,7 +243,8 @@ class ConstructorRoom extends Component {
                 {this.props.storage.srcSample.map((elem, index) => (
                   <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault()
                         this.props.clearPresetAC();
                         this.props.addPriceFloor(elem.price);
                         this.setState({ floor: elem.img });
@@ -259,7 +260,8 @@ class ConstructorRoom extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -277,7 +279,8 @@ class ConstructorRoom extends Component {
                 {this.props.storage.srcDoor.map((elem, index) => (
                   <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault()
                         this.props.clearPresetAC();
                         this.setState({ door: elem.img });
                         this.props.addPriceDoor(elem.price);
@@ -293,7 +296,8 @@ class ConstructorRoom extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -310,7 +314,8 @@ class ConstructorRoom extends Component {
                 {this.props.storage.srcPlint.map((elem, index) => (
                   <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault()
                         this.props.clearPresetAC();
                         this.props.addPricePlint(elem.price);
                         this.setState({ plint: elem.img });
@@ -326,7 +331,8 @@ class ConstructorRoom extends Component {
                     >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -343,7 +349,8 @@ class ConstructorRoom extends Component {
                 {this.props.storage.molding.map((elem, index) => (
                   <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault()
                         this.props.clearPresetAC();
                         this.props.addPriceSill(elem.price);
                         this.setState({ molding: elem.img });
@@ -359,7 +366,8 @@ class ConstructorRoom extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -376,7 +384,8 @@ class ConstructorRoom extends Component {
                 {this.props.storage.sill.map((elem, index) => (
                   <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault()
                         this.props.clearPresetAC();
                         this.props.addPriceMolding(elem.price);
                         this.setState({ podium: elem.img });
@@ -392,7 +401,8 @@ class ConstructorRoom extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -409,7 +419,8 @@ class ConstructorRoom extends Component {
                 {this.props.storage.light.map((elem, index) => (
                   <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault()
                         this.props.clearPresetAC();
                         this.props.addPriceLight(elem.price);
                         this.setState({ lamp: elem.img });
@@ -424,7 +435,8 @@ class ConstructorRoom extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
@@ -441,7 +453,8 @@ class ConstructorRoom extends Component {
                 {this.props.storage.electric.map((elem, index) => (
                   <Col key={index} span={12} style={{ padding: 5 }}>
                     <Card
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault()
                         this.props.clearPresetAC();
                         this.props.addPriceElectric(elem.price);
                         this.setState({ energy: elem.img });
@@ -457,7 +470,8 @@ class ConstructorRoom extends Component {
                       >
                         {elem.price}
                       </span>
-                      <Button onClick={() => {
+                      <Button onClick={(e) => {
+                        e.preventDefault()
                         this.props.addActionPriceAC({
                           price: elem.price,
                           title: elem.title,
