@@ -45,10 +45,10 @@ class LoginForm extends Component {
   
 
     return (
-     <div className={"backImg"} style={{display:"flex",justifyContent: "center", marginTop: "10px",minHeight:1300,paddingTop:50}}>
-       <Card title="Добро пожаловать!" style={{width: "40%",backgroundColor: "#282c34",opacity:"0.90", height:"10%"}}>
+     <div className={"backImg"} style={{display:"flex", justifyContent: "center", marginTop: "10px", minHeight:1300, paddingTop:50}}>
+       <Card title="Добро пожаловать!" style={{width: "40%", backgroundColor: "#282c34", opacity:"0.90", height:"10%"}}>
        <Col offset={0} span={24} >
-{this.props.isLogin === false ? (<Form layout="horizontal">
+            {this.props.isLogin === false ? (<Form layout="horizontal">
            <Form.Item label="Username">
              <Input
              
@@ -82,8 +82,8 @@ class LoginForm extends Component {
                this.setState ({username: null, password: null});
                const res = await response.json ();
                if (res.result) {
-                 localStorage.setItem("login", username)
-                 this.props.submit(res.result,username)
+                 localStorage.setItem("login", username);
+                 this.props.submit(res.result, username);
                  this.openOkNotification()
                }
                else {

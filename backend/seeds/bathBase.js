@@ -5,6 +5,8 @@
 // // import floor5 from "../../img/bath/kerama_floor/kerama_prostone_light.jpg";
 // // import floor6 from "../../img/bath/kerama_floor/prostone_beige_light.jpg";
 // // import floor7 from "../../img/bath/kerama_floor/prostone_beige.jpg";
+import * as floor from '../../frontend/src/img/bath/kerama_floor/'
+
 // // import floor1p from "../../img/bath/kerama_floor/equipe_micro_revival.png";
 // // import floor2p from "../../img/bath/kerama_floor/kerama_fregat_beige.png";
 // // import floor3p from "../../img/bath/kerama_floor/kerama_fregat_dark.png";
