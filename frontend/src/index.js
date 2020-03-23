@@ -4,7 +4,8 @@ import { createStore } from 'redux';
 import Router from './Router';
 import reducers from './redux/reducer';
 import { Provider } from 'react-redux';
-import '../src/app.css';
+import './app.css';
+import './index.css';
 import { GetMapAC } from './redux/creators';
 import { loadState, saveState } from './localStorage.js';
 
