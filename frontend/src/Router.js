@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import {Route, Router} from 'react-router';
-import RegistrationForm from './components/users/RegForm';
-import Home from './components/home/Home';
-import List from './components/home/List'
-import NavConstructor from './components/construtor/NavConstructor';
-import Navigation from './components/users/Navigation';
-import Login from './components/users/LoginForm';
 import {createBrowserHistory} from 'history';
 import {ReqUserAC} from './redux/creators';
 import {connect} from 'react-redux';
 import 'antd/dist/antd.css';
 import '../src/app.css';
 import {Icon, Layout, BackTop} from 'antd';
+import RegistrationForm from './components/users/RegForm';
+import Home from './components/home/Home';
+import List from './components/home/List'
+import NavConstructor from './components/construtor/NavConstructor';
+import Navigation from './components/users/Navigation';
+import Login from './components/users/LoginForm';
 
 const {Header, Footer, Content} = Layout;
 
