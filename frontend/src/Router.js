@@ -54,7 +54,6 @@ class Routers extends Component {
         </Header>
         <Content >
           {this.props.ymaps ? <Route exact path="/" component={Home}/> : <>loading</>}
-  
           <Route path='/login' component={Login}/>
           <Route path='/room' component={NavConstructor}/>
           <Route path='/registration' component={RegistrationForm}/>
