@@ -1,0 +1,4 @@
+{
+  "port": 5010,
+  "mongoUri": "mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@clusterelbrus-ntmbz.mongodb.net/makeApp?retryWrites=true&w=majority"
+}

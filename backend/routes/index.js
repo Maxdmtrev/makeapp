@@ -29,9 +29,9 @@ router.route ('/login')
      return res.json ({result: true, user: req.session.user.username});
    }
    else {
-     return res.json ({result: false, user: null});
+     // return res.json ({result: false, user: null});
    }
-   
+
  })
  .post (async function (req, res) {
    const {username, password} = req.body;
@@ -55,10 +55,10 @@ router.route ('/logout')
    }
    else {
      await res.json ({result: false});
-  
+
    }
    await res.end ();
-   
+
  });
 
 
