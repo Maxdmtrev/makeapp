@@ -4,7 +4,6 @@ const User = require ('../models/users');
 const bcrypt = require ('bcrypt');
 const saltRounds = 10;
 
-
 router.route ('/signIn')
  .get (function (req, res) {
    res.render ('signIn');
@@ -29,7 +28,6 @@ router.route ('/login')
      return res.json ({result: true, user: req.session.user.username});
    }
    else {
-     // return res.json ({result: false, user: null});
    }
 
  })
@@ -60,6 +58,5 @@ router.route ('/logout')
    await res.end ();
 
  });
-
 
 module.exports = router;
