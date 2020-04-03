@@ -19,10 +19,10 @@ const customHistory = createBrowserHistory ();
 
 class Routers extends Component {
 
-  async componentDidMount () {
+  componentDidMount = async () => {
     if (localStorage.getItem ('login')) {
       const response = await fetch (`/login`, {
-        method: 'get', headers: {
+        method: 'GET', headers: {
           'Content-Type': 'application/json',
         }
       });
@@ -44,39 +44,38 @@ class Routers extends Component {
         priceToilet + roomCard.price;
     return sumPrice
   };
-  
+
   render () {
     return (
         <Router history={customHistory}>
-        <Layout  style={{ backgroundColor: "white", minHeight:1200}}  >
-        <Header style={{margin: 5}}>
-        <Navigation history={customHistory}/>
-        </Header>
-        <Content >
-          {this.props.ymaps ? <Route exact path="/" component={Home}/> : <>loading</>}
-          <Route path='/login' component={Login}/>
-          <Route path='/room' component={NavConstructor}/>
-          <Route path='/registration' component={RegistrationForm}/>
-          <Route path='/info' component={List} />
-        </Content>
-        <Footer style={{ backgroundColor: "white" , display:'flex', justifyContent: 'space-between'}} >Контакты:
-          
-          <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""
-            onClick={() => {window.open('https://www.instagram.com/elbrus.bootcamp/')}}
-          />
-          <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""
-            onClick={() => {window.open('https://slack.com/intl/en-ru/')}}
-          />
-          <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""
-            onClick={() => {window.open('https://elbrusboot.camp/')}}
-          />
-          <h1 style={{float:"right"}}> Итоговая стоимость:  {this.totalPrice()}</h1>
-          <BackTop style={{bottom: 60 }} />
-        </Footer>
-      </Layout>
+          <Layout  style={{ backgroundColor: "white", minHeight:1200}}  >
+          <Header style={{margin: 5}}>
+            <Navigation history={customHistory}/>
+          </Header>
+          <Content >
+            {this.props.ymaps ? <Route exact path="/" component={Home}/> : <>loading</>}
+            <Route path='/login' component={Login}/>
+            <Route path='/room' component={NavConstructor}/>
+            <Route path='/registration' component={RegistrationForm}/>
+            <Route path='/info' component={List} />
+          </Content>
+          <Footer style={{ backgroundColor: "white" , display:'flex', justifyContent: 'space-between'}} >Контакты:
 
-
-    </Router>);
+            <Icon type="instagram" style={{fontSize: '30px', color: '#08c'}} theme=""
+              onClick={() => {window.open('https://www.instagram.com/elbrus.bootcamp/')}}
+            />
+            <Icon type="slack" style={{fontSize: '30px', color: '#08c'}} theme=""
+              onClick={() => {window.open('https://slack.com/intl/en-ru/')}}
+            />
+            <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""
+              onClick={() => {window.open('https://elbrusboot.camp/')}}
+            />
+            <h1 style={{float:"right"}}> Итоговая стоимость:  {this.totalPrice()}</h1>
+            <BackTop style={{bottom: 60 }} />
+          </Footer>
+          </Layout>
+        </Router>
+    );
   }
 }
 
