@@ -25,10 +25,10 @@ class Navigation extends Component {
       current: e.key,
     });
   };
-  
+
   render () {
     return (
-        <Menu onClick={this.handleClick} mode="horizontal" selectedKeys={[this.state.current]}>
+    <Menu onClick={this.handleClick} mode="horizontal" selectedKeys={[this.state.current]}>
       <Menu.Item key="home">
         <Link to="/">
           <Icon type="code"/> Home
@@ -39,10 +39,12 @@ class Navigation extends Component {
         <Link to="/room">
           <Icon type="snippets"/> AppartmentDesign
         </Link>
-      </Menu.Item>:<></>}
-
-      {this.props.isLogin ? (<Menu.Item style={{float: 'right'}}>
-        <Link to="/logout" onClick={async (e) => {
+      </Menu.Item>
+          :
+          <></>}
+      {this.props.isLogin ? (
+          <Menu.Item style={{float: 'right'}}>
+          <Link to="/logout" onClick={async (e) => {
           e.preventDefault ();
           localStorage.removeItem ('login');
           let response = await fetch (`/logout`, {
@@ -58,25 +60,29 @@ class Navigation extends Component {
         }}>
           <Icon type="logout"/> Logout
         </Link>
-      </Menu.Item>) : (<Menu.Item style={{float: 'right'}}
-      >
+      </Menu.Item>)
+          :
+      (<Menu.Item style={{float: 'right'}}
+       >
         <Link to="/login">
           <Icon type="login"/> Login
         </Link>
       </Menu.Item>)}
-  
-      {this.props.isLogin ? <Menu.Item >
+
+      {this.props.isLogin ?
+        <Menu.Item >
          <Link to='/info'>
            <Icon type="user"/> {this.props.username}
          </Link>
-       </Menu.Item>
-   
-       : <Menu.Item style={{float: 'right'}}>
+        </Menu.Item>
+          :
+        <Menu.Item style={{float: 'right'}}>
          <Link to="/registration">
            <Icon type="form"/> Registration
          </Link>
        </Menu.Item>}
-    </Menu>);
+    </Menu>
+    );
   }
 }
 
