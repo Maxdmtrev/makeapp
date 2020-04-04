@@ -153,9 +153,7 @@ class ConstructorBath extends Component {
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} style={{ marginBottom: 5 }} description={elem.descript} />
-                      <span
-                        style={{ marginRight: 30, marginLeft: 20, color: 'blue' }}
-                      >
+                      <span className="constructorKitchen-price">
                         {elem.price}
                       </span>
                       <Button onClick={(e) => {
@@ -170,7 +168,7 @@ class ConstructorBath extends Component {
                       >
                         <Icon type="heart" />
                         {' '}
-Добавить в избранное
+                        Добавить в избранное
                       </Button>
                     </Card>
                   </Col>
@@ -190,9 +188,7 @@ class ConstructorBath extends Component {
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} style={{ marginBottom: 5 }} description={elem.descript} />
-                      <span
-                        style={{ marginRight: 30, marginLeft: 20, color: 'blue' }}
-                      >
+                      <span className="constructorKitchen-price">
                         {elem.price}
                       </span>
                       <Button onClick={(e) => {
@@ -207,7 +203,7 @@ class ConstructorBath extends Component {
                       >
                         <Icon type="heart" />
                         {' '}
-Добавить в избранное
+                        Добавить в избранное
                       </Button>
                     </Card>
                   </Col>
@@ -226,9 +222,7 @@ class ConstructorBath extends Component {
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} style={{ marginBottom: 5 }} description={elem.descript} />
-                      <span
-                        style={{ marginRight: 30, marginLeft: 20, color: 'blue' }}
-                      >
+                      <span className="constructorKitchen-price">
                         {elem.price}
                       </span>
                       <Button onClick={(e) => {
@@ -243,7 +237,7 @@ class ConstructorBath extends Component {
                       >
                         <Icon type="heart" />
                         {' '}
-Добавить в избранное
+                        Добавить в избранное
                       </Button>
                     </Card>
                   </Col>
@@ -262,9 +256,7 @@ class ConstructorBath extends Component {
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} style={{ marginBottom: 5 }} description={elem.descript} />
-                      <span
-                        style={{ marginRight: 30, marginLeft: 20, color: 'blue' }}
-                      >
+                      <span className="constructorKitchen-price">
                         {elem.price}
                       </span>
                       <Button onClick={(e) => {
@@ -279,7 +271,7 @@ class ConstructorBath extends Component {
                       >
                         <Icon type="heart" />
                         {' '}
-Добавить в избранное
+                        Добавить в избранное
                       </Button>
                     </Card>
                   </Col>
@@ -298,9 +290,7 @@ class ConstructorBath extends Component {
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} style={{ marginBottom: 5 }} description={elem.descript} />
-                      <span
-                        style={{ marginRight: 30, marginLeft: 20, color: 'blue' }}
-                      >
+                      <span className="constructorKitchen-price">
                         {elem.price}
                       </span>
                       <Button onClick={(e) => {
@@ -315,7 +305,7 @@ class ConstructorBath extends Component {
                       >
                         <Icon type="heart" />
                         {' '}
-Добавить в избранное
+                        Добавить в избранное
                       </Button>
                     </Card>
                   </Col>
@@ -333,9 +323,7 @@ class ConstructorBath extends Component {
                       cover={<img alt="example" src={elem.sampleImage} />}
                     >
                       <Meta title={elem.title} style={{ marginBottom: 5 }} description={elem.descript} />
-                      <span
-                        style={{ marginRight: 30, marginLeft: 20, color: 'blue' }}
-                      >
+                      <span className="constructorKitchen-price">
                         {elem.price}
                       </span>
                       <Button onClick={(e) => {
@@ -350,7 +338,7 @@ class ConstructorBath extends Component {
                       >
                         <Icon type="heart" />
                         {' '}
-Добавить в избранное
+                        Добавить в избранное
                       </Button>
                     </Card>
                   </Col>

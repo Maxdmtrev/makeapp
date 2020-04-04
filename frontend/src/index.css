@@ -46,3 +46,9 @@ code {
   min-height: 900px;
   min-width: 600px;
 }
+
+.constructorKitchen-price {
+  margin-right: 30px;
+  margin-left: 20px;
+  color: blue;
+}
