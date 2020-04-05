@@ -47,8 +47,11 @@ code {
   min-width: 600px;
 }
 
-.constructorKitchen-price {
-  margin-right: 30px;
-  margin-left: 20px;
+.constructorKitchen-price,
+.constructorRoom-price {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
   color: blue;
 }
