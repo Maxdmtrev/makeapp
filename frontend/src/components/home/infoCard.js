@@ -1,10 +1,7 @@
-import { Table} from 'antd';
-import React, {Component} from 'react';
-import {connect} from "react-redux";
-
-import {Link} from 'react-router-dom';
-
-
+import { Table } from 'antd';
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { Link } from 'react-router-dom';
 
 class InfoCard extends Component {
   constructor(props) {
@@ -15,33 +12,32 @@ class InfoCard extends Component {
   }
 
   render() {
-const columns = [
-  { title: 'Материал', dataIndex: 'title', key: 'title' },
-  { title: 'Цена', dataIndex: 'price', key: 'price' },
+    const columns = [
+      { title: 'Материал', dataIndex: 'title', key: 'title' },
+      { title: 'Цена', dataIndex: 'price', key: 'price' },
+      {
+        title: 'Ссылка',
+        dataIndex: 'href',
+        key: 'href',
+        render: (e) => <Link to="#" onClick={() => { window.open(e); }}>Где купить!</Link>,
+      },
+    ];
 
-  {
-    title: 'Ссылка',
-    dataIndex: 'href',
-    key: 'href',
-    render: (e) => <Link to="#" onClick={()=>{window.open(e)}}>Где купить!</Link>,
-  },
-];
-
-return (
-    <Table
-     style={{backgroundColor:'white'}}
-     rowKey="uid"
-      columns={columns}
-      expandedRowRender={e => <span>{e.descript}</span>}
-      dataSource={this.props.priceAction}
-    />
-    )
+    return (
+      <Table
+        style={{backgroundColor: 'white'}}
+        rowKey="uid"
+        columns={columns}
+        expandedRowRender={e => <span>{ e.descript }</span>}
+        dataSource={this.props.priceAction}
+      />
+    );
   }
 }
 
 function mapStateToProps(store) {
   return {
-    priceAction: store.priceAction
+    priceAction: store.priceAction,
   };
 }
 

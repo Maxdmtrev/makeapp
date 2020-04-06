@@ -48,7 +48,7 @@ class Navigation extends Component {
           e.preventDefault ();
           localStorage.removeItem ('login');
           let response = await fetch (`/logout`, {
-            method: 'get', headers: {
+            method: 'GET', headers: {
               'Content-Type': 'application/json',
             }
           });

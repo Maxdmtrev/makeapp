@@ -9,7 +9,9 @@ class RegForm extends React.Component {
   constructor (props) {
     super (props);
     this.state = {
-      username: null, password: null, email: null
+      username: null,
+      password: null,
+      email: null
     };
   }
 
@@ -28,18 +30,13 @@ class RegForm extends React.Component {
       description: 'Данный пользователь уже существует',
     });
   };
-  
+
   render () {
     const {username, email, password} = this.state;
     return (
         <div className={"backImg"} style={{display: "flex", justifyContent: "center", marginTop: "10px", minHeight: 1300, paddingTop: 50}}>
        <Card title="Поле регистрации."
-             style={{
-               width: '40%',
-               backgroundColor: '#282c34',
-               opacity: '0.90',
-               height:"10%"
-             }}
+             className="regFormCard"
        >
          {this.props.isLogin === false ? <Col offset={0} span={24}>
             <Form>
@@ -50,7 +47,7 @@ class RegForm extends React.Component {
                   </Tooltip>
                 </span>}>
                 <Input
-                 prefix={<Icon type="user" style={{color: 'rgba(0,0,0,.25)'}}/>}
+                 prefix={<Icon type="user" className="regFormIcon"/>}
                  placeholder="Username"
                  autoComplete="Username"
                  required="required"
@@ -59,10 +56,10 @@ class RegForm extends React.Component {
                   this.setState ({username: e.target.value});
                   }}/>
               </Form.Item>
-              
+
               <Form.Item label="Password" hasFeedback={true}>
                 <Input.Password
-                 prefix={<Icon type="lock" style={{color: 'rgba(0,0,0,.25)'}}/>}
+                 prefix={<Icon type="lock" className="regFormIcon"/>}
                  type="password"
                  required="required"
                  placeholder="Password"
@@ -73,7 +70,7 @@ class RegForm extends React.Component {
               </Form.Item>
               <Form.Item label="E-mail">
                 <Input
-                 prefix={<Icon type="mail" style={{color: 'rgba(0,0,0,.25)'}}/>}
+                 prefix={<Icon type="mail" className="regFormIcon"/>}
                  required="required"
                  placeholder="Email"
                  autoComplete="current-password"
@@ -103,7 +100,7 @@ class RegForm extends React.Component {
                     // await alert (res.error.errmsg);
                     this.openNotification()
                   }
-                  
+
                 }}>
                   Register
                 </Button>

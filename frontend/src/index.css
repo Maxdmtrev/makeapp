@@ -33,6 +33,15 @@ code {
   height: 10%;
 }
 
+.constructorKitchen-price,
+.constructorRoom-price {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: blue;
+}
+
 .iconColor {
   color: rgba(0,0,0,.25);
 }
@@ -47,11 +56,15 @@ code {
   min-width: 600px;
 }
 
-.constructorKitchen-price,
-.constructorRoom-price {
-  display: flex;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
-  color: blue;
+.regFormIcon {
+  color: rgba(0,0,0,.25);
 }
+
+.regFormCard {
+  width: 40%;
+  background-color: #282c34;
+  opacity: 0.90;
+  height: 10%;
+}
+
+
