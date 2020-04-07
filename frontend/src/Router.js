@@ -19,23 +19,23 @@ const customHistory = createBrowserHistory ();
 
 class Routers extends Component {
 
-  // componentDidMount = async () => {
-  //   if (localStorage.getItem ('login')) {
-  //     const response = await fetch (`/login`, {
-  //       method: 'GET', headers: {
-  //         'Content-Type': 'application/json',
-  //       }
-  //     });
-  //     const res = await response.json();
-  //     if (res.result) {
-  //       localStorage.setItem ('login', res.user);
-  //       this.props.submit (res.result, res.user);
-  //     }
-  //     else {
-  //       localStorage.removeItem("login")
-  //     }
-  //   }
-  // };
+  componentDidMount = async () => {
+    if (localStorage.getItem ('login')) {
+      const response = await fetch (`/login`, {
+        method: 'GET', headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+      const res = await response.json();
+      if (res.result) {
+        localStorage.setItem ('login', res.user);
+        this.props.submit (res.result, res.user);
+      }
+      else {
+        localStorage.removeItem("login")
+      }
+    }
+  };
 
   totalPrice = () => {
     const {priceKitchen, priceApron, priceDoor, priceElectric, priceFloor, priceLight, priceMolding, pricePlint,
