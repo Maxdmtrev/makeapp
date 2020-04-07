@@ -26,7 +26,7 @@ class Routers extends Component {
           'Content-Type': 'application/json',
         }
       });
-      const res = await response.json ();
+      const res = await response.json();
       if (res.result) {
         localStorage.setItem ('login', res.user);
         this.props.submit (res.result, res.user);
@@ -35,7 +35,8 @@ class Routers extends Component {
         localStorage.removeItem("login")
       }
     }
-  }
+  };
+
   totalPrice = () => {
     const {priceKitchen, priceApron, priceDoor, priceElectric, priceFloor, priceLight, priceMolding, pricePlint,
       priceSill, priceBath, priceBathfloor, priceKeramaWall, priceLocker, priceShower, priceToilet, roomCard} = this.props;
