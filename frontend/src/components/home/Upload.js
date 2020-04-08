@@ -32,7 +32,7 @@ class UploadImg extends Component {
         uid: '-3',
         name: 'image.png',
         status: 'done',
-        url: 'https://play.min.io/makeapp/preset/cold-caramel.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=Q3AM3UQ867SPQQA43P2F%2F20200129%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20200129T143038Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Signature=046377ff2f5056e5101fd210dd2a2b6b4d5f6a181089adb9e848d6aa804720db',
+        url: 'https://i.pinimg.com/564x/e4/fa/7d/e4fa7dbe2f202eb3648e1b69776223c0.jpg',
       },
       {
         uid: '-4',

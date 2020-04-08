@@ -25,10 +25,10 @@ class InfoCard extends Component {
 
     return (
       <Table
-        style={{backgroundColor: 'white'}}
+        style={{ backgroundColor: 'white' }}
         rowKey="uid"
         columns={columns}
-        expandedRowRender={e => <span>{ e.descript }</span>}
+        expandedRowRender={(e) => <span>{ e.descript }</span>}
         dataSource={this.props.priceAction}
       />
     );

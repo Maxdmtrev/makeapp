@@ -34,7 +34,7 @@ class RegForm extends React.Component {
   render () {
     const {username, email, password} = this.state;
     return (
-        <div className={"backImg"} style={{display: "flex", justifyContent: "center", marginTop: "10px", minHeight: 1300, paddingTop: 50}}>
+      <div className={"backImg InfoCard"}>
        <Card title="Поле регистрации."
              className="regFormCard"
        >
@@ -97,10 +97,8 @@ class RegForm extends React.Component {
                     this.openOkNotification()
                   }
                   else {
-                    // await alert (res.error.errmsg);
                     this.openNotification()
                   }
-
                 }}>
                   Register
                 </Button>
