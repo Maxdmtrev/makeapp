@@ -5,7 +5,7 @@ import {ReqUserAC} from './redux/creators';
 import {connect} from 'react-redux';
 import 'antd/dist/antd.css';
 import '../src/app.css';
-import {Icon, Layout, BackTop} from 'antd';
+import {BackTop, Icon, Layout} from 'antd';
 import RegistrationForm from './components/users/RegForm';
 import Home from './components/home/Home';
 import List from './components/home/List'
@@ -40,10 +40,9 @@ class Routers extends Component {
   totalPrice = () => {
     const {priceKitchen, priceApron, priceDoor, priceElectric, priceFloor, priceLight, priceMolding, pricePlint,
       priceSill, priceBath, priceBathfloor, priceKeramaWall, priceLocker, priceShower, priceToilet, roomCard} = this.props;
-    let sumPrice = priceApron + priceKitchen + priceDoor + priceElectric + priceFloor + priceLight + priceMolding +
+    return priceApron + priceKitchen + priceDoor + priceElectric + priceFloor + priceLight + priceMolding +
         pricePlint + priceSill + priceBath + priceBathfloor + priceKeramaWall + priceLocker + priceShower +
         priceToilet + roomCard.price;
-    return sumPrice
   };
 
   render () {
@@ -54,7 +53,9 @@ class Routers extends Component {
             <Navigation history={customHistory}/>
           </Header>
           <Content >
-            {this.props.ymaps ? <Route exact path="/" component={Home}/> : <>loading</>}
+            {this.props.ymaps ?
+                <Route exact path="/" component={Home}/> :
+                <div>Loading...</div>}
             <Route path='/login' component={Login}/>
             <Route path='/room' component={NavConstructor}/>
             <Route path='/registration' component={RegistrationForm}/>
@@ -71,7 +72,7 @@ class Routers extends Component {
             <Icon type="github" style={{fontSize: '30px', color: '#08c'}} theme=""
               onClick={() => {window.open('https://elbrusboot.camp/')}}
             />
-            <h1 style={{float:"right"}}> Итоговая стоимость:  {this.totalPrice()}</h1>
+            <h1 style={{float:"right"}}> Итоговая стоимость: {this.totalPrice()}</h1>
             <BackTop style={{bottom: 60 }} />
           </Footer>
           </Layout>

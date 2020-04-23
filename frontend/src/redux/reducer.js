@@ -21,8 +21,8 @@ const state = {
     countDoor: null,
     countRoom: null,
     price: null,
-    desPrice: 0,
-    perePlanPrice: 0,
+    designPrice: 0,
+    changeLayoutPrice: 0,
   },
   isLogin: false,
   username: null,
@@ -118,19 +118,16 @@ export default function (oldState = state, action) {
         ...oldState,
         priceToilet: action.priceToilet,
       };
-
     case PRICE_KITCHEN:
       return {
         ...oldState,
         priceKitchen: action.priceKitchen,
       };
-
     case PRICE_APRON:
       return {
         ...oldState,
         priceApron: action.priceApron,
       };
-
     case ADD_USER:
       return {
         ...oldState,
@@ -156,8 +153,8 @@ export default function (oldState = state, action) {
       newRoomCard.countBath = action.countBath;
       newRoomCard.countDoor = action.countDoor;
       newRoomCard.countRoom = action.countRoom;
-      newRoomCard.desPrice = action.desPrice;
-      newRoomCard.perePlanPrice = action.perePlanPrice;
+      newRoomCard.designPrice = action.designPrice;
+      newRoomCard.changeLayoutPrice = action.changeLayoutPrice;
       newRoomCard.price = action.price;
       return {
         ...oldState,

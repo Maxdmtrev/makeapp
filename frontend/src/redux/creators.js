@@ -39,14 +39,15 @@ export const GetUrlAC = (data) => {
     data,
   };
 };
+
 export const GetCardAC = (
   address,
   m2,
   countBath,
   countDoor,
   countRoom,
-  desPrice,
-  perePlanPrice,
+  designPrice,
+  changeLayoutPrice,
   price,
 ) => ({
   type: GET_CARD,
@@ -55,10 +56,11 @@ export const GetCardAC = (
   countBath,
   countDoor,
   countRoom,
-  desPrice,
-  perePlanPrice,
+  designPrice,
+  changeLayoutPrice,
   price,
 });
+
 export const GetMapAC = (map) => ({
   type: GET_MAP,
   ymaps: map,
@@ -68,6 +70,7 @@ export const SetPresetAC = (data) => ({
   type: SET_PRESET,
   selectedPreset: data,
 });
+
 export const ClearPresetAC = () => ({
   type: CLEAR_PRESET,
   selectedPreset: {},
